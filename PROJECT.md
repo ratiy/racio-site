@@ -18,8 +18,11 @@
 
 ## Де переглянути
 
-- **Локально:** відкрити `artifacts/racio/index.html` у браузері (або `/serve` через HTTP)
-- **Для передачі іншим** (копірайтер, дизайнер, замовник) — деплой на Netlify drop (2 хв, безкоштовно): https://app.netlify.com/drop → перетягнути папку `artifacts/racio/` → отримати публічний URL
+- **Live URL (auto-deploy):** https://candid-profiterole-017286.netlify.app/
+- **GitHub repo:** https://github.com/ratiy/racio-site (private)
+- **Локально:** `python3 -m http.server 4567` у `artifacts/racio/` → http://127.0.0.1:4567/
+
+**Auto-deploy:** будь-який `git push` у `main` → Netlify оновлює сайт за 30-60 секунд на тому ж URL. Дизайнер/замовник бачать актуальний стан без додаткових дій.
 
 ---
 
