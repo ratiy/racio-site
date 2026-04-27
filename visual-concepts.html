@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Візуальні концепти — RACIO home page · blueprint line-art</title>
+<meta name="description" content="Концепти ілюстрацій для трьох блоків головної RACIO у стилі technical blueprint."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#EFE8D8;
+    --bg-card:#F5EEE0;
+    --ink:#1A1612;
+    --muted:#6B6258;
+    --red:#A63737;
+    --line:rgba(26,22,18,.14);
+    --hairline:rgba(26,22,18,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;font-size:16px;color:var(--ink);background:var(--bg);line-height:1.6}
+  .container{max-width:1320px;margin:0 auto;padding:0 32px}
+  .page-head{padding:48px 0 24px}
+  .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:12px}
+  h1{font-size:clamp(32px,3.5vw,52px);font-weight:500;line-height:1.1;margin-bottom:14px}
+  h1 em{font-family:'Playfair Display',serif;font-style:italic;color:var(--red);font-weight:500}
+  .lede{max-width:760px;font-size:17px;color:var(--muted);margin-bottom:20px}
+  .meta{display:flex;gap:32px;flex-wrap:wrap;font-size:13px;color:var(--muted);padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:56px}
+  .meta b{color:var(--ink);font-weight:600}
+
+  section.block{padding:56px 0;border-top:1px solid var(--line)}
+  section.block:first-of-type{border-top:none}
+  .block-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;gap:40px;flex-wrap:wrap}
+  .block-head h2{font-size:clamp(28px,3vw,42px);font-weight:500;line-height:1.15}
+  .block-head h2 em{font-family:'Playfair Display',serif;font-style:italic;color:var(--red);font-weight:500}
+  .block-head .caption{max-width:420px;font-size:14px;color:var(--muted);line-height:1.55}
+  .block-head .caption .tag{display:inline-block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:6px}
+
+  /* Service cards */
+  .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card-svc{background:var(--bg-card);border:1px solid var(--line);border-radius:2px;display:flex;flex-direction:column;overflow:hidden;position:relative}
+  .card-svc .num{position:absolute;top:20px;left:20px;font-family:'Manrope';font-size:44px;font-weight:600;color:var(--ink);letter-spacing:-.02em;z-index:2}
+  .card-svc .art{aspect-ratio:1/1;display:grid;place-items:center;padding:12px;border-bottom:1px solid var(--line);background:var(--bg-card);position:relative}
+  .card-svc .art svg{width:100%;height:100%;max-width:340px;max-height:340px}
+  .card-svc .body{padding:32px 32px 24px}
+  .card-svc h3{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:32px;line-height:1.15;margin-bottom:14px;letter-spacing:-.01em}
+  .card-svc p{color:var(--muted);font-size:15px;line-height:1.55}
+  .card-svc .cta{display:flex;justify-content:space-between;align-items:center;padding:20px 32px 28px;gap:14px}
+  .card-svc .btn{background:var(--ink);color:var(--bg-card);border:none;padding:16px 28px;border-radius:999px;font-family:'Manrope';font-weight:500;font-size:15px;cursor:pointer}
+  .card-svc .arrow{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:18px;color:var(--ink)}
+
+  /* Problem → Solution dark block */
+  .ps-block{background:#0F0D0A;color:#E7DFC8;padding:72px 0;border-radius:2px;margin:0 -32px}
+  .ps-block .container{padding:0 48px}
+  .ps-block .eyebrow{color:rgba(231,223,200,.5)}
+  .ps-block h2{color:#F5EEE0}
+  .ps-block h2 em{color:#F5EEE0;font-family:'Playfair Display';font-style:italic}
+  .ps-block .caption{color:rgba(231,223,200,.7)}
+  .ps-panels{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:14px}
+  .ps-panel{background:#1A1612;border:1px solid #322A22;border-radius:2px;overflow:hidden}
+  .ps-panel .art{aspect-ratio:16/10;padding:18px;display:grid;place-items:center}
+  .ps-panel .art svg{width:100%;height:100%}
+  .ps-panel .label{padding:24px 32px 28px;border-top:1px solid #322A22;display:flex;align-items:center;gap:18px}
+  .ps-panel .badge{font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border:1px solid #493B2B;border-radius:3px;color:#C9B998;font-weight:600}
+  .ps-panel h4{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:28px;color:#F5EEE0;line-height:1.1;flex:1}
+  .ps-panel.problem .badge{color:#E88B8B;border-color:#6B3838}
+
+  /* Industries 4×2 */
+  .ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ind-card{background:var(--bg-card);border:1px solid var(--line);border-radius:2px;overflow:hidden;display:flex;flex-direction:column}
+  .ind-card .art{aspect-ratio:1/1;padding:22px;display:grid;place-items:center;border-bottom:1px solid var(--line)}
+  .ind-card .art svg{width:100%;height:100%;max-width:200px;max-height:200px}
+  .ind-card .body{padding:22px 24px 26px}
+  .ind-card h4{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:24px;line-height:1.15;margin-bottom:8px}
+  .ind-card p{font-size:14px;color:var(--muted);line-height:1.5}
+
+  /* Spec notes */
+  .notes{margin-top:20px;font-size:13px;color:var(--muted);padding:14px 18px;background:rgba(26,22,18,.04);border-left:2px solid var(--muted);border-radius:0 2px 2px 0}
+  .notes b{color:var(--ink)}
+
+  /* Footer */
+  footer{padding:48px 32px;margin-top:48px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);text-align:center}
+  footer b{color:var(--ink)}
+
+  @media(max-width:1000px){
+    .cards-3,.ind-grid{grid-template-columns:repeat(2,1fr)}
+    .ps-panels{grid-template-columns:1fr}
+  }
+  @media(max-width:640px){
+    .cards-3,.ind-grid{grid-template-columns:1fr}
+    .ps-block{margin:0 -16px;padding:40px 0}
+    .ps-block .container{padding:0 20px}
+  }
+</style>
+</head>
+<body>
+
+<div class="container page-head">
+  <div class="eyebrow">Візуальні концепти · RACIO · 2026-04-24</div>
+  <h1>Головна сторінка · 3 блоки в стилі <em>technical blueprint</em></h1>
+  <p class="lede">Ця сторінка — <b>ізольована презентація</b> для обговорення з дизайнером і замовником, НЕ частина основного сайту. Показує єдину візуальну мову line-art blueprint для трьох блоків: послуги, проблема/рішення (експеримент), галузі.</p>
+  <div class="meta">
+    <span><b>Стиль:</b> thin-line blueprint, interior через прозорість, червоний акцент на 1 деталі</span>
+    <span><b>Палітра:</b> beige-background · ink-stroke · red-accent</span>
+    <span><b>Blocks:</b> Block 1 (3 cards) · Block 2 (problem/solution, expt) · Block 3 (8 industries)</span>
+  </div>
+</div>
+
+<!-- ─── BLOCK 1 · Services ─── -->
+<section class="block">
+  <div class="container">
+    <div class="block-head">
+      <div>
+        <div class="eyebrow">Блок 1 · Варіант 1 · line-art предметний</div>
+        <h2>Що ми робимо для <em>вашого бізнесу</em></h2>
+      </div>
+      <div class="caption">
+        <div class="tag">Концепт</div>
+        <p>3 картки з ключовим предметом галузі у blueprint-стилі. Кожен предмет — cross-section з видимою внутрішньою будовою, тонкі precise-лінії, червоний акцент на 1 деталі.</p>
+      </div>
+    </div>
+
+    <div class="cards-3">
+      <!-- Card 1 · OP: HELMET -->
+      <div class="card-svc">
+        <div class="num">01</div>
+        <div class="art">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#1A1612" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <!-- helmet outer profile -->
+            <path d="M 95 240 Q 82 230 85 205 Q 88 125 200 95 Q 312 125 315 205 Q 320 230 325 245 L 350 250 Q 360 254 357 262 L 340 268 Q 305 272 265 270 Q 200 268 135 270 Q 110 271 90 268 Q 75 266 70 258 Q 68 250 95 240 Z" stroke-width="1.4" fill="#F5EEE0"/>
+            <!-- dome crown highlights (inner structure hint) -->
+            <path d="M 120 165 Q 200 135 290 165" stroke-width=".7" stroke-dasharray="2 3"/>
+            <path d="M 110 200 Q 200 170 300 200" stroke-width=".7" stroke-dasharray="2 3"/>
+            <!-- top vents -->
+            <g stroke-width="1">
+              <path d="M 150 115 L 170 110"/>
+              <path d="M 185 107 L 215 105"/>
+              <path d="M 230 105 L 250 107"/>
+            </g>
+            <!-- brim shadow -->
+            <path d="M 90 240 Q 200 248 330 244" stroke-opacity=".6"/>
+            <path d="M 100 258 Q 200 264 325 258" stroke-width=".7" stroke-opacity=".4"/>
+            <!-- RACIO badge (red accent) -->
+            <g transform="translate(200 195)">
+              <ellipse rx="36" ry="30" stroke-width="1" fill="#F5EEE0"/>
+              <ellipse rx="30" ry="25" stroke-width=".6" stroke-opacity=".35"/>
+              <text x="0" y="4" text-anchor="middle" font-family="Manrope" font-size="12" font-weight="700" fill="#A63737" stroke="none" letter-spacing="1.2">RACIO</text>
+              <line x1="-18" y1="13" x2="18" y2="13" stroke="#A63737" stroke-width="1.2"/>
+            </g>
+            <!-- chinstrap -->
+            <path d="M 125 275 L 132 310" stroke-width="1"/>
+            <path d="M 275 275 L 268 310" stroke-width="1"/>
+            <path d="M 128 308 Q 200 350 272 308" stroke-width=".9"/>
+            <!-- buckle -->
+            <g transform="translate(200 340)">
+              <rect x="-16" y="-8" width="32" height="16" rx="1" stroke-width="1" fill="#F5EEE0"/>
+              <path d="M -9 -5 L -9 5 M 0 -5 L 0 5 M 9 -5 L 9 5" stroke-width=".6" stroke-opacity=".6"/>
+            </g>
+            <!-- adjustment wheel (rear) — just hint -->
+            <g transform="translate(345 258)">
+              <circle r="18" stroke-width=".9" fill="#F5EEE0"/>
+              <circle r="12" stroke-width=".6" stroke-opacity=".5"/>
+              <circle r="4" stroke-width=".5" stroke-opacity=".4"/>
+              <g stroke-width=".5" stroke-opacity=".5">
+                <path d="M 0 -18 L 0 -14"/><path d="M 0 14 L 0 18"/>
+                <path d="M -18 0 L -14 0"/><path d="M 14 0 L 18 0"/>
+              </g>
+            </g>
+            <!-- technical dim arrows (subtle) -->
+            <g stroke=".6" stroke-opacity=".35">
+              <path d="M 60 100 L 60 245" stroke-width=".6" stroke-dasharray="2 3"/>
+              <text x="52" y="175" font-family="Manrope" font-size="7" font-weight="600" fill="#6B6258" stroke="none">H</text>
+            </g>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>Охорона праці</h3>
+          <p>Аутсорсинг ОП, аудит, документація, тренінги, супровід Держпраці. 7 послуг у категорії.</p>
+        </div>
+        <div class="cta"><button class="btn">Детальніше</button><div class="arrow">↗</div></div>
+      </div>
+
+      <!-- Card 2 · PB: EXTINGUISHER -->
+      <div class="card-svc">
+        <div class="num">02</div>
+        <div class="art">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#1A1612" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <!-- handle / lever top -->
+            <g transform="translate(0 0)">
+              <!-- carry handle top bar -->
+              <path d="M 180 82 L 250 72 L 250 86 L 182 96 Z" stroke-width="1.2" fill="#F5EEE0"/>
+              <!-- trigger/lever -->
+              <path d="M 182 96 L 182 110 L 248 110 L 248 86" stroke-width="1"/>
+              <!-- valve neck -->
+              <path d="M 198 110 L 198 130 L 232 130 L 232 110 Z" stroke-width="1" fill="#F5EEE0"/>
+              <!-- pressure gauge -->
+              <g transform="translate(170 110)">
+                <circle r="11" stroke-width="1" fill="#F5EEE0"/>
+                <circle r="8" stroke-width=".5" stroke-opacity=".4"/>
+                <path d="M -4 1 L -1 -4 L 3 0" stroke-width=".7" stroke-opacity=".5"/>
+                <circle cx="0" cy="0" r="1.2" fill="#A63737" stroke="none"/>
+                <path d="M 0 0 L 4 -5" stroke="#A63737" stroke-width="1"/>
+              </g>
+              <!-- pin with ring -->
+              <g transform="translate(216 96)">
+                <circle cx="-3" cy="0" r="5" stroke-width=".9" fill="#F5EEE0"/>
+                <path d="M -2 0 L -8 -14 L -16 -13 L -16 -8" stroke-width=".9"/>
+              </g>
+            </g>
+            <!-- body cylinder outline -->
+            <path d="M 176 130 L 176 306 Q 176 332 215 335 L 218 335 Q 256 332 256 306 L 256 130 Z" stroke-width="1.4" fill="#F5EEE0"/>
+            <!-- interior tube (cross-section hint) -->
+            <path d="M 210 138 L 210 300 Q 210 316 220 318 Q 230 316 230 300 L 230 138" stroke-width=".7" stroke-opacity=".35"/>
+            <!-- label rectangles -->
+            <path d="M 176 188 L 256 188" stroke-width=".6" stroke-opacity=".4"/>
+            <path d="M 176 252 L 256 252" stroke-width=".6" stroke-opacity=".4"/>
+            <rect x="188" y="208" width="56" height="36" stroke-width="1" fill="#F5EEE0"/>
+            <text x="216" y="224" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="700" fill="#1A1612" stroke="none" letter-spacing=".5">ПБ</text>
+            <text x="216" y="237" text-anchor="middle" font-family="Manrope" font-size="8" font-weight="600" fill="#A63737" stroke="none">ОП-5</text>
+            <!-- hose coiled -->
+            <path d="M 252 135 Q 290 150 296 190 Q 292 234 262 252" stroke-width=".9"/>
+            <!-- nozzle -->
+            <path d="M 258 247 L 272 243 L 276 259 L 264 263 Z" stroke-width="1" fill="#F5EEE0"/>
+            <!-- base ring -->
+            <path d="M 168 335 L 264 335" stroke-width="1.4"/>
+            <path d="M 168 335 L 168 345 L 264 345 L 264 335" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>Пожежна безпека</h3>
+          <p>Декларація ДСНС, аудит, документація за НАПБ-2024, аутсорсинг ПБ. 5 послуг у категорії.</p>
+        </div>
+        <div class="cta"><button class="btn">Детальніше</button><div class="arrow">↗</div></div>
+      </div>
+
+      <!-- Card 3 · Risk Management: INDUSTRIAL GAUGE -->
+      <div class="card-svc">
+        <div class="num">03</div>
+        <div class="art">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#1A1612" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <!-- outer casing -->
+            <circle cx="200" cy="200" r="140" stroke-width="1.4" fill="#F5EEE0"/>
+            <circle cx="200" cy="200" r="130" stroke-width=".6" stroke-opacity=".35"/>
+            <!-- mounting screws -->
+            <circle cx="72" cy="200" r="4" stroke-width=".9" fill="#F5EEE0"/>
+            <circle cx="328" cy="200" r="4" stroke-width=".9" fill="#F5EEE0"/>
+            <circle cx="200" cy="72" r="4" stroke-width=".9" fill="#F5EEE0"/>
+            <circle cx="200" cy="328" r="4" stroke-width=".9" fill="#F5EEE0"/>
+            <!-- dial face -->
+            <circle cx="200" cy="200" r="110" stroke-width=".9"/>
+            <!-- scale ticks -->
+            <g stroke-width="1">
+              <!-- major ticks: -90° to 90° from center top, 5 ticks -->
+              <line x1="200" y1="90" x2="200" y2="102" />
+              <line x1="122" y1="122" x2="130" y2="130" />
+              <line x1="90" y1="200" x2="102" y2="200" />
+              <line x1="122" y1="278" x2="130" y2="270" />
+              <line x1="200" y1="310" x2="200" y2="298" />
+              <line x1="278" y1="278" x2="270" y2="270" />
+              <line x1="310" y1="200" x2="298" y2="200" />
+              <line x1="278" y1="122" x2="270" y2="130" />
+            </g>
+            <!-- minor ticks -->
+            <g stroke-width=".5" stroke-opacity=".5">
+              <line x1="155" y1="97" x2="158" y2="107"/>
+              <line x1="105" y1="155" x2="115" y2="158"/>
+              <line x1="105" y1="245" x2="115" y2="242"/>
+              <line x1="155" y1="303" x2="158" y2="293"/>
+              <line x1="245" y1="303" x2="242" y2="293"/>
+              <line x1="295" y1="245" x2="285" y2="242"/>
+              <line x1="295" y1="155" x2="285" y2="158"/>
+              <line x1="245" y1="97" x2="242" y2="107"/>
+            </g>
+            <!-- scale labels — risk zones -->
+            <text x="200" y="132" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="#1A1612" stroke="none" letter-spacing="1">LOW</text>
+            <text x="140" y="205" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="600" fill="#6B6258" stroke="none">1</text>
+            <text x="155" y="255" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="600" fill="#6B6258" stroke="none">2</text>
+            <text x="200" y="280" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="600" fill="#6B6258" stroke="none">3</text>
+            <text x="245" y="255" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="600" fill="#A63737" stroke="none">4</text>
+            <text x="260" y="205" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="#A63737" stroke="none" letter-spacing="1">HIGH</text>
+            <!-- danger zone arc -->
+            <path d="M 280 215 A 80 80 0 0 1 255 267" stroke="#A63737" stroke-width="2" fill="none" opacity=".55"/>
+            <!-- needle -->
+            <g transform="translate(200 200)">
+              <g transform="rotate(-35)">
+                <path d="M 0 0 L -4 0 L 0 -90 L 4 0 Z" fill="#1A1612" stroke="#1A1612" stroke-width="1"/>
+              </g>
+              <circle r="10" stroke-width="1" fill="#F5EEE0"/>
+              <circle r="4" fill="#A63737" stroke="none"/>
+            </g>
+            <!-- bottom label -->
+            <text x="200" y="155" text-anchor="middle" font-family="Manrope" font-size="8" font-weight="600" fill="#6B6258" stroke="none" letter-spacing="1.5">RISK · MATRIX 5×5</text>
+            <!-- interior wiring (hint) -->
+            <path d="M 138 340 L 138 360" stroke-width=".7" stroke-dasharray="2 2" stroke-opacity=".4"/>
+            <path d="M 262 340 L 262 360" stroke-width=".7" stroke-dasharray="2 2" stroke-opacity=".4"/>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>Керування ризиками</h3>
+          <p>Оцінка ризиків (ISO 45001), цивільний захист, техногенна безпека. 3 послуги у категорії.</p>
+        </div>
+        <div class="cta"><button class="btn">Детальніше</button><div class="arrow">↗</div></div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <b>Key design rules для всіх 3 карток:</b> stroke-width 1-1.4px outer, 0.5-0.7px interior hints (часто dashed), монохром <code>#1A1612</code> на <code>#F5EEE0</code>, єдиний червоний акцент на бейджі/мітці/стрілці. Предмет як «cross-section blueprint» — зовнішня оболонка + натяк на внутрішню конструкцію через напівпрозорі лінії.
+    </div>
+  </div>
+</section>
+
+<!-- ─── BLOCK 2 · Problem → Solution (Variant 3 experimental) ─── -->
+<section class="block">
+  <div class="container">
+    <div class="block-head">
+      <div>
+        <div class="eyebrow">Блок 2 · Варіант 3 · експериментальний</div>
+        <h2>Проблеми бізнесу з ОП — <em>наші рішення</em></h2>
+      </div>
+      <div class="caption">
+        <div class="tag">Експеримент</div>
+        <p>Будівля / виробничий об'єкт в <b>isometric blueprint</b>-розрізі. Зліва — «хворий» об'єкт з warning-зонами (червоні), справа — той самий об'єкт у здоровому стані з зеленими compliance-точками. Тонка blueprint-мова замість драматичного реалізму.</p>
+      </div>
+    </div>
+
+    <div class="ps-block">
+      <div class="container">
+        <div class="ps-panels">
+
+          <!-- Left: Problem -->
+          <div class="ps-panel problem">
+            <div class="art">
+              <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#C9B998" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round">
+                <!-- grid background -->
+                <g stroke="#3A3228" stroke-width=".4">
+                  <line x1="0" y1="60" x2="600" y2="60"/>
+                  <line x1="0" y1="120" x2="600" y2="120"/>
+                  <line x1="0" y1="180" x2="600" y2="180"/>
+                  <line x1="0" y1="240" x2="600" y2="240"/>
+                  <line x1="0" y1="300" x2="600" y2="300"/>
+                  <line x1="100" y1="0" x2="100" y2="380"/>
+                  <line x1="200" y1="0" x2="200" y2="380"/>
+                  <line x1="300" y1="0" x2="300" y2="380"/>
+                  <line x1="400" y1="0" x2="400" y2="380"/>
+                  <line x1="500" y1="0" x2="500" y2="380"/>
+                </g>
+                <!-- ISO factory: floor plan perspective -->
+                <!-- floor -->
+                <path d="M 80 300 L 520 300 L 560 250 L 120 250 Z" stroke-width="1" fill="#1A1612"/>
+                <!-- back wall -->
+                <path d="M 120 250 L 560 250 L 560 90 L 120 90 Z" stroke-width=".9" fill="#14110E"/>
+                <!-- left wall -->
+                <path d="M 80 300 L 80 140 L 120 90 L 120 250 Z" stroke-width=".9" fill="#14110E"/>
+                <!-- roof hint -->
+                <path d="M 80 140 L 240 40 L 560 40 L 560 90 Z" stroke-width=".6" stroke-dasharray="2 2"/>
+                <!-- Crack in wall (red) -->
+                <path d="M 180 200 L 210 175 L 195 160 L 225 135" stroke="#A63737" stroke-width="1.4"/>
+                <path d="M 210 175 L 220 180" stroke="#A63737" stroke-width="1"/>
+                <!-- Equipment on floor (chaotic) -->
+                <rect x="160" y="200" width="50" height="40" stroke-width=".9"/>
+                <path d="M 160 200 L 170 190 L 220 190 L 210 200" stroke-width=".8"/>
+                <rect x="280" y="210" width="60" height="35" stroke-width=".9" transform="rotate(-8 310 227)"/>
+                <!-- leaky pipes (red drip) -->
+                <path d="M 400 110 L 400 180 L 450 180" stroke-width="1.2"/>
+                <path d="M 400 180 L 410 190 L 395 200 L 405 210" stroke="#A63737" stroke-width="1"/>
+                <circle cx="405" cy="215" r="2" fill="#A63737" stroke="none"/>
+                <circle cx="418" cy="225" r="1.5" fill="#A63737" stroke="none" opacity=".6"/>
+                <!-- smoke from equipment -->
+                <path d="M 340 200 Q 335 180 345 165 Q 355 150 348 135" stroke-width=".7" stroke-dasharray="2 2" opacity=".5"/>
+                <path d="M 345 200 Q 340 180 350 170" stroke-width=".7" stroke-dasharray="2 2" opacity=".4"/>
+                <!-- Warning markers (red) -->
+                <g stroke="#A63737" stroke-width="1">
+                  <!-- ⚠ biohazard zone top-right -->
+                  <circle cx="510" cy="110" r="18"/>
+                  <path d="M 498 102 L 522 118 M 522 102 L 498 118" stroke-width="1.2"/>
+                  <!-- !!! warning top -->
+                  <rect x="280" y="70" width="80" height="22" stroke-dasharray="3 2"/>
+                  <text x="320" y="85" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="#A63737" stroke="none" letter-spacing="2">WARNING</text>
+                  <!-- electrical hazard -->
+                  <g transform="translate(130 160)">
+                    <rect x="-14" y="-14" width="28" height="28" stroke-dasharray="2 2"/>
+                    <path d="M -2 -10 L -8 -2 L 0 0 L -4 10 L 10 -2 L 0 -2 Z" fill="#A63737" stroke="none"/>
+                  </g>
+                </g>
+                <!-- Missing worker-safety indicator (hint of person without helmet) -->
+                <g transform="translate(440 220)">
+                  <circle r="6" stroke-width=".8"/>
+                  <path d="M -7 20 Q -7 8 0 6 Q 7 8 7 20 Z" stroke-width=".8"/>
+                  <!-- red X on head — "no helmet" -->
+                  <path d="M -8 -8 L 8 8 M 8 -8 L -8 8" stroke="#A63737" stroke-width="1.2"/>
+                </g>
+                <!-- cable chaos (tangled lines on floor) -->
+                <path d="M 180 290 Q 220 280 260 295 Q 300 285 340 295 Q 380 280 420 290" stroke-width=".7" stroke-opacity=".5"/>
+                <path d="M 200 295 Q 240 285 280 290 Q 320 285 360 295" stroke-width=".6" stroke-opacity=".4"/>
+                <!-- dimension arrow / label -->
+                <text x="30" y="200" font-family="Manrope" font-size="10" font-weight="600" fill="#6B6258" stroke="none" letter-spacing="1.5">A-1</text>
+                <text x="560" y="360" text-anchor="end" font-family="Manrope" font-size="9" font-weight="600" fill="#A63737" stroke="none" letter-spacing="2">STATE: HAZARD</text>
+              </svg>
+            </div>
+            <div class="label">
+              <span class="badge">Проблема</span>
+              <h4>Біль бізнесу</h4>
+            </div>
+          </div>
+
+          <!-- Right: Solution -->
+          <div class="ps-panel solution">
+            <div class="art">
+              <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#C9B998" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round">
+                <!-- grid background -->
+                <g stroke="#3A3228" stroke-width=".4">
+                  <line x1="0" y1="60" x2="600" y2="60"/>
+                  <line x1="0" y1="120" x2="600" y2="120"/>
+                  <line x1="0" y1="180" x2="600" y2="180"/>
+                  <line x1="0" y1="240" x2="600" y2="240"/>
+                  <line x1="0" y1="300" x2="600" y2="300"/>
+                  <line x1="100" y1="0" x2="100" y2="380"/>
+                  <line x1="200" y1="0" x2="200" y2="380"/>
+                  <line x1="300" y1="0" x2="300" y2="380"/>
+                  <line x1="400" y1="0" x2="400" y2="380"/>
+                  <line x1="500" y1="0" x2="500" y2="380"/>
+                </g>
+                <!-- Same floor plan, ordered -->
+                <path d="M 80 300 L 520 300 L 560 250 L 120 250 Z" stroke-width="1" fill="#1A1612"/>
+                <path d="M 120 250 L 560 250 L 560 90 L 120 90 Z" stroke-width=".9" fill="#14110E"/>
+                <path d="M 80 300 L 80 140 L 120 90 L 120 250 Z" stroke-width=".9" fill="#14110E"/>
+                <path d="M 80 140 L 240 40 L 560 40 L 560 90 Z" stroke-width=".6" stroke-dasharray="2 2"/>
+                <!-- Equipment aligned -->
+                <rect x="160" y="210" width="50" height="32" stroke-width=".9"/>
+                <path d="M 160 210 L 170 200 L 220 200 L 210 210" stroke-width=".8"/>
+                <rect x="240" y="210" width="50" height="32" stroke-width=".9"/>
+                <path d="M 240 210 L 250 200 L 300 200 L 290 210" stroke-width=".8"/>
+                <rect x="320" y="210" width="50" height="32" stroke-width=".9"/>
+                <path d="M 320 210 L 330 200 L 380 200 L 370 210" stroke-width=".8"/>
+                <!-- Clean pipes — no leaks -->
+                <path d="M 400 110 L 400 170 L 500 170" stroke-width="1.2"/>
+                <!-- Fire extinguisher on wall -->
+                <g transform="translate(460 130)">
+                  <rect x="-6" y="0" width="12" height="30" stroke-width=".9"/>
+                  <rect x="-4" y="-6" width="8" height="6"/>
+                  <path d="M -8 3 L -4 3" stroke-width=".7"/>
+                </g>
+                <!-- Exit sign -->
+                <g transform="translate(540 130)">
+                  <rect x="-16" y="-8" width="32" height="16"/>
+                  <text x="0" y="3" text-anchor="middle" font-family="Manrope" font-size="7" font-weight="700" fill="#C9B998" stroke="none" letter-spacing="1">EXIT</text>
+                  <path d="M -10 -2 L 10 -2" stroke-width=".6"/>
+                </g>
+                <!-- Worker with helmet (safe) -->
+                <g transform="translate(440 220)">
+                  <path d="M -7 -14 Q -7 -22 0 -22 Q 7 -22 7 -14 L 9 -10 L -9 -10 Z" stroke-width=".9"/>
+                  <circle cx="0" cy="-6" r="5" stroke-width=".8"/>
+                  <path d="M -7 20 Q -7 8 0 6 Q 7 8 7 20 Z" stroke-width=".8"/>
+                </g>
+                <!-- evac route (green dashed) -->
+                <g stroke="#9BC37A" stroke-width="1" stroke-dasharray="4 3">
+                  <path d="M 440 275 L 520 275 L 540 260"/>
+                </g>
+                <g stroke="#9BC37A" stroke-width=".8" fill="none">
+                  <path d="M 526 270 L 530 275 L 526 280" stroke-width="1"/>
+                </g>
+                <!-- Compliance markers (green check) -->
+                <g stroke="#9BC37A" stroke-width="1">
+                  <circle cx="510" cy="110" r="18"/>
+                  <path d="M 502 110 L 508 116 L 520 104" stroke-width="1.4"/>
+                  <rect x="280" y="70" width="80" height="22" stroke-dasharray="3 2"/>
+                  <text x="320" y="85" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="700" fill="#9BC37A" stroke="none" letter-spacing="2">COMPLIANT</text>
+                  <g transform="translate(130 160)">
+                    <rect x="-14" y="-14" width="28" height="28" stroke-dasharray="2 2"/>
+                    <path d="M -7 0 L -2 6 L 8 -6" stroke-width="1.4"/>
+                  </g>
+                </g>
+                <!-- clean cable routing -->
+                <path d="M 180 290 L 420 290" stroke-width=".7" stroke-opacity=".5"/>
+                <!-- label -->
+                <text x="30" y="200" font-family="Manrope" font-size="10" font-weight="600" fill="#6B6258" stroke="none" letter-spacing="1.5">A-1</text>
+                <text x="560" y="360" text-anchor="end" font-family="Manrope" font-size="9" font-weight="600" fill="#9BC37A" stroke="none" letter-spacing="2">STATE: PASSED ✓</text>
+              </svg>
+            </div>
+            <div class="label">
+              <span class="badge">Рішення</span>
+              <h4>Рішення RACIO</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <b>Експеримент:</b> одна й та сама технічна сцена (фабричний цех в isometric-розрізі), тонкі blueprint-лінії на темному (<code>#0F0D0A</code>), warning-зони <code>#A63737</code> зліва, compliance-зони <code>#9BC37A</code> (muted green) справа. Обидві панелі — з grid-підкладкою й кодом зони «A-1» для автентичного технічного вигляду.
+    </div>
+  </div>
+</section>
+
+<!-- ─── BLOCK 3 · Industries ─── -->
+<section class="block">
+  <div class="container">
+    <div class="block-head">
+      <div>
+        <div class="eyebrow">Блок 3 · Варіант 1 · line-art предметний · 8 карток</div>
+        <h2>Галузі — для <em>кожної галузі</em> свій предмет</h2>
+      </div>
+      <div class="caption">
+        <div class="tag">Концепт</div>
+        <p>8 карток 4×2 grid. Один технічний blueprint-об'єкт на картку, характерний для галузі. Той самий стиль thin-line cross-section, що і в Блоці 1 — консистентно з послугами.</p>
+      </div>
+    </div>
+
+    <div class="ind-grid">
+
+      <!-- Фарма · TEST TUBE -->
+      <div class="ind-card">
+        <div class="art">
+          <svg viewBox="0 0 200 200" fill="none" stroke="#1A1612" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <!-- test tube -->
+            <path d="M 75 30 L 75 140 Q 75 170 100 172 Q 125 170 125 140 L 125 30 Z" stroke-width="1.2" fill="#F5EEE0"/>
+            <!-- rim -->
+            <ellipse cx="100" cy="30" rx="25" ry="4" stroke-width="1"/>
+            <!-- liquid level (red accent) -->
+            <path d="M 79 110 Q 100 108 121 110 L 121 140 Q 121 162 100 164 Q 79 162 79 140 Z" fill="#A63737" fill-opacity=".2" stroke="#A63737" stroke-width="1"/>
+            <path d="M 79 110 Q 100 108 121 110" stroke="#A63737" stroke-width="1"/>
+            <!-- ml markings -->
+            <g stroke-width=".5" stroke-opacity=".5" font-family="Manrope" font-size="7" font-weight="600" fill="#6B6258">
+              <line x1="125" y1="50" x2="132" y2="50"/>
+              <text x="136" y="53" stroke="none">50</text>
+              <line x1="125" y1="80" x2="132" y2="80"/>
+              <text x="136" y="83" stroke="none">30</text>
+              <line x1="125" y1="110" x2="132" y2="110"/>
+              <text x="136" y="113" stroke="none">10</text>
+            </g>
+            <!-- bubbles -->
+            <circle cx="92" cy="130" r="2" stroke-width=".6" stroke-opacity=".5"/>
+            <circle cx="108" cy="145" r="1.5" stroke-width=".6" stroke-opacity=".4"/>
+            <!-- label -->
+            <text x="100" y="195" text-anchor="middle" font-family="Manrope" font-size="7" font-weight="600" fill="#6B6258" stroke="none" letter-spacing="1.5">VIAL · GDP</text>
+          </svg>
+        </div>
+        <div class="body"><h4>Фарма</h4><p>GMP/GDP, чисті кімнати, ISO 45001, EHS від HQ.</p></div>
+      </div>
+
+      <!-- MilTech · MILITARY HELMET -->
+      <div class="ind-card">
+        <div class="art">
+          <svg viewBox="0 0 200 200" fill="none" stroke="#1A1612" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <!-- helmet military profile -->
+            <path d="M 40 120 Q 38 110 42 100 Q 50 55 100 48 Q 152 55 158 100 Q 162 110 160 120 L 172 125 Q 176 128 172 132 L 160 134 Q 130 138 100 138 Q 70 138 40 134 Q 24 132 28 128 Q 32 125 40 120 Z" stroke-width="1.4" fill="#F5EEE0"/>
+            <!-- star (red accent) -->
+            <g transform="translate(100 95)">
+              <path d="M 0 -12 L 3 -4 L 12 -4 L 5 2 L 7 11 L 0 6 L -7 11 L -5 2 L -12 -4 L -3 -4 Z" fill="#A63737" stroke="#A63737" stroke-width=".6"/>
+            </g>
+            <!-- chinstrap -->
+            <path d="M 55 138 L 58 158" stroke-width="1"/>
+            <path d="M 145 138 L 142 158" stroke-width="1"/>
+            <path d="M 58 158 Q 100 175 142 158" stroke-width=".9"/>
+            <!-- goggles strap (top) -->
+            <path d="M 52 85 Q 100 80 148 85" stroke-width=".7" stroke-dasharray="2 2"/>
+            <!-- label -->
+            <text x="100" y="192" text-anchor="middle" font-family="Manrope" font-size="7" font-weight="600" fill="#6B6258" stroke="none" letter-spacing="1.5">HELM · MIL-SPEC</text>
+          </svg>
+        </div>
+        <div class="body"><h4>MilTech</h4><p>Дозволи, секретність, роботи з вибухонебезпечним.</p></div>
+      </div>
+
+      <!-- IT · MICROCHIP -->
+      <div class="ind-card">
+        <div class="art">
+          <svg viewBox="0 0 200 200" fill="none" stroke="#1A1612" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <!-- chip body -->
+            <rect x="55" y="55" width="90" height="90" stroke-width="1.4" fill="#F5EEE0"/>
+            <!-- inner core -->
+            <rect x="70" y="70" width="60" height="60" stroke-width="1"/>
+            <!-- circuit lines inside -->
+            <g stroke-width=".6" stroke-opacity=".5">
+              <path d="M 80 85 L 95 85 L 95 100"/>
+              <path d="M 105 85 L 120 85 L 120 100 L 110 100"/>
+              <path d="M 80 115 L 100 115"/>
+              <path d="M 115 115 L 120 115 L 120 105"/>
+            </g>
+            <!-- IT text red -->
+            <text x="100" y="107" text-anchor="middle" font-family="Manrope" font-size="16" font-weight="800" fill="#A63737" stroke="none" letter-spacing="1">IT</text>
+            <!-- pins -->
+            <g stroke-width="1" fill="#F5EEE0">
+              <!-- left -->
+              <rect x="43" y="68" width="12" height="6"/>
+              <rect x="43" y="82" width="12" height="6"/>
+              <rect x="43" y="96" width="12" height="6"/>
+              <rect x="43" y="110" width="12" height="6"/>
+              <rect x="43" y="124" width="12" height="6"/>
+              <!-- right -->
+              <rect x="145" y="68" width="12" height="6"/>
+              <rect x="145" y="82" width="12" height="6"/>
+              <rect x="145" y="96" width="12" height="6"/>
+              <rect x="145" y="110" width="12" height="6"/>
+              <rect x="145" y="124" width="12" height="6"/>
+              <!-- top -->
+              <rect x="65" y="43" width="6" height="12"/>
+              <rect x="80" y="43" width="6" height="12"/>
+              <rect x="95" y="43" width="6" height="12"/>
+              <rect x="110" y="43" width="6" height="12"/>
+              <rect x="125" y="43" width="6" height="12"/>
+              <!-- bottom -->
+              <rect x="65" y="145" width="6" height="12"/>
+              <rect x="80" y="145" width="6" height="12"/>
+              <rect x="95" y="145" width="6" height="12"/>
+              <rect x="110" y="145" width="6" height="12"/>
+              <rect x="125" y="145" width="6" height="12"/>
+            </g>
+            <!-- pin 1 marker -->
+            <circle cx="67" cy="65" r="2" stroke-width=".6" stroke-opacity=".4"/>
+            <!-- label -->
+            <text x="100" y="192" text-anchor="middle" font-family="Manrope" font-size="7" font-weight="600" fill="#6B6258" stroke="none" letter-spacing="1.5">MCU · DIE CROSS</text>
+          </svg>
+        </div>
+        <div class="body"><h4>IT та офіс</h4><p>Ергономіка, психосоціальні ризики, ISO 45001.</p></div>
+      </div>
+
+      <!-- HoReCa · GLASS + FORK -->
+      <div class="ind-card">
+        <div class="art">
+          <svg viewBox="0 0 200 200" fill="none" stroke="#1A1612" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <!-- wine glass -->
+            <g transform="translate(80 0)">
+              <!-- bowl -->
+              <path d="M 20 45 Q 10 75 20 100 Q 30 115 40 115 Q 50 115 60 100 Q 70 75 60 45 Z" stroke-width="1.2" fill="#F5EEE0"/>
+              <!-- rim -->
+              <path d="M 20 45 Q 40 42 60 45" stroke-width=".8"/>
+              <!-- liquid line (red, wine accent) -->
+              <path d="M 23 75 Q 40 78 57 75" stroke="#A63737" stroke-width="1"/>
+              <!-- stem -->
+              <path d="M 40 115 L 40 155" stroke-width="1"/>
+              <!-- base -->
+              <ellipse cx="40" cy="156" rx="18" ry="4" stroke-width="1" fill="#F5EEE0"/>
+            </g>
+            <!-- fork -->
+            <g transform="translate(40 30)">
+              <!-- tines -->
+              <path d="M 10 0 L 10 25" stroke-width=".9"/>
+              <path d="M 16 0 L 16 25" stroke-width=".9"/>
+              <path d="M 22 0 L 22 25" stroke-width=".9"/>
+              <path d="M 28 0 L 28 25" stroke-width=".9"/>
+              <!-- head base -->
+              <path d="M 7 25 L 31 25 L 33 33 L 5 33 Z" stroke-width="1.2" fill="#F5EEE0"/>
+              <!-- handle -->
+              <path d="M 13 33 L 13 128 Q 13 130 15 130 L 23 130 Q 25 130 25 128 L 25 33 Z" stroke-width="1" fill="#F5EEE0"/>
+              <!-- handle detail -->
+              <path d="M 13 55 L 25 55" stroke-width=".6" stroke-opacity=".4"/>
+              <path d="M 13 75 L 25 75" stroke-width=".6" stroke-opacity=".4"/>
+            </g>
+            <!-- label -->
+            <text x="100" y="192" text-anchor="middle" font-family="Manrope" font-size="7" font-weight="600" fill="#6B6258" stroke="none" letter-spacing="1.5">HoReCa · SET-A</text>
+          </svg>
+        </div>
+        <div class="body"><h4>HoReCa</h4><p>Кухня, газ, декларація ДСНС, ПТМ, клієнти.</p></div>
+      </div>
+
+      <!-- Ритейл · SHOPPING TROLLEY -->
+      <div class="ind-card">
+        <div class="art">
+          <svg viewBox="0 0 200 200" fill="none" stroke="#1A1612" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <!-- trolley basket (trapezoidal) -->
+            <path d="M 50 70 L 160 70 L 145 130 L 55 130 Z" stroke-width="1.4" fill="#F5EEE0"/>
+            <!-- basket grid horizontal -->
+            <line x1="52" y1="85" x2="158" y2="85" stroke-width=".6"/>
+            <line x1="54" y1="100" x2="156" y2="100" stroke-width=".6"/>
+            <line x1="55" y1="115" x2="155" y2="115" stroke-width=".6"/>
+            <!-- basket grid vertical -->
+            <g stroke-width=".6">
+              <line x1="70" y1="70" x2="66" y2="130"/>
+              <line x1="90" y1="70" x2="88" y2="130"/>
+              <line x1="110" y1="70" x2="112" y2="130"/>
+              <line x1="130" y1="70" x2="134" y2="130"/>
+            </g>
+            <!-- handle -->
+            <path d="M 40 55 L 70 55 L 70 70" stroke-width="1.2"/>
+            <path d="M 40 55 L 40 45 L 50 45" stroke-width="1"/>
+            <!-- wheels -->
+            <circle cx="70" cy="145" r="10" stroke-width="1.2" fill="#F5EEE0"/>
+            <circle cx="70" cy="145" r="4" stroke-width=".6" fill="#F5EEE0"/>
+            <circle cx="140" cy="145" r="10" stroke-width="1.2" fill="#F5EEE0"/>
+            <circle cx="140" cy="145" r="4" stroke-width=".6" fill="#F5EEE0"/>
+            <!-- wheel axles -->
+            <path d="M 72 131 L 68 144" stroke-width=".8"/>
+            <path d="M 142 131 L 140 144" stroke-width=".8"/>
+            <!-- price tag (red) -->
+            <g transform="translate(128 82) rotate(-10)">
+              <path d="M 0 0 L 22 0 L 22 14 L 14 20 L 0 20 Z" stroke="#A63737" stroke-width="1" fill="#F5EEE0"/>
+              <text x="10" y="12" text-anchor="middle" font-family="Manrope" font-size="8" font-weight="800" fill="#A63737" stroke="none">%</text>
+              <circle cx="4" cy="4" r="1.2" stroke="#A63737" stroke-width=".6"/>
+            </g>
+            <!-- label -->
+            <text x="100" y="192" text-anchor="middle" font-family="Manrope" font-size="7" font-weight="600" fill="#6B6258" stroke="none" letter-spacing="1.5">CART · RET-14</text>
+          </svg>
+        </div>
+        <div class="body"><h4>Ритейл</h4><p>Мережі, сезонний персонал, єдиний стандарт на 50+ точок.</p></div>
+      </div>
+
+      <!-- Виробництво · GEAR CROSS-SECTION -->
+      <div class="ind-card">
+        <div class="art">
+          <svg viewBox="0 0 200 200" fill="none" stroke="#1A1612" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <!-- large gear outer -->
+            <g transform="translate(100 100)">
+              <!-- teeth -->
+              <g stroke-width="1.2">
+                <g transform="rotate(0)"><rect x="-4" y="-75" width="8" height="16" fill="#F5EEE0"/></g>
+                <g transform="rotate(30)"><rect x="-4" y="-75" width="8" height="16" fill="#F5EEE0"/></g>
+                <g transform="rotate(60)"><rect x="-4" y="-75" width="8" height="16" fill="#F5EEE0"/></g>
+                <g transform="rotate(90)"><rect x="-4" y="-75" width="8" height="16" fill="#F5EEE0"/></g>
+                <g transform="rotate(120)"><rect x="-4" y="-75" width="8" height="16" fill="#F5EEE0"/></g>
+                <g transform="rotate(150)"><rect x="-4" y="-75" width="8" height="16" fill="#F5EEE0"/></g>
+                <g transform="rotate(180)"><rect x="-4" y="-75" width="8" height="16" fill="#F5EEE0"/></g>
+                <g transform="rotate(210)"><rect x="-4" y="-75" width="8" height="16" fill="#F5EEE0"/></g>
+                <g transform="rotate(240)"><rect x="-4" y="-75" width="8" height="16" fill="#F5EEE0"/></g>
+                <g transform="rotate(270)"><rect x="-4" y="-75" width="8" height="16" fill="#F5EEE0"/></g>
+                <g transform="rotate(300)"><rect x="-4" y="-75" width="8" height="16" fill="#F5EEE0"/></g>
+                <g transform="rotate(330)"><rect x="-4" y="-75" width="8" height="16" fill="#F5EEE0"/></g>
+              </g>
+              <!-- body -->
+              <circle r="60" stroke-width="1.4" fill="#F5EEE0"/>
+              <circle r="52" stroke-width=".7" stroke-opacity=".4"/>
+              <!-- spokes -->
+              <g stroke-width="1">
+                <path d="M 0 -45 L 0 -18 L -18 0 L 18 0 Z" fill="#F5EEE0"/>
+                <g transform="rotate(90)"><path d="M 0 -45 L 0 -18 L -18 0 L 18 0 Z" fill="#F5EEE0"/></g>
+                <g transform="rotate(180)"><path d="M 0 -45 L 0 -18 L -18 0 L 18 0 Z" fill="#F5EEE0"/></g>
+                <g transform="rotate(270)"><path d="M 0 -45 L 0 -18 L -18 0 L 18 0 Z" fill="#F5EEE0"/></g>
+              </g>
+              <!-- center axis -->
+              <circle r="14" stroke-width="1.2" fill="#F5EEE0"/>
+              <circle r="6" stroke-width=".8"/>
+              <circle r="2" fill="#A63737" stroke="none"/>
+              <!-- small gear adjacent (red accent) -->
+              <g transform="translate(-72 0)">
+                <g stroke="#A63737" stroke-width=".9">
+                  <g transform="rotate(0)"><rect x="-2" y="-22" width="4" height="6" fill="#F5EEE0"/></g>
+                  <g transform="rotate(45)"><rect x="-2" y="-22" width="4" height="6" fill="#F5EEE0"/></g>
+                  <g transform="rotate(90)"><rect x="-2" y="-22" width="4" height="6" fill="#F5EEE0"/></g>
+                  <g transform="rotate(135)"><rect x="-2" y="-22" width="4" height="6" fill="#F5EEE0"/></g>
+                  <g transform="rotate(180)"><rect x="-2" y="-22" width="4" height="6" fill="#F5EEE0"/></g>
+                  <g transform="rotate(225)"><rect x="-2" y="-22" width="4" height="6" fill="#F5EEE0"/></g>
+                  <g transform="rotate(270)"><rect x="-2" y="-22" width="4" height="6" fill="#F5EEE0"/></g>
+                  <g transform="rotate(315)"><rect x="-2" y="-22" width="4" height="6" fill="#F5EEE0"/></g>
+                  <circle r="17" fill="#F5EEE0"/>
+                  <circle r="4"/>
+                </g>
+              </g>
+            </g>
+            <!-- label -->
+            <text x="100" y="192" text-anchor="middle" font-family="Manrope" font-size="7" font-weight="600" fill="#6B6258" stroke="none" letter-spacing="1.5">GEAR · M-12T</text>
+          </svg>
+        </div>
+        <div class="body"><h4>Виробництво</h4><p>НПАОП, ЗІЗ, небезпечні процеси, ПНО.</p></div>
+      </div>
+
+      <!-- Логістика · PALLET + FORKLIFT ARROW -->
+      <div class="ind-card">
+        <div class="art">
+          <svg viewBox="0 0 200 200" fill="none" stroke="#1A1612" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <!-- pallet isometric -->
+            <g transform="translate(30 80)">
+              <!-- top plank -->
+              <path d="M 0 0 L 110 -25 L 140 -15 L 30 10 Z" stroke-width="1.2" fill="#F5EEE0"/>
+              <!-- plank gaps on top (blueprint lines) -->
+              <path d="M 24 4 L 134 -21" stroke-width=".6"/>
+              <path d="M 12 7 L 122 -18" stroke-width=".6"/>
+              <!-- side blocks -->
+              <path d="M 0 10 L 0 28 L 30 40 L 30 20" stroke-width="1" fill="#F5EEE0"/>
+              <path d="M 70 -4 L 70 14 L 100 26 L 100 6" stroke-width="1" fill="#F5EEE0"/>
+              <path d="M 140 -15 L 140 5 L 140 25 L 110 13" stroke-width="1" fill="#F5EEE0"/>
+              <!-- bottom plank -->
+              <path d="M 0 28 L 110 3 L 140 15 L 30 40 Z" stroke-width="1" fill="#F5EEE0"/>
+            </g>
+            <!-- forklift arrow (red accent) going into pallet -->
+            <g transform="translate(145 110)" stroke="#A63737" stroke-width="1.4">
+              <path d="M 0 0 L 30 -5 L 30 -12 L 44 -2 L 30 8 L 30 1 L 0 6 Z" fill="#F5EEE0"/>
+            </g>
+            <!-- hash marks / dimension -->
+            <g stroke="#6B6258" stroke-width=".5" stroke-opacity=".4" font-family="Manrope" font-size="7" fill="#6B6258">
+              <path d="M 30 130 L 170 130" stroke-dasharray="2 3"/>
+              <path d="M 30 125 L 30 135"/>
+              <path d="M 170 125 L 170 135"/>
+              <text x="100" y="142" text-anchor="middle" stroke="none" letter-spacing="1">1200mm</text>
+            </g>
+            <!-- label -->
+            <text x="100" y="192" text-anchor="middle" font-family="Manrope" font-size="7" font-weight="600" fill="#6B6258" stroke="none" letter-spacing="1.5">PALLET · EUR-1</text>
+          </svg>
+        </div>
+        <div class="body"><h4>Логістика і склади</h4><p>Склади А, ВРР, навантажувачі, ЛЗР, декларація ДСНС.</p></div>
+      </div>
+
+      <!-- Банкінг · SAFE CROSS-SECTION -->
+      <div class="ind-card">
+        <div class="art">
+          <svg viewBox="0 0 200 200" fill="none" stroke="#1A1612" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <!-- safe body -->
+            <rect x="45" y="50" width="110" height="110" stroke-width="1.4" fill="#F5EEE0"/>
+            <!-- inner wall -->
+            <rect x="58" y="63" width="84" height="84" stroke-width="1" fill="#F5EEE0"/>
+            <!-- hinges -->
+            <rect x="43" y="70" width="4" height="8" stroke-width=".8" fill="#F5EEE0"/>
+            <rect x="43" y="132" width="4" height="8" stroke-width=".8" fill="#F5EEE0"/>
+            <!-- spokes (wheel/dial) -->
+            <g transform="translate(120 105)">
+              <circle r="22" stroke-width="1.2" fill="#F5EEE0"/>
+              <circle r="16" stroke-width=".6" stroke-opacity=".4"/>
+              <circle r="4" stroke-width=".8" fill="#F5EEE0"/>
+              <!-- spokes -->
+              <g stroke-width="1">
+                <path d="M 0 0 L 0 -22"/>
+                <path d="M 0 0 L 19 11"/>
+                <path d="M 0 0 L -19 11"/>
+              </g>
+              <!-- notches -->
+              <g stroke-width=".6" stroke-opacity=".5">
+                <path d="M 0 -22 L 0 -18"/>
+                <path d="M 22 0 L 18 0"/>
+                <path d="M 0 22 L 0 18"/>
+                <path d="M -22 0 L -18 0"/>
+              </g>
+            </g>
+            <!-- keyhole (red accent) -->
+            <g transform="translate(78 105)">
+              <circle r="5" stroke-width="1"/>
+              <path d="M 0 4 L -2 14 L 2 14 Z" stroke="#A63737" stroke-width="1" fill="#A63737"/>
+            </g>
+            <!-- locking bolts (hidden) -->
+            <g stroke-width=".7" stroke-dasharray="2 2" stroke-opacity=".5">
+              <path d="M 45 80 L 38 80"/>
+              <path d="M 45 100 L 38 100"/>
+              <path d="M 45 120 L 38 120"/>
+              <path d="M 45 140 L 38 140"/>
+            </g>
+            <!-- brand plate -->
+            <rect x="65" y="165" width="70" height="10" stroke-width=".8"/>
+            <text x="100" y="172" text-anchor="middle" font-family="Manrope" font-size="6" font-weight="700" fill="#1A1612" stroke="none" letter-spacing="1.5">VAULT · BKG-1</text>
+            <!-- label -->
+            <text x="100" y="192" text-anchor="middle" font-family="Manrope" font-size="7" font-weight="600" fill="#6B6258" stroke="none" letter-spacing="1.5">SAFE · SEC-B</text>
+          </svg>
+        </div>
+        <div class="body"><h4>Банкінг і фінтех</h4><p>NBU, BCP, персональні дані, воєнний стан, укриття.</p></div>
+      </div>
+
+    </div>
+
+    <div class="notes">
+      <b>Галузеві об'єкти (8 карток):</b> пробірка (Фарма) · військовий шолом з зіркою (MilTech) · мікрочіп з pins (IT) · келих + виделка (HoReCa) · торгова візка з price-tag (Ритейл) · шестерня з малою шестернею-акцентом (Виробництво) · isometric піддон з forklift-стрілкою (Логістика) · сейф з ключовиною (Банкінг). Кожен з єдиним червоним акцентом, технічною маркою-лейблом внизу ({тип} · {код}).
+    </div>
+  </div>
+</section>
+
+<footer>
+  Експериментальна сторінка концептів · RACIO · 24.04.2026 · Не частина основного сайту. <br>
+  Генерується локально у <b>/Users/oleksandrratiy/claude-code-design/artifacts/racio/visual-concepts.html</b>
+</footer>
+
+</body>
+</html>

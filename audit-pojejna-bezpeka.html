@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Аудит пожежної безпеки — RACIO | Симуляція перевірки ДСНС</title>
+<meta name="description" content="Інспектор-практик проводить mock-перевірку пожежної безпеки. Звіт з ризиками + план дій. Від 8 900 ₴."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="racio.css">
+</head>
+<body>
+<header class="nav" id="site-header"></header>
+<div class="container"><nav class="crumbs"><a href="index.html">Головна</a><span>›</span><a href="#">Пожежна безпека</a><span>›</span>Аудит ПБ</nav></div>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Аудит ПБ · mock-перевірка ДСНС</div>
+      <h1>Аудит пожежної безпеки — <em>симуляція перевірки</em> ДСНС.</h1>
+      <p class="sub"><b>Інспектор-практик з 15+ років досвіду</b> проводить повноцінну «перевірку» за чеклістом 100+ позицій, фіксує слабкі місця й пропонує план усунення. Ви бачите свій бізнес очима ДСНС.</p>
+      <div class="hero-cta"><a href="#quiz" class="btn btn-primary">Замовити аудит →</a><a href="#report" class="btn btn-ghost">Приклад звіту</a></div>
+      <div class="hero-trust"><span>100+ позицій чек-листа</span><span>Звіт 3-5 днів</span><span>NDA у договорі</span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <!-- Inspector with clipboard + fire extinguisher + evacuation plan checkboxes -->
+      <svg viewBox="0 0 600 600" fill="none" stroke="#0A0A0A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Clipboard -->
+        <g transform="translate(110 110)">
+          <rect width="320" height="420" rx="12" fill="#0A0A0A"/>
+          <rect x="10" y="18" width="300" height="384" rx="4" fill="#FAF6EC"/>
+          <!-- top clip -->
+          <rect x="130" y="0" width="60" height="22" fill="#A63737" stroke="#A63737"/>
+          <!-- Page title -->
+          <rect x="30" y="40" width="260" height="32" fill="#A63737" stroke="#A63737"/>
+          <text x="160" y="62" text-anchor="middle" font-family="Manrope" font-size="12" font-weight="800" fill="#FAF6EC" letter-spacing="2.5">FIRE SAFETY AUDIT</text>
+          <text x="30" y="92" font-family="Manrope" font-size="9" font-weight="700" fill="#6B6258" letter-spacing="1.5">100+ ПОЗИЦІЙ · НАПБ-2024</text>
+          <path d="M 30 100 L 290 100" stroke-opacity=".4"/>
+          <!-- Checklist items -->
+          <g font-family="Manrope" font-size="10">
+            <!-- row 1 -->
+            <g transform="translate(30 120)">
+              <rect width="16" height="16" fill="#A63737" stroke="#A63737"/>
+              <path d="M 3 8 L 7 12 L 13 4" stroke="#FAF6EC" stroke-width="2" fill="none"/>
+              <text x="24" y="12" fill="#0A0A0A" font-weight="600">Декларація ДСНС</text>
+              <text x="260" y="12" text-anchor="end" fill="#A63737" font-weight="800" font-size="9">OK</text>
+            </g>
+            <!-- row 2 -->
+            <g transform="translate(30 145)">
+              <rect width="16" height="16" fill="#A63737" stroke="#A63737"/>
+              <line x1="4" y1="4" x2="12" y2="12" stroke="#FAF6EC" stroke-width="2"/>
+              <line x1="12" y1="4" x2="4" y2="12" stroke="#FAF6EC" stroke-width="2"/>
+              <text x="24" y="12" fill="#0A0A0A" font-weight="600">Плани евакуації</text>
+              <text x="260" y="12" text-anchor="end" fill="#A63737" font-weight="800" font-size="9">FIX</text>
+            </g>
+            <!-- row 3 -->
+            <g transform="translate(30 170)">
+              <rect width="16" height="16" fill="#E8DCC4" stroke="#0A0A0A"/>
+              <text x="24" y="12" fill="#0A0A0A" font-weight="600">Вогнегасники (31)</text>
+              <text x="260" y="12" text-anchor="end" fill="#6B6258" font-weight="600" font-size="9">21/31</text>
+            </g>
+            <!-- row 4 -->
+            <g transform="translate(30 195)">
+              <rect width="16" height="16" fill="#A63737" stroke="#A63737"/>
+              <path d="M 3 8 L 7 12 L 13 4" stroke="#FAF6EC" stroke-width="2" fill="none"/>
+              <text x="24" y="12" fill="#0A0A0A" font-weight="600">АПС / сигналізація</text>
+              <text x="260" y="12" text-anchor="end" fill="#A63737" font-weight="800" font-size="9">OK</text>
+            </g>
+            <!-- row 5 -->
+            <g transform="translate(30 220)">
+              <rect width="16" height="16" fill="#E8DCC4" stroke="#0A0A0A"/>
+              <text x="24" y="12" fill="#0A0A0A" font-weight="600">Журнал інструктажів</text>
+              <text x="260" y="12" text-anchor="end" fill="#6B6258" font-weight="600" font-size="9">?</text>
+            </g>
+          </g>
+          <!-- Result summary bottom -->
+          <g transform="translate(30 280)">
+            <path d="M 0 0 L 260 0" stroke-opacity=".3"/>
+            <text x="0" y="24" font-family="Manrope" font-size="9" font-weight="700" fill="#6B6258" letter-spacing="1.5">ПІДСУМОК:</text>
+            <text x="0" y="50" font-family="Playfair Display" font-style="italic" font-size="28" font-weight="500" fill="#A63737">31 порушень</text>
+            <text x="0" y="72" font-family="Manrope" font-size="10" fill="#6B6258">· 6 критичних · 12 суттєвих · 13 формальних</text>
+          </g>
+        </g>
+        <!-- Stamp "MOCK" -->
+        <g transform="translate(400 120) rotate(10)">
+          <rect x="-50" y="-18" width="100" height="40" stroke="#A63737" stroke-width="2" stroke-dasharray="4 3" fill="none"/>
+          <text x="0" y="-2" text-anchor="middle" font-family="Manrope" font-size="11" font-weight="800" fill="#A63737" letter-spacing="2">MOCK</text>
+          <text x="0" y="14" text-anchor="middle" font-family="Manrope" font-size="8" font-weight="700" fill="#A63737">RACIO · 2026</text>
+        </g>
+        <path d="M 20 585 L 580 585" stroke-opacity=".18" stroke-dasharray="4 6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0 0 56px">
+  <div class="container">
+    <div class="qform">
+      <div><h3>Прорахунок <em style="color:var(--beige)">за 1 робочий день</em></h3><div class="hint">Пн-Пт 9:00–18:00 · прорахунок безкоштовний.</div></div>
+      <form onsubmit="event.preventDefault();alert('Дякуємо!')">
+        <input id="apb-name" name="name" placeholder="Ім'я" autocomplete="name" required/>
+        <input id="apb-phone" name="phone" placeholder="+380 ..." autocomplete="tel" required/>
+        <input id="apb-type" name="type" placeholder="Тип об'єкта" required/>
+        <button class="btn btn-primary" type="submit">Надіслати →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="sec-head"><div class="eyebrow">Що входить в аудит</div><h2>Що перевіряє <em>наш інспектор</em></h2></div>
+    <div class="grid-3">
+      <div class="card"><div class="num">01</div><h3>Документальний аудит</h3><p>Накази, інструкції, журнали, плани евакуації, повідомлення, протоколи тренувань.</p></div>
+      <div class="card"><div class="num">02</div><h3>Виїзд і огляд</h3><p>Вогнегасники, пожежні виходи, знаки, електрика, освітлення евакуаційне.</p></div>
+      <div class="card"><div class="num">03</div><h3>Працездатність систем</h3><p>АПС (сигналізація), АСПГ (пожежогасіння), димовидалення.</p></div>
+      <div class="card"><div class="num">04</div><h3>Інтерв'ю з персоналом</h3><p>Чи знають куди бігти, як користуватись вогнегасником, кого кликати.</p></div>
+      <div class="card"><div class="num">05</div><h3>Фото-фіксація</h3><p>Кожне порушення — з прив'язкою до конкретного місця на об'єкті.</p></div>
+      <div class="card"><div class="num">06</div><h3>Звіт + план дій</h3><p>Категоризація: критичні / суттєві / формальні + пріоритети виправлення.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cream">
+  <div class="container">
+    <div class="sec-head"><div class="eyebrow">Для кого · Коли</div><h2>Коли <em>потрібен</em> аудит ПБ</h2></div>
+    <div class="grid-2">
+      <div class="card"><h3>Для кого</h3><ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:12px;color:var(--muted);font-size:15px">
+        <li>→ ТРЦ та магазини — перед плановими перевірками ДСНС</li>
+        <li>→ HoReCa — після оновлення правил 2024</li>
+        <li>→ Склади, особливо з легкозаймистими матеріалами</li>
+        <li>→ Виробництво з вогненебезпечними процесами</li>
+        <li>→ Новий власник — due diligence успадкованого об'єкта</li>
+      </ul></div>
+      <div class="card"><h3>Коли замовляти</h3><ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:12px;color:var(--muted);font-size:15px">
+        <li>→ Отримали попередження про планову перевірку ДСНС</li>
+        <li>→ Після пожежі або займання — зрозуміти причини</li>
+        <li>→ Перед продажем або купівлею бізнесу</li>
+        <li>→ Щорічно для внутрішнього контролю (мережі, ТРЦ)</li>
+        <li>→ Перед введенням в експлуатацію нового приміщення</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO-A prose -->
+<section>
+  <div class="container">
+    <div class="sec-head"><div class="eyebrow">Аудит vs декларація</div><h2>Чим аудит ПБ відрізняється <em>від декларації ДСНС</em> і від самоперевірки</h2></div>
+    <div class="seo-prose">
+      <p><b>Аудит пожежної безпеки</b> — це mock-перевірка вашого об'єкта силами зовнішнього інспектора, із симуляцією того, що робить ДСНС на реальній перевірці. <a href="deklaratsiia-dsns.html">Декларація ДСНС</a> — це юридичний документ, який ви подаєте в ДСНС до початку діяльності. Два різні продукти: декларація — зовнішній, юридичний, «на вхід»; аудит — внутрішній, технічний, «на контроль».</p>
+      <p>Самоперевірка силами штатного відповідального за ПБ — важлива частина системи, але має обмеження. Людина, яка сама призначає пожежні виходи й замовляє вогнегасники, рідко об'єктивно оцінює їх стан. Зовнішній інспектор бачить свіжим оком: чи справді виходи вільні, чи справді таблички на місці, чи справді персонал знає евакуаційну процедуру. У нашій команді — 16 інженерів з досвідом у різних <a href="halusi.html">галузях</a>, тому ми порівнюємо ваш об'єкт зі стандартом для галузі, а не з власною логікою власника.</p>
+      <p>Коли замовляти аудит: оптимально — за 2-3 тижні до планової перевірки ДСНС, щоб встигнути виправити критичні порушення; або раз на рік як частина внутрішнього контролю для ТРЦ, готелів, мережевих операторів. Після аудиту критичні правки зазвичай можна закрити силами пакетом <a href="dokumentatsiia-pojejna-bezpeka.html">документації</a> + <a href="treningy-z-pojejnoi-bezpeky.html">навчання</a>, а якщо потрібна системна робота — переходьте на <a href="autsorsynh-pojejna-bezpeka.html">аутсорсинг ПБ</a> з щомісячним супроводом.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="sec-head"><div class="eyebrow">Процес · 4 кроки</div><h2>Аудит за <em>3-5 робочих днів</em></h2></div>
+    <div class="process">
+      <div class="step"><div class="num">01</div><h3>Договір + документи</h3><div class="time">1 день</div><p>NDA, опитувальник, список документів.</p></div>
+      <div class="step"><div class="num">02</div><h3>Виїзд інспектора</h3><div class="time">1-2 дні</div><p>Огляд, фото, перевірка систем, опитування.</p></div>
+      <div class="step"><div class="num">03</div><h3>Звіт з ризиками</h3><div class="time">2-3 дні</div><p>Документ 15-30 сторінок + фото-додатки.</p></div>
+      <div class="step"><div class="num">04</div><h3>Презентація</h3><div class="time">1 день</div><p>Зустріч з керівником, план впровадження.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cream" id="report">
+  <div class="container">
+    <div class="sec-head"><div class="eyebrow">Результат</div><h2>Що ви <em>отримаєте</em></h2></div>
+    <ul class="deliv">
+      <li><span class="arr">→</span><div><h4>Звіт 15-30 сторінок</h4><p>Чек-ліст з відмітками, фото-фіксацією порушень, висновками.</p></div></li>
+      <li><span class="arr">→</span><div><h4>Чек-ліст 100+ позицій</h4><p>Статус кожної: ОК / попередження / критично.</p></div></li>
+      <li><span class="arr">→</span><div><h4>Пріоритизований план дій</h4><p>A/B/C ризики з оцінкою часу й бюджету на виправлення.</p></div></li>
+      <li><span class="arr">→</span><div><h4>Перелік інженерних рішень</h4><p>Які системи треба встановити або модернізувати (АПС, АСПГ, освітлення).</p></div></li>
+      <li><span class="arr">→</span><div><h4>Відсилки на НАПБ-2024</h4><p>По кожному порушенню — стаття закону, за якою ДСНС штрафує.</p></div></li>
+      <li><span class="arr">→</span><div><h4>Протокол тренувань</h4><p>Перевірка, як персонал реагує на надзвичайну ситуацію.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- SEO-B numbered list — typical findings -->
+<section>
+  <div class="container">
+    <div class="sec-head"><div class="eyebrow">Що знаходить mock-перевірка</div><h2>8 типових порушень — <em>з реальних аудитів</em></h2></div>
+    <p class="lead" style="margin-bottom:8px">Статистика 300+ mock-перевірок: нижче — порушення, які ми знаходимо на 7 з 10 об'єктів, від найпоширеніших до тих, що загрожують зупинкою діяльності.</p>
+    <ol class="num-list">
+      <li><div><h4>Заставлені або закриті пожежні виходи</h4><p>Коробки, стелажі, меблі, зимовий одяг, велосипеди — перед «евакуаційним» виходом. Критичне порушення, штраф до 34 000 ₴ + ризик реальних жертв при пожежі.</p></div></li>
+      <li><div><h4>Прострочені або несправні вогнегасники</h4><p>Просрочена дата перезарядки, розряджений манометр, пошкоджена пломба. Перевіряються візуально і за журналом.</p></div></li>
+      <li><div><h4>Плани евакуації не відповідають плануванню</h4><p>Після перепланування старий план залишається на стіні. Інспектор звіряє зі зразком приміщення — розбіжності ловить.</p></div></li>
+      <li><div><h4>Не працює або не обслуговується АПС</h4><p>Автоматична пожежна сигналізація — без регулярних ТО-актів, без журналу, з «згорілими» датчиками. У магазинах і офісах часто саме така прогалина.</p></div></li>
+      <li><div><h4>Немає протоколу тренувань з евакуації</h4><p>Має проводитись раз на рік. У SMB зазвичай пропускають. Інспектор питає конкретних учасників, дати, сценарії — без цього тренування «не було».</p></div></li>
+      <li><div><h4>Застарілі інструкції (до НАПБ-2024)</h4><p>Більшість шаблонів з інтернету написані за редакцією 2016-2020 року. У наших <a href="dokumentatsiia-pojejna-bezpeka.html">пакетах документів</a> усе за чинною редакцією.</p></div></li>
+      <li><div><h4>Немає посвідчення у відповідального за ПБ</h4><p>Призначений наказом, але без офіційного <a href="treningy-z-pojejnoi-bezpeky.html">посвідчення з реєстру</a>. Штраф особисто директору за ст. 41 КУпАП.</p></div></li>
+      <li><div><h4>Електробезпека — прострочений замір опору ізоляції</h4><p>Термін протоколу 1 рік. Для виробництва й складів з великою електрикою — обов'язковий додаток до декларації.</p></div></li>
+    </ol>
+    <p class="lead" style="margin-top:28px;max-width:860px"><b>Що з цим робити:</b> аудит бачить ці 8 пунктів до того, як їх знайде ДСНС. Далі у вас зазвичай 2-3 тижні на правки — і перевірка проходить без штрафів. Без аудиту — штрафи стартують з 17 000 ₴ і швидко доходять до 51 000 ₴ + припис про заборону діяльності.</p>
+  </div>
+</section>
+
+<section id="quiz">
+  <div class="container">
+    <div class="sec-head center"><div class="eyebrow">Калькулятор</div><h2>Розрахуйте <em>вартість</em> аудиту</h2></div>
+    <div class="quiz">
+      <div class="quiz-progress"><i></i></div>
+      <div class="quiz-step active" data-step="1"><h3>1. Тип об'єкта?</h3><div class="quiz-opts"><button class="quiz-opt">Офіс</button><button class="quiz-opt">Магазин</button><button class="quiz-opt">Склад</button><button class="quiz-opt">HoReCa</button><button class="quiz-opt">ТРЦ</button><button class="quiz-opt">Виробництво</button></div></div>
+      <div class="quiz-step" data-step="2"><h3>2. Площа?</h3><div class="quiz-opts"><button class="quiz-opt">До 500 м²</button><button class="quiz-opt">500-2000 м²</button><button class="quiz-opt">2000-5000 м²</button><button class="quiz-opt">5000+ м²</button></div></div>
+      <div class="quiz-step" data-step="3"><h3>3. Мета аудиту?</h3><div class="quiz-opts"><button class="quiz-opt">Перед ДСНС</button><button class="quiz-opt">Після займання</button><button class="quiz-opt">Щорічний</button><button class="quiz-opt">Купівля/продаж</button></div></div>
+      <div class="quiz-step" data-step="4"><h3>4. Місто?</h3><div class="quiz-opts"><button class="quiz-opt">Київ</button><button class="quiz-opt">Обл. центр</button><button class="quiz-opt">Інше</button></div></div>
+      <div class="quiz-step" data-step="5"><h3>Куди надіслати?</h3>
+        <div class="quiz-fields"><input name="qname" placeholder="Ім'я" autocomplete="name" required/><input name="qphone" placeholder="Телефон" autocomplete="tel" required/><input name="qemail" placeholder="Email" type="email" autocomplete="email"/><input name="qcompany" placeholder="Компанія" autocomplete="organization"/></div>
+        <div class="quiz-actions"><span class="quiz-micro">Безкоштовно · прорахунок протягом 1 робочого дня</span><button class="btn btn-primary" onclick="alert('Дякуємо!')">Отримати прорахунок →</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cream">
+  <div class="container">
+    <div class="sec-head"><div class="eyebrow">Клієнти</div><h2>Нам <em>довіряють</em></h2></div>
+    <div class="logos">
+      <span>ROZETKA</span><span>VARUS</span><span>SOCAR</span><span>SILPO</span>
+      <span>AUCHAN</span><span>NOVUS</span><span>ATB</span><span>FOZZY</span>
+    </div>
+    <div class="testi">
+      <div class="t"><h3>«Здали ДСНС <em>з 1-ї подачі</em>»</h3><p>Перед відкриттям нового ТРЦ замовили mock-перевірку. Знайшли 31 порушення, виправили, здали ДСНС з 1-ї подачі.</p><div class="who">Project Director <span>· Rozetka</span></div></div>
+      <div class="t"><h3>«Штрафів ДСНС менше <em>на 40%</em>»</h3><p>Варус — 180 магазинів. RACIO зробили типовий аудит + корпоративний стандарт. Штрафів ДСНС за рік стало менше на 40%.</p><div class="who">Head of Operations <span>· Varus</span></div></div>
+    </div>
+    <p style="margin-top:24px;font-size:14px;color:var(--muted)">Повна картина кейсів — у <a href="kliyenty-ta-keysu.html" style="color:var(--red);border-bottom:1px solid rgba(166,55,55,.35);text-decoration:none">розділі клієнтів</a>.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="sec-head center"><div class="eyebrow">FAQ</div><h2>Часті <em>запитання</em></h2></div>
+    <div class="faq">
+      <details><summary>Аудит чи декларація — що важливіше?</summary><p>Якщо щойно відкриваєтесь — <a href="deklaratsiia-dsns.html" style="color:var(--red);border-bottom:1px solid currentColor">декларація</a>. Якщо працюєте давно й боїтесь перевірки — аудит.</p></details>
+      <details><summary>Чи перевіряєте працездатність вогнегасників?</summary><p>Візуально + перевірка паспортів і термінів. Технічну перезарядку робить партнер-лабораторія.</p></details>
+      <details><summary>Скільки триває аудит?</summary><p>Офіс/магазин — 3-5 днів. ТРЦ — 5-10 днів. Виробництво — до 2 тижнів.</p></details>
+      <details><summary>Чи інформуєте ДСНС про результати?</summary><p>Ні, аудит конфіденційний, NDA в договорі.</p></details>
+      <details><summary>А якщо багато філій?</summary><p>Знижка 10% за 3+ об'єкти, 15% за 5+. Для мережевих клієнтів пакетом з <a href="autsorsynh-pojejna-bezpeka.html" style="color:var(--red);border-bottom:1px solid currentColor">аутсорсингом</a>.</p></details>
+      <details><summary>Чи можна аудит без виїзду?</summary><p>Документальна частина — так. Але повноцінний аудит без огляду об'єкта неможливий.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cream">
+  <div class="container">
+    <div class="sec-head"><div class="eyebrow">Дотичні матеріали</div><h2>Корисне <em>почитати</em></h2></div>
+    <div class="blog">
+      <a class="post" href="koryisne.html"><div class="kind">Чек-ліст</div><h3>На що дивиться інспектор ДСНС у ТРЦ</h3><div class="r">Читати →</div></a>
+      <a class="post" href="dokumentatsiia-pojejna-bezpeka.html"><div class="kind">Огляд</div><h3>Нові правила пожежної безпеки 2024 — що змінилось</h3><div class="r">Читати →</div></a>
+      <a class="post" href="blog.html"><div class="kind">Порівняння</div><h3>Як часто аудитувати ПБ на підприємстві</h3><div class="r">Читати →</div></a>
+    </div>
+    <div class="blog-foot">Суміжні — <a href="audit.html">аудит ОП</a> і <a href="suprovid-derzhpratsi.html">супровід Держпраці</a>.</div>
+  </div>
+</section>
+
+<section class="dark finalcta">
+  <div class="container">
+    <h2 style="color:#fff">Побачте об'єкт <em style="color:var(--beige)">очима ДСНС</em></h2>
+    <p>Звіт 15-30 сторінок + план дій — за 3-5 робочих днів.</p>
+    <div class="btns"><a href="#quiz" class="btn btn-primary">Замовити аудит →</a><a href="autsorsynh-pojejna-bezpeka.html" class="btn btn-ghost">Аутсорсинг ПБ</a></div>
+  </div>
+</section>
+
+<footer class="foot" id="site-footer"></footer>
+<div class="sticky-mobile" id="site-sticky"></div>
+<script src="racio.js"></script>
+</body>
+</html>
