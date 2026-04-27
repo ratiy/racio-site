@@ -1,8 +1,11 @@
 # RACIO — структура сайту для дизайнера
 
-**Версія:** 2026-04-24
-**Покриття:** 24 сторінки, 1 шаблон сервісної сторінки, глобальні компоненти
-**Формат:** структурний (дерево блоків + CTA + SVG-описи). Типографіка / кольори / spacing — у design-system.
+**Версія:** 2026-04-25 · **Структура затверджена**
+**Покриття:** 23 сторінки, 1 затверджений 13-блоковий шаблон сервісної сторінки, глобальні компоненти
+**Live preview:** https://candid-profiterole-017286.netlify.app/
+**GitHub repo:** https://github.com/ratiy/racio-site (public)
+
+Документ описує **інформаційну архітектуру**. Типографіка, кольори, spacing — у design-system / Figma.
 
 ---
 
@@ -10,37 +13,44 @@
 
 ```
 /
-├── /ohorona-pratsi/            (категорія — dropdown, без окремої сторінки)
-│   ├── /autsorsynh/            — Аутсорсинг ОП
-│   ├── /audit/                 — Аудит ОП
-│   ├── /dokumentatsiia/        — Розробка документації ОП
-│   ├── /pakety-dokumentiv/     — Пакети документів ОП
-│   ├── /treningy-z-op/         — Тренінги з ОП (hub з 5 темами)
-│   ├── /rozsliduvannia-nv/     — Розслідування НВ
-│   └── /suprovid-derzhpratsi/  — Супровід перевірок Держпраці
-├── /pozhezhna-bezpeka/         (категорія — dropdown)
-│   ├── /autsorsynh/            — Аутсорсинг ПБ
-│   ├── /audit/                 — Аудит ПБ
-│   ├── /dokumentatsiia/        — Документація ПБ (merged: розробка + пакети + інструкції)
-│   ├── /treningy-z-pb/         — Тренінги з ПБ (hub з 2 темами)
-│   └── /deklaratsiia-dsns/     — Декларація ДСНС (+ секція «Замір опору ізоляції»)
-├── /keruvannia-ryzykamy/       (категорія — dropdown)
-│   ├── /otsinka-ryzykiv/       — Оцінка ризиків
-│   ├── /tsyvilnyi-zakhyst/     — Цивільний захист
-│   └── /treningy-z-bezpeky-pratsi/ — Тренінги з безпеки праці (hub з 2 темами: Вигорання, Стрес-менеджмент)
-├── /pro-nas/                   (категорія — dropdown)
-│   ├── /pro-kompaniyu/         — Про компанію (з RSS-секцією)
-│   ├── /kliyenty-ta-keysu/     — Клієнти та кейси
-│   └── /kontakty/              — Контакти
-├── /blog/                      — Блог (рубрикатор)
-│   └── /koryisne/              — Корисне (шаблони, чек-листи)
-└── [footer-only, не в dropdown]
-    ├── /halusi/                — Галузі (20+ галузей)
-    ├── /tarify/                — Тарифи (START/SMART/FULL + матриця)
-    └── /rss/                   — RACIO Safety Standard
-```
+├── index.html                               — Головна (18 блоків)
+│
+├── /ohorona-pratsi/                          (категорія — dropdown, без landing)
+│   ├── /autsorsynh/                         — Аутсорсинг ОП
+│   ├── /audit/                              — Аудит ОП
+│   ├── /dokumentatsiia/                     — Розробка документації ОП
+│   ├── /pakety-dokumentiv/                  — Пакети документів ОП
+│   ├── /treningy-z-op/                      — Тренінги з ОП
+│   ├── /rozsliduvannia-nv/                  — Розслідування НВ (24/7 emergency)
+│   └── /suprovid-derzhpratsi/               — Супровід Держпраці
+│
+├── /pozhezhna-bezpeka/                       (категорія — dropdown)
+│   ├── /autsorsynh/                         — Аутсорсинг ПБ
+│   ├── /audit/                              — Аудит ПБ
+│   ├── /dokumentatsiia/                     — Документація ПБ (merged 3-tier)
+│   ├── /treningy-z-pb/                      — Тренінги з ПБ
+│   └── /deklaratsiia-dsns/                  — Декларація ДСНС (+ Замір опору ізоляції секція)
+│
+├── /keruvannia-ryzykamy/                     (категорія — dropdown)
+│   ├── /otsinka-ryzykiv/                    — Оцінка ризиків
+│   ├── /tsyvilnyi-zakhyst/                  — Цивільний захист
+│   └── /treningy-z-bezpeky-pratsi/          — Тренінги з безпеки праці
+│
+├── /pro-nas/                                 (категорія — dropdown, 4 пункти)
+│   ├── /pro-kompaniyu/                      — Про компанію (з RSS-секцією id="rss")
+│   ├── /kliyenty-ta-keysu/                  — Клієнти та кейси
+│   ├── /halusi/                             — Галузі (8 industries)
+│   └── /kontakty/                           — Контакти
+│
+├── /blog/                                    — Блог (рубрикатор)
+│   └── /koryisne/                           — Корисне (шаблони/чек-листи)
+│
+└── [footer-only «Ще»]
+    ├── /tarify/                             — Тарифи
+    └── /pro-kompaniyu/#rss                  — RACIO Safety Standard (anchor)
 
-**Усього: 24 сторінки** (0 сторінок-рубрикаторів категорій — вони тільки як dropdown'и в меню).
+Всього: 23 окремих HTML.
+```
 
 ---
 
@@ -48,160 +58,142 @@
 
 ### 2.1 Header (nav)
 
-Структура (injected via `racio.js` у `<header id="site-header">`):
-
 ```
-┌────────────────────────────────────────────────────────────────────────────┐
-│ [LOGO "RACIO"]  [Охорона праці ▾] [Пожежна безпека ▾] [Керування ризиками ▾]│
-│                  [Про нас ▾] [Блог ▾]     [+380 ... ] [UA|EN]  [CTA →]     │
-└────────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ [LOGO]  [Охорона праці ▾] [Пожежна безпека ▾] [Керування ризиками ▾]          │
+│         [Про нас ▾] [Блог ▾]              [+380 ...] [UA|EN] [primary CTA →]  │
+└──────────────────────────────────────────────────────────────────────────────┘
 ```
 
-- **Logo** → `/` (головна)
-- **5 dropdown-меню:**
-  - ОП — 7 пунктів
-  - ПБ — 5 пунктів
-  - К.Р. — 3 пункти
-  - Про нас — 3 пункти
-  - Блог — 2 пункти
-- **Праворуч:**
-  - Phone link (tel:)
-  - Language switcher (UA активна, EN — заглушка)
-  - Primary CTA button → `#quiz` (або `#form` на сторінках-екстрених як rozsliduvannia)
+**5 dropdown-меню:**
+- Охорона праці — 7 пунктів
+- Пожежна безпека — 5 пунктів
+- Керування ризиками — 3 пункти
+- Про нас — 4 пункти (Про компанію · Клієнти та Кейси · Галузі · Контакти)
+- Блог — 2 пункти
 
 **Mobile:** burger → overlay drawer з усіма dropdown як collapsed `<details>`.
 
-### 2.2 Footer (foot)
-
-Injected via `racio.js` у `<footer id="site-footer">`:
+### 2.2 Footer
 
 ```
-┌────────────────────────────────────────────────────────────────────────────┐
-│ [LOGO + адреса]    [Охорона праці]   [Пожежна безпека]      [Про нас]       │
-│                    [7 посилань]       [5 посилань +          [3 посилання]  │
-│                                        Керування ризиками: 3]              │
-│                                                            [Ще: 3 пункти]   │
-│                                                            [Блог: 2]        │
-├────────────────────────────────────────────────────────────────────────────┤
-│ [Телефон] [Email] [Адреса] [Графік роботи]                                   │
-├────────────────────────────────────────────────────────────────────────────┤
-│ © 2026 RACIO       [Політика конф.] [Cookies] [Договір] [Мапа]  [LI][FB][YT]│
-└────────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ [LOGO + ISO + адреса] [ОП·7] [ПБ·5+К.Р.·3]              [Про нас·4]            │
+│                                                          [Ще·2: Тарифи · RSS]  │
+│                                                          [Блог·2]              │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ [Телефон] [Email] [Адреса] [Графік]                                            │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ © 2026 RACIO  [Політика] [Cookies] [Договір] [Мапа]   [LinkedIn][FB][YouTube]  │
+└──────────────────────────────────────────────────────────────────────────────┘
 ```
-
-**«Ще» (EXTRA_LINKS в racio.js):**
-- Галузі → `/halusi/`
-- Тарифи → `/tarify/`
-- RACIO Safety Standard → `/rss/`
 
 ### 2.3 Sticky mobile CTA
 
-Фіксована внизу на мобільних розмірах — primary button «Отримати прорахунок →» до `#quiz`.
+Фіксована знизу на mobile — кнопка primary «Отримати прорахунок →» до `#quiz`.
 
 ---
 
-## 3. Шаблон типової сервісної сторінки
+## 3. Затверджений шаблон сервісної сторінки — 13 блоків
 
-Усі 15 сервісних сторінок (ОП + ПБ + К.Р. + 3 хаби тренінгів) слідують спільному шаблону з незначними відхиленнями.
-
-### 3.1 Послідовність блоків (13-18 блоків)
+**Всі 15 сервісних сторінок** слідують цьому шаблону з мінімальними варіаціями. **Структура зафіксована 25.04.2026.**
 
 ```
-┌─ [1]  Breadcrumb: Головна › Категорія › Поточна сторінка
+┌─ 1.  Breadcrumb · «Головна › Категорія › Поточна»
 │
-├─ [2]  Hero (split 60/40)
-│       ├─ Ліва колонка:
-│       │   ├─ Eyebrow (маленька caps-стрічка з метадатою)
-│       │   ├─ H1 (з <em> для italic emphasis)
-│       │   ├─ Sub-headline (2-3 речення, з inline-посиланнями)
-│       │   ├─ CTA pair (primary + secondary/ghost)
-│       │   └─ Trust markers (3 short chips)
-│       └─ Права колонка: line-art SVG 600×600 (унікальний для кожної сторінки)
+├─ 2.  HERO  (split 60/40, beige bg)
+│       ├─ Ліва: eyebrow + H1 (з <em> italic) + sub + 2 CTAs (primary + ghost) + 3 trust-chips
+│       └─ Права: line-art SVG hero (унікальний на кожну сторінку)
 │
-├─ [3]  Quick form (стрічка)
-│       ├─ Ліва частина: H3 + hint-текст
-│       └─ Права частина: 3-4 inputs + submit button
+├─ 3.  SEO ОПИС ПОСЛУГИ  (cream bg, 2-колонкова сітка) ← новий стандарт
+│       ├─ Ліва card: H2 (caps) + lead-параграф + CTA «Замовити консультацію»
+│       └─ Права: 3-5 параграфів прози (для копірайтера)
+│       ↳ Замінює: колишній SEO-A intro + Quick form (обидва видалені)
 │
-├─ [4]  «Що входить» — grid-3 або grid-6
-│       ├─ Sec-head: eyebrow + H2
-│       └─ 6 карток з num (01-06) + H3 + короткий опис
-│
-├─ [5]  «Для кого · Коли» — grid-2 (cream bg)
-│       ├─ Ліва: «Для кого» (list з → bullets)
-│       └─ Права: «Коли замовляти» (list з → bullets)
-│
-├─ [6]  SEO-A prose (max-width 820px)
+├─ 4.  Service grid (default beige)
 │       ├─ Sec-head
-│       └─ 3-4 параграфи прози з вплетеними inline-лінками (labyrinth)
+│       └─ 6 cards (numbered 01-06): «Що входить» / «Команда в дорозі» / «3 формати» (варіює)
 │
-├─ [7]  Process (horizontal timeline, 4-5 кроків)
+├─ 5.  Для кого / Коли  (cream, 2 cards)  ← на більшості сторінок
+│       ├─ Card 1: «Для кого» (list з → bullets)
+│       └─ Card 2: «Коли замовляти»
+│       ↳ Per-page варіації:
+│           • pakety-dokumentiv  → «Коли пакет, а коли індивідуалка»
+│           • dokumentatsiia-pb  → «Який формат підійде вам» (3-tier cards)
+│           • deklaratsiia-dsns  → «Кому обов'язково подавати» (ПОТРІБНА / НЕ ПОТРІБНА)
+│           • rozsliduvannia-nv  → «Коли потрібен супровід НВ» (numbered, для emergency)
+│
+├─ 6.  Problem/Solution VS  (dark bg) — опційно
+│       └─ 2 col: «Без нас» (червоні —) vs «З RACIO» (бежеві ✓)
+│
+├─ 7.  Process · timeline  (default beige)
+│       └─ 4-5 horizontal steps з num + title + time + опис
+│
+├─ 8.  Deliverables  (cream bg)
+│       └─ Vertical list з → arrow + H4 + опис (до 6 пунктів)
+│
+├─ 9.  SEO-B numbered list  (default beige)  ← унікальна цінність
+│       ├─ Sec-head + lead-вступ
+│       ├─ 5-8 пунктів з Playfair italic цифрами
+│       └─ Lead-висновок
+│       ↳ Приклади: «8 типових порушень», «7 категорій ризиків», «6 типових сценаріїв»
+│
+├─ 10. (опційно) KPI strip / pricing-deep / спеціальний компонент
+│       ↳ audit.html       → «Скільки коштує аудит» (pricing prose)
+│       ↳ deklaratsiia-dsns → «Замір опору ізоляції — елемент декларації»
+│       ↳ autsorsynh-pb    → KPI strip
+│
+├─ 11. Testimonials  (cream або default)
 │       ├─ Sec-head
-│       └─ .process grid з .step блоками (num + H3 + time + опис)
+│       ├─ Logos strip (8 brand-name spans)
+│       ├─ 2 testimonial cards (italic H3 quote + body + author)
+│       └─ Footer-link на /kliyenty-ta-keysu/
 │
-├─ [8]  Deliverables (vertical list з arrows, cream bg)
+├─ 12. Quiz / Calculator  (cream bg, id="quiz")
+│       ├─ Progress bar
+│       └─ 5-step wizard: 4 контентні питання + крок 5 з contact fields
+│
+├─ 13. FAQ  (default beige, max-width 880px)
+│       └─ 6-10 details/summary з + / × toggle, з inline-посиланнями у відповідях
+│
+├─ 14. Blog cards  (cream)
 │       ├─ Sec-head
-│       └─ .deliv ul з → іконкою + H4 + підпис
+│       └─ 3 cards: kicker (caps red) + H3 + «Читати →»
 │
-├─ [9]  SEO-B numbered list (5-8 items)
-│       ├─ Sec-head
-│       ├─ Lead-параграф
-│       └─ ol.num-list: Playfair italic цифри + H4 + опис з inline-лінками
-│
-├─ [10] KPI strip (red section) — опційно, є на частині сторінок
-│       └─ 4 великі метрики в row
-│
-├─ [11] Testimonials + logos (cream або default bg)
-│       ├─ Sec-head
-│       ├─ Logos strip (8 логотипів flex-wrap)
-│       ├─ 2 testimonial cards (H3 з italic-акцентом + опис + author)
-│       └─ Footer-link на «всі кейси» → /kliyenty-ta-keysu/
-│
-├─ [12] Quiz/calculator (5-step wizard)
-│       ├─ Sec-head center
-│       ├─ Progress bar зверху
-│       └─ Крок 1-4: питання + кнопки варіантів; крок 5: contact fields + submit
-│
-├─ [13] FAQ (accordion, 6-10 items, max-width 880px)
-│       ├─ Sec-head center
-│       └─ details/summary з + / × toggle, відповіді з inline-лінками
-│
-├─ [14] Blog cards (grid-3, cream bg)
-│       ├─ Sec-head
-│       ├─ 3 картки: kicker (caps) + H3 + «Читати →»
-│       └─ Blog-foot з inline-лінками на блог і суміжне
-│
-└─ [15] Final CTA (dark або red section)
+└─ 15. Final CTA  (dark або red bg)
         ├─ Sec-head center
-        ├─ H2 з <em>
-        ├─ Коротке речення
+        ├─ H2 з <em> + 1 коротке речення
         └─ 2 кнопки (primary + ghost)
 ```
 
-### 3.2 Hero SVG (line-art) — спільний стиль
+**На рівні CTA-точок:** 4 momentum-зони на сторінці = Hero (2 кнопки) → SEO desc (1 кнопка) → Quiz (форма-калькулятор) → Final CTA (2 кнопки). **Без зайвих proximity-конфліктів.**
 
-- Viewport: 600 × 600
+### 3.1 Hero SVG — спільний стиль
+
+- Viewport: **600 × 600**
 - Stroke: `#0A0A0A`, `stroke-width: 1.6`, `linecap: round`, `linejoin: round`
-- Fill acc.: `#E8DCC4` (beige light) або `#FAF6EC` (cream)
-- Accent color: `#A63737` (red — для печаток, акцентних деталей, червоних smells)
-- Ground reference: `path d="M 20 585 L 580 585"` з `dasharray 4 6` (тонка dashed лінія знизу як підкладка)
-- Текст у SVG: Manrope for labels, Playfair Display italic для emphasis
+- Fill accent: `#E8DCC4` (beige) або `#FAF6EC` (cream)
+- Color accent: `#A63737` (red — для штампів, бейджів, акцентів)
+- Бренд-маркер «RACIO» дрібно вмонтовано в одну деталь
+- Ground reference dashed line знизу
+- Текст у SVG: Manrope (labels), Playfair Display italic (emphasis)
 
-Приклади предметів в hero кожної сторінки:
+**Унікальні предмети** на кожну сервісну (по фазі 3):
 - Аутсорсинг ОП → класична каска з RACIO-бейджем
-- Аудит ОП → планшет з AUDIT REPORT звітом + лупа + MOCK-штамп
-- Документація ОП → стос документів + ЗАТВЕРДЖЕНО-печатка + перо
-- Пакети документів → ряд папок з галузевими tab-ярликами + READY-штамп
-- Тренінги з ОП → дошка з топіками + групка учасників
+- Аудит ОП → планшет з AUDIT звітом + лупа + MOCK-штамп
+- Документація → стос документів + ЗАТВЕРДЖЕНО + перо
+- Пакети → ряд папок з галузевими tabs + READY-штамп
+- Тренінги ОП → дошка з топіками + групка учасників
 - Розслідування НВ → годинник з 24/7-бейджем + календар
 - Супровід Держпраці → ваги + щит + документи
 - Аутсорсинг ПБ → будівля з планом евакуації + вогнегасник + ДСНС-значок
-- Аудит ПБ → планшет з чек-листом + MOCK-штамп + вогнегасник
-- Документація ПБ → план евакуації на стіні + ЗАТВЕРДЖЕНО-печатка
-- Тренінги з ПБ → людина з вогнегасником + полум'я + EXIT-знак
+- Аудит ПБ → планшет з fire checklist + MOCK-штамп
+- Документація ПБ → план евакуації на стіні + ЗАТВЕРДЖЕНО
+- Тренінги ПБ → людина з вогнегасником + полум'я + EXIT
 - Декларація ДСНС → двері з замком + ДСНС ✓ табличка
 - Оцінка ризиків → матриця 5×5 з heat-map
 - Цивільний захист → будівля з укриттям + тривога
-- Тренінги з безпеки праці → медитуюча фігура + концентричні кола + heart-rate лінія
+- Тренінги безпеки → медитуюча фігура + концентричні кола + heart-rate
 
 ---
 
@@ -209,265 +201,209 @@ Injected via `racio.js` у `<footer id="site-footer">`:
 
 ### 4.1 Головна (`index.html`) — 18 блоків
 
-Відрізняється від шаблону сервісної сторінки — служить як hub.
-
 ```
-[1]  Hero (triptych SVG: каска + вогнегасник + планшет)
-[2]  Brand-line (ISO + stats одним рядком, caps)
-[3]  Logos strip
-[4]  «Хто такі RACIO» (про компанію, grid 1.3/1 + 3 stat-cards)
-[5]  4 напрями (grid-4 картки — ОП/ПБ/К.Р./Тренінги)
-[6]  Problem → Solution (dark, .vs)
-[7]  KPI strip (red, 4 metrics)
-[8]  Тарифи (3 pricing cards + CTA «Порівняти всі пакети →»)
-[9]  Повний каталог (3 колонки: ОП 7 / ПБ 5 / К.Р. 3 з вертикальними списками посилань)
-[10] Process (4 steps)
-[11] Галузі (4×2 grid 8 карток + CTA «Клієнти та кейси →»)
-[12] Тренінги-хаби (3 cards — лінки на хаби-landings)
-[13] Кейси (4 картки + CTA «Всі кейси →»)
-[14] FAQ (6 топ-питань)
-[15] Чому не самостійно? (2 колонки порівняння + inline lead-форма)
-[16] Quiz (калькулятор)
-[17] Блог (3 picked articles, різні суміжні сторінки як таргети)
-[18] Final CTA (dark)
+1.  Hero (triptych SVG: каска + вогнегасник + планшет)
+2.  Brand-line (ISO + stats одним рядком, caps)
+3.  Logos strip
+4.  «Хто такі RACIO» (про компанію, grid 1.3/1 + 3 stat-cards)
+5.  4 напрями (grid-4: ОП/ПБ/К.Р./Тренінги)
+6.  Problem → Solution (dark, .vs)
+7.  KPI strip (red, 4 metrics)
+8.  Тарифи (3 pricing cards + CTA «Порівняти всі пакети →»)
+9.  Повний каталог (3 колонки: ОП 7 / ПБ 5 / К.Р. 3)
+10. Process (4 steps)
+11. Галузі (4×2 grid 8 карток + CTA «Клієнти та кейси →»)
+12. Тренінги-хаби (3 cards)
+13. Кейси (4 картки + CTA «Всі кейси →»)
+14. FAQ (6 топ-питань)
+15. Чому не самостійно? (2 колонки + inline lead-форма)
+16. Quiz (калькулятор)
+17. Блог (3 picked articles)
+18. Final CTA (dark)
 ```
 
-### 4.2 Про компанію (`pro-kompaniyu.html`) — ⚠ ПОТРЕБУЄ РОЗГОРТАННЯ
-
-**Поточно 423 слова.** Є коректна структура, але блоки короткі. За ТЗ потрібно:
+### 4.2 Про компанію (`pro-kompaniyu.html`) — 12 блоків
 
 ```
-[1]  Breadcrumb
-[2]  Hero (H1 + subheadline + CTA)
-[3]  Timeline «Наша історія» (14 років у 10-15 подій)
-[4]  Команда «Люди, які роблять RACIO» (grid-cards профайлами)
-[5]  Values «Чому нам довіряють» (4 картки принципів)
-[6]  Ліцензії та сертифікати
-[7]  RSS-секція (Reputation / Sustainability / Social — R·S·S брендовий стандарт)
-[8]  Partners / логотипи
-[9]  Final CTA «Хочете познайомитись?»
+1.  Hero (badge SVG)
+2.  SEO intro «Що робить RACIO різним»
+3.  Timeline 2012-2026 (8 років)
+4.  Команда (8 members + 8 більше)
+5.  Methodology «Як ми працюємо з клієнтом»
+6.  Values (4 принципи)
+7.  Licenses (6 awards)
+8.  KPI strip (red)
+9.  RSS секція з id="rss" (RACIO Safety Standard)
+10. Partners / memberships (6 card-cards)
+11. FAQ
+12. Final CTA
 ```
 
-### 4.3 Клієнти та кейси (`kliyenty-ta-keysu.html`) — ⚠ ПОТРЕБУЄ РОЗГОРТАННЯ
-
-**Поточно 371 слово.** За ТЗ — 5-7 повних кейсів з конкретикою.
+### 4.3 Клієнти та кейси (`kliyenty-ta-keysu.html`) — 11 блоків
 
 ```
-[1]  Breadcrumb + Hero (з H1 + sub)
-[2]  Filters (галузі: фарма, IT, вир., рітейл, лог., фін., ін.)
-[3]  Case-cards grid (8-12 карток, клік → detail-view)
-[4]  Featured case (розгорнутий з метриками, цитатою, фото)
-[5]  Testimonials (4-6 одиниць)
-[6]  Logos all clients (~40 логотипів)
-[7]  Final CTA
+1.  Hero (trophy SVG)
+2.  KPI strip
+3.  Logo wall (24 brands)
+4.  SEO methodology «Як читати ці кейси»
+5.  3 featured cases (повний writeup кожен: AstraZeneca · Glovo · Edem)
+6.  9 highlight metrics (cases short)
+7.  6 testimonials
+8.  Industries cross-section (8 cards)
+9.  FAQ (6 items)
+10. Final CTA
 ```
 
-### 4.4 Контакти (`kontakty.html`) — ⚠ ТОНКА (нормально для контактів)
+### 4.4 Галузі (`halusi.html`) — 9 блоків
 
 ```
-[1]  Breadcrumb + Hero «Контакти»
-[2]  Contacts grid (phone, email, address, schedule — 4 картки)
-[3]  Form (name, phone, email, message, topic-dropdown)
-[4]  Map embed
-[5]  Банківські реквізити (опц., якщо потрібно)
-[6]  Final CTA
+1.  Hero
+2.  SEO intro «Чому 8 галузей — 8 різних продуктів»
+3.  8 industry cards (grid-2, deep info: НПАОП + клієнти + досвід)
+4.  SEO numbered list «6 речей, які робимо інакше»
+5.  Comparison table (галузь × специфіка × виклик × стартова послуга)
+6.  3 featured cases
+7.  FAQ
+8.  Final CTA
 ```
 
-### 4.5 Галузі (`halusi.html`) — ⚠ ПОТРЕБУЄ РОЗГОРТАННЯ
-
-**Поточно 281 слово.** Стратегічна сторінка — на неї з сервісних ~15+ посилань.
+### 4.5 Тарифи (`tarify.html`) — 13 блоків
 
 ```
-[1]  Breadcrumb + Hero «Галузі»
-[2]  Intro (pozitioning: 20+ галузей, 500+ клієнтів)
-[3]  Industries grid (4×5 або 8×3 cards), кожна картка:
-      ├─ Icon
-      ├─ H3 назва галузі
-      ├─ Short description
-      ├─ Список ключових нормативних вимог
-      └─ Link на детальний блок нижче
-[4]  Per-industry deep blocks (секція на кожну галузь 100-150 слів):
-      — Фарма (GMP, GDP, чисті кімнати)
-      — MilTech (дозвільні, секретність)
-      — IT / офіс (ISO 45001, ергономіка)
-      — HoReCa (ПТМ, газ, ДСНС)
-      — Ритейл (мережі, сезонні)
-      — Виробництво (НПАОП, ЗІЗ)
-      — Логістика (ВРР, склади A)
-      — Фінанси / Банкінг (BCP, дані)
-      — Інші 12+ галузей
-[5]  Cases per industry (featured кейс для топ-6 галузей)
-[6]  Final CTA
+1.  Hero (3 boxes SVG)
+2.  SEO intro «Логіка START / SMART / FULL»
+3.  8 tabs (по категоріях послуг) — кожен з .prices grid
+4.  Comparison matrix (13 параметрів × 3 пакети)
+5.  Galuzevi nadbavky (SEO prose)
+6.  Quiz
+7.  Discounts (8 cards)
+8.  «Що не входить» (6 окремих платних)
+9.  FAQ (8 items)
+10. Final CTA
 ```
 
-### 4.6 Тарифи (`tarify.html`) — ⚠ ПОТРЕБУЄ РОЗГОРТАННЯ
-
-**Поточно 528 слів.** Стратегічна — посилання з усіх сервісних.
+### 4.6 Контакти (`kontakty.html`) — мінімалістична
 
 ```
-[1]  Breadcrumb + Hero «Тарифи»
-[2]  3 pricing cards (START / SMART / FULL) з цінами і ключовими «включає»
-[3]  Full comparison table (матриця — всі фічі × 3 пакети з ✓/✗)
-[4]  Галузеві надбавки (модуль «якщо фарма +N%, якщо виробництво +M%»)
-[5]  Калькулятор вартості (quiz 5-step)
-[6]  FAQ про тарифи
-[7]  CTA «Зв'яжіться для індивідуальної пропозиції»
+1.  Hero
+2.  Contacts grid (телефон + email + адреса + графік)
+3.  Form
+4.  (опц.) карта
+5.  Final CTA
 ```
 
-### 4.7 RACIO Safety Standard (`rss.html`) — ⚠ ТОНКА (279 слів, standalone)
+### 4.7 Блог (`blog.html`) і Корисне (`koryisne.html`) — рубрикатори
 
 ```
-[1]  Breadcrumb + Hero «RACIO Safety Standard»
-[2]  Что таке RSS — 3 картки R / S / S
-[3]  Принципи (6-8 принципів детально)
-[4]  Звітність (приклад звіту)
-[5]  Для кого (enterprise клієнти)
-[6]  Testimonials від клієнтів-прихильників
-[7]  Final CTA «Дізнатись деталі»
+1.  Hero
+2.  Category filters
+3.  Featured article / material
+4.  Articles / Materials grid
+5.  Pagination
+6.  Newsletter signup
+7.  Final CTA
 ```
-
-**Тут є дилема:** Розгорнутий RSS-блок уже є в `pro-kompaniyu.html`. Потрібно або вилучити з `pro-kompaniyu` → залишити лише на `rss.html`, або синхронізувати контент.
-
-### 4.8 Блог (`blog.html`) — ⚠ РУБРИКАТОР
-
-**Поточно 363 слова.** Статей немає.
-
-```
-[1]  Breadcrumb + Hero «Блог»
-[2]  Category filters (ОП / ПБ / КР / Тренінги / Законодавство / Кейси)
-[3]  Featured article (1 картка-анонс великого формату)
-[4]  Articles grid (12-18 останніх)
-[5]  Pagination
-[6]  Newsletter signup
-[7]  Final CTA
-```
-
-Статті (кожна — окремий `/blog/<slug>/` URL) — не в scope цього документа.
-
-### 4.9 Корисне (`koryisne.html`) — ⚠ РУБРИКАТОР
-
-**Поточно 345 слів.** Матеріалів немає.
-
-```
-[1]  Breadcrumb + Hero «Корисне»
-[2]  Type filters (чек-листи / шаблони / гайди / інфографіка)
-[3]  Featured material
-[4]  Materials grid (з іконкою типу + download-кнопкою)
-[5]  CTA «Підпишіться, щоб отримувати нові»
-```
+Статті як окремі URL — поза scope цього документа.
 
 ---
 
-## 5. Відхилення сервісних сторінок від шаблону
+## 5. Повторювані UI-компоненти (CSS classes у `racio.css`)
 
-| Сторінка | Унікальні блоки / відхилення |
+| Клас | Призначення |
 |---|---|
-| **Аутсорсинг ОП** | + VS-блок «Без нас / З RACIO» (dark) · + SEO-C comparison table (Штатний vs Аутсорсинг) · + SEO-D — 8 критеріїв вибору підрядника · FAQ 10 питань (замість типових 6) |
-| **Аудит ОП** | Блок 5 = 2-cards «Для кого + Коли» злиті (замість типових grid-3/6) · SEO-C про pricing замість comparison |
-| **Документація ОП** | + Comparison table «Розробка vs Пакет» (.cmp) · Process 5 кроків (замість 4) · Section 3.2 «Для кого» як grid-3 (замість grid-2) |
-| **Пакети документів ОП** | + Industries-overview block (grid-4 з галузями наявних пакетів) · Process 4 кроки з «Супровід 12 міс.» як останній крок |
-| **Тренінги з ОП** | hub з 5 training-cards (замість grid-3 «Що входить») + dashed-placeholder card «Нова тема під запит» · без processed FAQ |
-| **Розслідування НВ** | **Red final CTA замість dark** · 24/7 hero-акцент · «Когда викликати» .numlist inline · Quiz 3-step (не 5) · Екстрений режим форми зверху |
-| **Супровід Держпраці** | + KPI strip (red) — унікальні метрики: 80% виграних справ, 2-5× зниження штрафу · Grid-3 «Підготовча / День X / Після» · «Для кого + Що не робимо» як окремий блок |
-| **Аутсорсинг ПБ** | Hero з будівлею + вогнегасником (не каска) · Посилання на `deklaratsiia-dsns` як primary secondary-CTA |
-| **Аудит ПБ** | Hero — планшет з fire checklist замість OP-checklist |
-| **Документація ПБ (merged)** | + «3 формати» block з tier-cards (300 ₴ інструкція / 4900 ₴ пакет / 12000 ₴ розробка) замість типового 6-card grid |
-| **Тренінги з ПБ** | Grid-2 training cards + dashed placeholders · Polygon-акцент у deliverables |
-| **Декларація ДСНС** | **+ окрема секція «Замір опору ізоляції»** (як компонент) між deliverables і quiz · Hero — двері з ДСНС-ключем замість типової ілюстрації |
-| **Оцінка ризиків** | Hero — матриця 5×5 heat-map · + блок «5 категорій ризиків» (numbered list із фізичних → психосоц.) · Контекст «атестація → оцінка» як SEO-A |
-| **Цивільний захист** | Hero — будівля з укриттям · «ПНО-блок» у «Що входить» · Акцент на воєнний стан + Постанова КМУ №1200 |
-| **Тренінги з безпеки праці** | Hero — медитуюча фігура (психологічний напрям) · Process 5 кроків (+ follow-up через 1 міс.) · Акцент «психолог vs коуч vs тренер» у SEO-A |
+| `.container` | Max-width wrapper з padding |
+| `.hero-grid` | 60/40 split для hero |
+| `.sec-head` | Section header (eyebrow + h2 з italic) |
+| `.grid-2/.grid-3/.grid-4` | Стандартні grid layouts |
+| `.card` | Стандартна картка (white bg, num red italic) |
+| `.cream/.dark/.red` | Section background modifiers |
+| **`.seo-desc/.seo-desc-card/.seo-desc-text`** | **Новий блок «Опис послуги»** (2-колонкова) |
+| `.vs/.vs-col.bad/.vs-col.good` | Dark 2-col порівняння (problem/solution) |
+| `.vs-col-light/.vs-diy` | Light 2-col порівняння (home «не самостійно») |
+| `.process/.step` | Horizontal timeline |
+| `.deliv` | Vertical list з → arrows |
+| `.num-list` | Numbered SEO list (Playfair italic цифри) |
+| `.compare/.cmp` | Comparison tables |
+| `.kpi` | Red metric strip |
+| `.logos/.testi` | Trust indicators |
+| `.quiz/.quiz-step` | 5-step wizard |
+| `.faq` + `<details>` | Accordion |
+| `.blog/.post` | Blog cards |
+| `.catalog-grid/.catalog-col` | Home full catalog (3 cols) |
+| `.about-grid/.about-stats` | Home about + stats |
+| `.hub-tiles/.hub` | 3-card category selectors |
+| `.industries/.ind` | 4×2 industry grid |
+| `.prices/.price` | Tariff cards (.anchor = picked) |
+| `.tabs/.tab-panel` | Tab switcher (на тарифах) |
+| `.timeline/.tl-item/.tl-year` | History timeline (про компанію) |
+| `.team/.member/.avatar` | Team grid (про компанію) |
+| `.awards/.award` | Licenses grid |
+| `.cases/.case` | Cases grid |
+| `.crumbs` | Breadcrumb nav |
+| `.qform` | ❌ Quick form (видалено зі сервісних) |
+| `.seo-prose` | SEO-A prose (видалено зі сервісних, лишилось на audit/deklaratsiia-dsns як спеціалізовані) |
+| `.finalcta` | Final CTA block |
 
 ---
 
-## 6. Повторювані UI-компоненти (CSS classes у `racio.css`)
+## 6. Кольорова палітра
 
-| Клас | Призначення | Виглядає як |
-|---|---|---|
-| `.container` | Max-width wrapper, padding | Стандарт |
-| `.hero-grid` | 60/40 split для hero | Ліва колонка текст, права — SVG |
-| `.sec-head` | Секційний заголовок (eyebrow + h2 + italic) | Центрований або ліворуч (.center модифікатор) |
-| `.grid-2, .grid-3, .grid-4` | Grid layouts | Cards |
-| `.card` | Стандартна картка | White bg, border 1px, num в italic red |
-| `.cream, .dark, .red` | Section background modifiers | Beige, black, accent-red |
-| `.vs` + `.vs-col.bad/.good` | Dark 2-column comparison | Dark bg — для Problem/Solution |
-| `.vs-col-light` + `.vs-diy` | Light 2-column comparison | White cards — для DIY-comparison на home |
-| `.process, .step` | Horizontal timeline | Step-cards з num, time, опис |
-| `.deliv` | Vertical list з arrows | Italic red → bullet |
-| `.num-list` | Numbered SEO list | Playfair italic цифра лівою колонкою |
-| `.compare, .cmp` | Comparison tables | Table з header-left ink-color, right-col red-accent |
-| `.kpi` | Red metric strip | 4 великі числа в ряд |
-| `.logos` | Client logos strip | Flex-wrap text-logos |
-| `.testi` | Testimonial cards | 2 cards grid з H3 italic |
-| `.quiz, .quiz-step` | Wizard | 5 steps з progress bar |
-| `.faq` + `<details>` | Accordion | Plus-toggle, 45° at open |
-| `.blog, .post` | Blog cards | 3-grid з kicker (caps) + H3 + «Читати →» |
-| `.catalog-grid, .catalog-col` | Home page services catalog | 3 колонки з вертикальними списками |
-| `.about-grid, .about-stats` | Home page about block | Split 1.3/1 + 3 stat-cards |
-| `.vs-diy, .vs-diy-cta` | Home page DIY comparison | 2 cards + inline lead-form |
-| `.hub-tiles, .hub` | 3-card category selectors | Large cards з num-italic |
-| `.industries, .ind` | 4×2 industry grid | Small icon + H4 + опис |
-| `.prices, .price` | Tariff cards | 3 cards, .anchor = середня picked |
-| `.finalcta` | Final CTA block | Dark bg, centered H2 з italic |
-| `.timeline, .tl-item, .tl-year` | History timeline | Vertical з dots |
-| `.tabs` | Category tabs | Horizontal scrollable |
+- **Beige-домінанта:** `#E8DCC4` (brand bg), `#FAF6EC` (cream), `#EFE5D1` (beige-2)
+- **Ink:** `#0A0A0A` (текст), `var(--muted)` `#6B6258` (приглушений)
+- **Accent red:** `#A63737` (CTA, emphasis, штампи, бейджі)
+- **Hairline:** `var(--line)` (тонкі розділювачі)
+- **Dark sections:** `#0F0D0A` (background), `#C9B998` (accent text)
 
 ---
 
-## 7. Кольорова палітра (довідково)
+## 7. Типографіка
 
-- **Beige-домінанта:** `#E8DCC4` (brand primary background), `#FAF6EC` (cream), `#EFE5D1` (beige-2)
-- **Ink / типографіка:** `#0A0A0A` (черний), `var(--ink-2)` (темно-сірий), `var(--muted)` (#6B6258 — мідл-сірий)
-- **Accent:** `#A63737` (rhubarb-red — для CTA, emphasis)
-- **Hairline:** `var(--line)` — тонкі розділювачі
-
-## 8. Типографіка (довідково)
-
-- **Основа:** Manrope 400/500/600/700 (sans-serif)
-- **Emphasis / Italic:** Playfair Display italic 400/500 — для `<em>` у заголовках і акцентних цифр
-- **H1:** clamp(40px, 5vw, 72px), Manrope 500 або 600
-- **H2:** clamp(28px, 3.5vw, 48px)
-- **H3:** 20-24px зазвичай
+- **Manrope** 400/500/600/700 — sans-serif основа
+- **Playfair Display italic** 400/500 — для `<em>` у заголовках і акцентних цифрах
+- **H1:** `clamp(40px, 5vw, 72px)`, Manrope 500-600
+- **H2:** `clamp(28px, 3.5vw, 48px)`
+- **H3:** 20-32px (Playfair italic для деяких блоків)
 - **Body:** 15-17px, line-height 1.6-1.7
-- **Eyebrow:** 11-13px, caps, letter-spacing 0.14em, colored-red для accent
-
-## 9. Статус сторінок — пріоритет для дизайн/розробки
-
-| Статус | Кількість | Дії |
-|---|---:|---|
-| ✅ Повний лендинг (13+ блоків, 1000+ слів) | **17** | Готові до дизайн-проходу |
-| ⚠ Тонка / потребує розгортання за ТЗ | **7** | **Спочатку** — довести до повного лендингу, потім дизайн |
-
-**Тонкі (пріоритет розгортання):**
-1. `halusi.html` — критично, на цю сторінку ~15+ внутрішніх посилань
-2. `tarify.html` — критично, ~12 посилань
-3. `kliyenty-ta-keysu.html` — важливо, ~10 посилань
-4. `pro-kompaniyu.html` — важливо, менеджерська сторінка
-5. `kontakty.html` — OK (контактна — сама по собі лаконічна)
-6. `rss.html` — опційно (частково дублюється з `pro-kompaniyu`)
-7. `blog.html` + `koryisne.html` — рубрикатори, наповнюватимуться статтями
+- **Eyebrow:** 11-13px, caps, letter-spacing 0.14em, red
 
 ---
 
-## 10. Мобільна адаптація
+## 8. Мобільна адаптація
 
-Усі сторінки responsive — на розмірі **≤860px:**
-- `.hero-grid` згортається в 1 колонку (SVG переходить під текст)
-- `.grid-4` → `.grid-2` → 1 колонка
-- `.vs`, `.vs-diy`, `.catalog-grid` — 1 колонка
-- `.cases` — 1 колонка замість 3-4
-- `.prices` — 1 колонка зі стеком
-- Sticky CTA з'являється внизу екрана
+Breakpoint **≤860px**:
+- `.hero-grid` → 1 колонка (SVG під текстом)
+- `.grid-4 → .grid-2 → 1` колонка
+- `.vs/.vs-diy/.catalog-grid/.seo-desc` → 1 колонка
+- `.cases` → 1 колонка
+- `.prices` → стек
+- Sticky CTA з'являється знизу
 - Header: dropdown → burger overlay
 
-## 11. Типові user flows
+---
 
-1. **Organic SEO → landing → quiz** (основний flow для ОП/ПБ/КР сервісних сторінок)
-2. **Main nav → dropdown → service page → cross-link → related service** (лабіринт-навігація)
-3. **Home page catalog → direct landing** (для тих, хто вже знає що шукає)
-4. **Home page «Хто ми → Клієнти та кейси» → конкретний кейс → service** (trust-flow)
-5. **Emergency: Головна → dropdown ОП/ПБ → рядок екстрених (розслідування НВ) з phone-CTA** (24/7-flow, червоний final CTA)
+## 9. Користувацькі сценарії
+
+1. **Organic SEO → service landing → quiz** (основний для ОП/ПБ/КР)
+2. **Main nav → dropdown → service → cross-link → related** (лабіринт)
+3. **Home catalog → direct landing** (для тих хто знає що шукає)
+4. **Home «Хто ми → Кейси» → конкретний кейс → service** (trust-flow)
+5. **Emergency: dropdown → розслідування НВ з phone-CTA** (24/7 red final CTA)
 
 ---
 
-_Кінець документа. Для копі-роботи — див. `copy-for-copywriter.md`._
+## 10. Статус сторінок (всі затверджені)
+
+| Категорія | Сторінок | Статус |
+|---|---:|---|
+| Сервісні (15) | 15 | ✅ 13-блокова структура зафіксована |
+| Головна | 1 | ✅ 18 блоків |
+| Про нас (3) | 3 | ✅ pro-kompaniyu (12 бл.) · kliyenty (11 бл.) · halusi (9 бл.) |
+| Контакти | 1 | ✅ мінімалістична (норма) |
+| Тарифи | 1 | ✅ 13 блоків |
+| Блог + Корисне | 2 | ✅ рубрикатори (наповнюватимуться статтями) |
+
+**Всі сторінки готові до дизайн-проходу й верстки фінального макета.**
+
+---
+
+_Кінець документа. Тексти й копі — у `copy-for-copywriter.md`._
