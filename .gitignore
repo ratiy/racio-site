@@ -23,3 +23,7 @@ build/
 # Local env
 .env
 .env.local
+
+# Local Netlify folder
+.netlify
+
