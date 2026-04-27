@@ -469,3 +469,14 @@ p{color:var(--ink-2)}
 .vs-diy-cta .inline-form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:640px;margin:0 auto}
 .vs-diy-cta .inline-form input{padding:12px 16px;border:1px solid var(--line);border-radius:8px;font-size:15px;min-width:180px;background:var(--white);font-family:inherit}
 @media(max-width:720px){.vs-diy{grid-template-columns:1fr}}
+
+/* ---------- Service page · SEO опис послуги (after hero) ---------- */
+.seo-desc{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;margin-top:8px}
+.seo-desc-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:40px 36px;display:flex;flex-direction:column;gap:18px}
+.seo-desc-card h2{font-size:clamp(22px,2.4vw,32px);font-weight:600;color:var(--ink);line-height:1.15;text-transform:uppercase;letter-spacing:.04em;margin:0}
+.seo-desc-card .lead{font-size:16px;color:var(--muted);line-height:1.6;margin:0}
+.seo-desc-card .btn{align-self:flex-start;margin-top:6px}
+.seo-desc-text{padding:8px 4px;display:flex;flex-direction:column;gap:14px}
+.seo-desc-text p{font-size:15px;line-height:1.65;color:var(--ink);margin:0}
+.seo-desc .placeholder{color:#9B9388;font-style:italic;font-weight:400}
+@media(max-width:860px){.seo-desc{grid-template-columns:1fr;gap:20px}.seo-desc-card{padding:28px 24px}}
