@@ -2,7 +2,7 @@
 
 **Файл:** `kliyenty-ta-keysu.html`  
 **Шлях від головної:** / › Про нас › Клієнти та кейси  
-**Поточний обсяг тексту:** 1440 слів  
+**Поточний обсяг тексту:** 1436 слів  
 **✅ Статус:** повний лендинг
 
 ---
@@ -50,7 +50,7 @@
 #### Секція 3/10
 
 ### Блок · Стрічка логотипів
-**Логотипи:** SCANIA · AstraZeneca · ORACLE · WIX · 3M · MICHELIN · DANONE · ROCHE · GLOVO · DECATHLON · DHL · ADIDAS · FERRERO · PepsiCo · HENKEL · TAKEDA · CARLSBERG · VARUS · SILPO · NOVUS · CREDIT AGRICOLE · SEB · CIKLUM · TOYOTA
+**Логотипи:** SCANIA · AstraZeneca · ORACLE · 3M · MICHELIN · DANONE · ROCHE · GLOVO · DECATHLON · DHL · ADIDAS · FERRERO · PepsiCo · HENKEL · TAKEDA · VARUS · SILPO · CREDIT AGRICOLE · SEB · CIKLUM
 
 ---
 
