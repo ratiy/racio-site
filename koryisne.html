@@ -3,87 +3,89 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Корисне — шаблони, чек-листи, гайди | RACIO</title>
-<meta name="description" content="Безкоштовні шаблони документів з ОП, чек-листи до перевірки ДСНС, калькулятор штрафів. Завантажуй у обмін на email."/>
+<title>Корисне — тести, інструкції, НПАОП, план з ОП, глосарій | RACIO</title>
+<meta name="description" content="Безкоштовні матеріали з охорони праці: тести по спеціальностях, готові інструкції, покажчик НПАОП, шаблон річного плану з ОП, глосарій термінів. 5 розділів, що допомагають бізнесу самостійно."/>
+<meta name="keywords" content="тести з охорони праці, інструкції з охорони праці завантажити, покажчик НПАОП, план з охорони праці, глосарій з охорони праці, корисне ОП"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Корисне — матеріали з охорони праці від RACIO"/>
+<meta property="og:description" content="Тести, інструкції, НПАОП, плани, глосарій. Безкоштовно для бізнесу."/>
+<meta property="og:url" content="https://racio.ua/koryisne.html"/>
+<meta property="og:image" content="https://racio.ua/og-koryisne.png"/>
+<meta property="og:locale" content="uk_UA"/>
+<meta property="og:site_name" content="RACIO"/>
+
+<!-- Schema.org · BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Головна","item":"https://racio.ua/"},
+    {"@type":"ListItem","position":2,"name":"Корисне","item":"https://racio.ua/koryisne.html"}
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="racio.css">
+<style>
+.koryisne-hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 32px; }
+.koryisne-hub-card { display: flex; flex-direction: column; padding: 32px; background: #fff; border: 1px solid var(--line); border-radius: 16px; text-decoration: none; color: inherit; transition: all .2s; min-height: 260px; }
+.koryisne-hub-card:hover { border-color: var(--ink); transform: translateY(-4px); box-shadow: 0 16px 32px -16px rgba(10,10,10,.18); }
+.koryisne-hub-card .num { font-family: 'Playfair Display', serif; font-style: italic; font-size: 38px; color: var(--red); line-height: 1; margin-bottom: 14px; }
+.koryisne-hub-card h3 { font-size: 22px; line-height: 1.25; margin-bottom: 10px; }
+.koryisne-hub-card p { font-size: 14px; line-height: 1.55; color: var(--muted); margin-bottom: 18px; flex-grow: 1; }
+.koryisne-hub-card .meta { display: flex; gap: 12px; margin-bottom: 14px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+.koryisne-hub-card .meta span { padding: 3px 9px; background: var(--beige); border-radius: 999px; }
+.koryisne-hub-card .more { font-size: 14px; font-weight: 700; color: var(--red); }
+</style>
 </head>
 <body>
 <header class="nav" id="site-header"></header>
-<div class="container"><nav class="crumbs"><a href="index.html">Головна</a><span>›</span><a href="blog.html">Блог</a><span>›</span>Корисне</nav></div>
+<div class="container"><nav class="crumbs"><a href="index.html">Головна</a><span>›</span>Корисне</nav></div>
 
+<!-- 1 · HERO -->
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="eyebrow">Корисне · 40+ шаблонів · безкоштовно</div>
-      <h1>Корисне — <em>шаблони, чек-листи, гайди</em>.</h1>
-      <p class="sub"><b>Все, що можна скачати й використати у вас на підприємстві.</b> Безкоштовно, в обмін на email (ми потім надішлемо 1-2 корисні статті).</p>
-      <div class="hero-cta"><a href="#catalog" class="btn btn-primary">Дивитись каталог →</a><a href="#popular" class="btn btn-ghost">Топ скачувань</a></div>
+      <div class="eyebrow">Корисне · 5 розділів · безкоштовно</div>
+      <h1>Корисне — <em>тести, інструкції, НПАОП</em>, плани й терміни в одному місці.</h1>
+      <p class="sub"><b>Усе, що допомагає бізнесу самостійно</b> — від типових тестів за спеціальностями до повного покажчика НПАОП. Без реєстрації, без оплат, без обмежень. Беріть і використовуйте у себе на підприємстві.</p>
+      <div class="hero-cta"><a href="#categories" class="btn btn-primary">Дивитись 5 розділів →</a><a href="koryisne/glosary.html" class="btn btn-ghost">Глосарій термінів</a></div>
+      <div class="hero-trust"><span>5 розділів</span><span>100+ матеріалів</span><span>Безкоштовно</span></div>
     </div>
     <div class="hero-art" aria-hidden="true">
-      <!-- Clipboard with checklist + pencil + stamp -->
       <svg viewBox="0 0 600 600" fill="none" stroke="#0A0A0A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <!-- clipboard back -->
-        <path d="M 120 120 L 400 120 Q 420 120 420 140 L 420 510 Q 420 530 400 530 L 120 530 Q 100 530 100 510 L 100 140 Q 100 120 120 120 Z" fill="#0A0A0A" stroke="#0A0A0A"/>
-        <!-- paper -->
-        <rect x="120" y="150" width="280" height="360" fill="#FAF6EC" stroke="none"/>
-        <!-- clip at top -->
-        <path d="M 200 100 L 320 100 Q 340 100 340 120 L 340 160 Q 340 180 320 180 L 200 180 Q 180 180 180 160 L 180 120 Q 180 100 200 100 Z" fill="#E8DCC4" stroke="#0A0A0A" stroke-width="1.8"/>
-        <rect x="235" y="120" width="50" height="18" rx="3" fill="#FAF6EC" stroke="#0A0A0A"/>
-        <!-- title line -->
-        <g stroke-width="1.8">
-          <path d="M 140 210 L 380 210"/>
+        <!-- 5 stacked file folders -->
+        <g transform="translate(120 130)">
+          <rect width="320" height="50" rx="6" fill="#E8DCC4"/>
+          <text x="160" y="32" text-anchor="middle" font-family="Manrope" font-size="13" font-weight="800" fill="#0A0A0A" letter-spacing="2">ТЕСТИ</text>
         </g>
-        <text x="140" y="202" font-family="Manrope" font-size="10" font-weight="800" fill="#A63737" letter-spacing="1.5">ЧЕК-ЛИСТ</text>
-        <!-- checklist rows -->
-        <g>
-          <g transform="translate(150 235)">
-            <rect width="18" height="18" rx="3" stroke-width="1.6" fill="#FAF6EC"/>
-            <path d="M 4 9 L 8 13 L 14 4" stroke="#A63737" stroke-width="2.4"/>
-            <path d="M 30 12 L 250 12" stroke-opacity=".3"/>
-            <path d="M 30 22 L 200 22" stroke-opacity=".2"/>
-          </g>
-          <g transform="translate(150 285)">
-            <rect width="18" height="18" rx="3" stroke-width="1.6" fill="#FAF6EC"/>
-            <path d="M 4 9 L 8 13 L 14 4" stroke="#A63737" stroke-width="2.4"/>
-            <path d="M 30 12 L 240 12" stroke-opacity=".3"/>
-            <path d="M 30 22 L 180 22" stroke-opacity=".2"/>
-          </g>
-          <g transform="translate(150 335)">
-            <rect width="18" height="18" rx="3" stroke-width="1.6" fill="#FAF6EC"/>
-            <path d="M 4 9 L 8 13 L 14 4" stroke="#A63737" stroke-width="2.4"/>
-            <path d="M 30 12 L 230 12" stroke-opacity=".3"/>
-            <path d="M 30 22 L 210 22" stroke-opacity=".2"/>
-          </g>
-          <g transform="translate(150 385)">
-            <rect width="18" height="18" rx="3" stroke-width="1.6" fill="#FAF6EC"/>
-            <path d="M 30 12 L 250 12" stroke-opacity=".3"/>
-            <path d="M 30 22 L 170 22" stroke-opacity=".2"/>
-          </g>
-          <g transform="translate(150 435)">
-            <rect width="18" height="18" rx="3" stroke-width="1.6" fill="#FAF6EC"/>
-            <path d="M 30 12 L 230 12" stroke-opacity=".3"/>
-            <path d="M 30 22 L 190 22" stroke-opacity=".2"/>
-          </g>
+        <g transform="translate(110 200)">
+          <rect width="340" height="50" rx="6" fill="#FAF6EC"/>
+          <text x="170" y="32" text-anchor="middle" font-family="Manrope" font-size="13" font-weight="800" fill="#0A0A0A" letter-spacing="2">ІНСТРУКЦІЇ</text>
         </g>
-        <!-- signature line -->
-        <path d="M 180 490 L 350 490" stroke-opacity=".5"/>
-        <text x="180" y="502" font-family="Manrope" font-size="7" font-weight="600" fill="#6B6258" letter-spacing="1">ПІДПИС ВІДПОВІДАЛЬНОГО</text>
-        <!-- stamp in corner (bottom right) -->
-        <g transform="translate(370 470) rotate(-8)">
-          <circle r="32" stroke="#A63737" stroke-width="1.8" stroke-dasharray="3 2" fill="none"/>
-          <text x="0" y="-6" text-anchor="middle" font-family="Manrope" font-size="8" font-weight="800" fill="#A63737">ЗАТВЕРДЖ.</text>
-          <text x="0" y="8" text-anchor="middle" font-family="Manrope" font-size="10" font-weight="800" fill="#A63737">RACIO</text>
-          <text x="0" y="20" text-anchor="middle" font-family="Manrope" font-size="7" font-weight="700" fill="#A63737">2026</text>
+        <g transform="translate(100 270)">
+          <rect width="360" height="50" rx="6" fill="#E8DCC4"/>
+          <text x="180" y="32" text-anchor="middle" font-family="Manrope" font-size="13" font-weight="800" fill="#0A0A0A" letter-spacing="2">ПОКАЖЧИК НПАОП</text>
         </g>
-        <!-- pencil -->
-        <g transform="translate(440 260) rotate(55)">
-          <rect x="0" y="0" width="140" height="14" fill="#E8DCC4" stroke="#0A0A0A"/>
-          <path d="M 140 0 L 160 7 L 140 14 Z" fill="#FAF6EC" stroke="#0A0A0A"/>
-          <path d="M 155 4 L 162 7 L 155 10 Z" fill="#0A0A0A" stroke="#0A0A0A"/>
-          <path d="M 0 0 L -14 7 L 0 14 Z" fill="#A63737" stroke="#A63737"/>
-          <path d="M 20 0 L 20 14 M 30 0 L 30 14" stroke-opacity=".4"/>
+        <g transform="translate(90 340)">
+          <rect width="380" height="50" rx="6" fill="#FAF6EC"/>
+          <text x="190" y="32" text-anchor="middle" font-family="Manrope" font-size="13" font-weight="800" fill="#0A0A0A" letter-spacing="2">ПЛАН З ОП</text>
+        </g>
+        <g transform="translate(80 410)">
+          <rect width="400" height="50" rx="6" fill="#A63737"/>
+          <text x="200" y="32" text-anchor="middle" font-family="Manrope" font-size="14" font-weight="800" fill="#FAF6EC" letter-spacing="2.5">ГЛОСАРІЙ</text>
+        </g>
+        <!-- Stamp top right -->
+        <g transform="translate(450 80) rotate(-8)">
+          <circle r="46" stroke="#A63737" stroke-width="1.8" stroke-dasharray="4 3" fill="none"/>
+          <text x="0" y="-6" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="800" fill="#A63737">FREE</text>
+          <text x="0" y="10" text-anchor="middle" font-family="Manrope" font-size="14" font-weight="800" fill="#A63737">RACIO</text>
+          <text x="0" y="24" text-anchor="middle" font-family="Manrope" font-size="7" font-weight="700" fill="#A63737">2026</text>
         </g>
         <path d="M 20 555 L 580 555" stroke-opacity=".18" stroke-dasharray="4 6"/>
       </svg>
@@ -91,82 +93,115 @@
   </div>
 </section>
 
-<section>
+<!-- 2 · SEO-desc placeholder -->
+<section class="cream">
   <div class="container">
-    <div class="sec-head"><div class="eyebrow">4 категорії</div><h2>Оберіть <em>що вам потрібно</em></h2></div>
-    <div class="grid-4">
-      <a class="card" href="#check"><div class="num">✓</div><h3>Чек-листи</h3><p>Перед перевіркою Держпраці, ДСНС, щорічний аудит — 12 листів.</p><span class="more">Дивитись →</span></a>
-      <a class="card" href="#templates"><div class="num">📄</div><h3>Шаблони</h3><p>Накази, інструкції, положення, журнали — 25 готових документів.</p><span class="more">Дивитись →</span></a>
-      <a class="card" href="#calc"><div class="num">≡</div><h3>Калькулятори</h3><p>Штрафів, оцінки ризиків, часу евакуації, вартості аутсорсингу.</p><span class="more">Дивитись →</span></a>
-      <a class="card" href="#guides"><div class="num">📖</div><h3>Гайди</h3><p>Як відкрити ресторан, як подати декларацію, як розслідувати НВ.</p><span class="more">Дивитись →</span></a>
+    <div class="sec-head"><div class="eyebrow">Опис розділу</div></div>
+    <div class="seo-desc">
+      <div class="seo-desc-card">
+        <h2 class="placeholder">[H2 · Опис розділу «Корисне» · ВЕЛИКИМИ]</h2>
+        <p class="lead placeholder">[Lead-параграф · 2-3 речення · головна теза розділу]</p>
+        <a href="kontakty.html" class="btn btn-primary">Замовити консультацію</a>
+      </div>
+      <div class="seo-desc-text">
+        <p class="placeholder">[Параграф 1 · ~80 слів · для кого розділ, що тут знайдете]</p>
+        <p class="placeholder">[Параграф 2 · ~80 слів · як використовувати матеріали, які найпопулярніші]</p>
+        <p class="placeholder">[Параграф 3 · ~50 слів · заклик до використання матеріалів]</p>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- 3 · 5 категорій -->
+<section id="categories">
+  <div class="container">
+    <div class="sec-head"><div class="eyebrow">5 розділів</div><h2>Що ви <em>знайдете</em> в «Корисному»</h2></div>
+    <div class="koryisne-hub-grid">
+      <a class="koryisne-hub-card" href="koryisne/testy.html">
+        <div class="num">01</div>
+        <div class="meta"><span>10+ тестів</span><span>За спеціальністю</span></div>
+        <h3>Тести</h3>
+        <p>Типові тести з охорони праці за спеціальностями: керівник, інженер ОП, кухар, водій, електрик, працівник складу. Перевірте знання своєї команди й виявіть прогалини до перевірки Держпраці.</p>
+        <span class="more">Дивитись усі тести →</span>
+      </a>
+      <a class="koryisne-hub-card" href="koryisne/instruktsii.html">
+        <div class="num">02</div>
+        <div class="meta"><span>30+ файлів</span><span>DOC · PDF</span></div>
+        <h3>Інструкції</h3>
+        <p>Готові інструкції з охорони праці для скачування. Накази, положення, журнали, шаблони документів — усе у редагованому форматі. Адаптуйте під своє підприємство за 15 хвилин.</p>
+        <span class="more">Каталог інструкцій →</span>
+      </a>
+      <a class="koryisne-hub-card" href="koryisne/pokazhchyk-npaop.html">
+        <div class="num">03</div>
+        <div class="meta"><span>60+ НПА</span><span>За кодом</span></div>
+        <h3>Покажчик НПАОП</h3>
+        <p>Систематизований індекс нормативно-правових актів з охорони праці за кодами галузей (НПАОП 0.00, 24.0, 27.0, 40.1, 52.1 тощо). З коротким описом сфери дії й посиланням на офіційний документ.</p>
+        <span class="more">Перейти до покажчика →</span>
+      </a>
+      <a class="koryisne-hub-card" href="koryisne/plan-z-op.html">
+        <div class="num">04</div>
+        <div class="meta"><span>Гайд + шаблон</span><span>Безкоштовно</span></div>
+        <h3>План з ОП</h3>
+        <p>Покрокове керівництво «Як скласти річний план заходів з охорони праці»: структура, обов'язкові розділи, типові помилки. Завантажте готовий шаблон у DOC або XLSX і адаптуйте під свій бізнес.</p>
+        <span class="more">Читати + завантажити →</span>
+      </a>
+      <a class="koryisne-hub-card" href="koryisne/glosary.html">
+        <div class="num">05</div>
+        <div class="meta"><span>50+ термінів</span><span>А-Я</span></div>
+        <h3>Глосарій</h3>
+        <p>Словник термінів з охорони праці, пожежної безпеки й керування ризиками. Прості пояснення складних понять: НПАОП, інструктаж, акт Н-1, ПТМ, ВРР, ISO 45001 та інші. Кожен термін — окрема сторінка з прикладами.</p>
+        <span class="more">Відкрити глосарій →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · Топ скачувань -->
 <section class="cream" id="popular">
   <div class="container">
-    <div class="sec-head"><div class="eyebrow">Топ скачувань</div><h2>Найпопулярніші <em>за місяць</em></h2></div>
+    <div class="sec-head"><div class="eyebrow">Топ скачувань</div><h2>Найпопулярніші <em>матеріали</em></h2></div>
     <div class="grid-3">
-      <a class="card" href="#"><div class="num">1</div><h3>Чек-ліст перед перевіркою Держпраці</h3><p style="font-size:13px;color:var(--muted)">Скачали <b style="color:var(--red)">2 834 разів</b></p><span class="more">Завантажити PDF →</span></a>
-      <a class="card" href="#"><div class="num">2</div><h3>Калькулятор штрафів Держпраці 2026</h3><p style="font-size:13px;color:var(--muted)">Скачали <b style="color:var(--red)">1 920 разів</b></p><span class="more">Завантажити XLSX →</span></a>
-      <a class="card" href="#"><div class="num">3</div><h3>Шаблон наказу про відповідального з ОП</h3><p style="font-size:13px;color:var(--muted)">Скачали <b style="color:var(--red)">1 640 разів</b></p><span class="more">Завантажити DOC →</span></a>
+      <a class="card" href="koryisne/instruktsii.html"><div class="num">1</div><h3>Чек-ліст перед перевіркою Держпраці</h3><p style="font-size:13px;color:var(--muted)">Скачали <b style="color:var(--red)">2 834 разів</b></p><span class="more">Завантажити PDF →</span></a>
+      <a class="card" href="koryisne/instruktsii.html"><div class="num">2</div><h3>Шаблон наказу про відповідального з ОП</h3><p style="font-size:13px;color:var(--muted)">Скачали <b style="color:var(--red)">1 920 разів</b></p><span class="more">Завантажити DOC →</span></a>
+      <a class="card" href="koryisne/plan-z-op.html"><div class="num">3</div><h3>Шаблон річного плану з ОП</h3><p style="font-size:13px;color:var(--muted)">Скачали <b style="color:var(--red)">1 640 разів</b></p><span class="more">Завантажити XLSX →</span></a>
     </div>
   </div>
 </section>
 
-<section id="catalog">
-  <div class="container">
-    <div class="sec-head"><div class="eyebrow">Каталог</div><h2>Всі <em>матеріали</em></h2></div>
-    <div id="check" class="sec-head" style="margin:32px 0 20px"><div class="eyebrow">Чек-листи</div></div>
-    <div class="grid-4">
-      <a class="card" href="#"><div class="num">✓</div><h3>Перед перевіркою Держпраці</h3><p style="font-size:13px;color:var(--muted)">PDF · 15 пунктів</p></a>
-      <a class="card" href="#"><div class="num">✓</div><h3>Перед перевіркою ДСНС</h3><p style="font-size:13px;color:var(--muted)">PDF · 22 пункти</p></a>
-      <a class="card" href="#"><div class="num">✓</div><h3>Щорічний аудит ОП</h3><p style="font-size:13px;color:var(--muted)">PDF · 30 пунктів</p></a>
-      <a class="card" href="#"><div class="num">✓</div><h3>Інструктаж новому працівнику</h3><p style="font-size:13px;color:var(--muted)">PDF · 12 пунктів</p></a>
-    </div>
-
-    <div id="templates" class="sec-head" style="margin:40px 0 20px"><div class="eyebrow">Шаблони</div></div>
-    <div class="grid-4">
-      <a class="card" href="#"><div class="num">📄</div><h3>Наказ про відповідального з ОП</h3><p style="font-size:13px;color:var(--muted)">DOC · 1 стор.</p></a>
-      <a class="card" href="#"><div class="num">📄</div><h3>Інструкція з ОП — приклад</h3><p style="font-size:13px;color:var(--muted)">DOC · 6 стор.</p></a>
-      <a class="card" href="#"><div class="num">📄</div><h3>Журнал інструктажів</h3><p style="font-size:13px;color:var(--muted)">XLSX · шаблон</p></a>
-      <a class="card" href="#"><div class="num">📄</div><h3>Положення про СОП</h3><p style="font-size:13px;color:var(--muted)">DOC · 4 стор.</p></a>
-    </div>
-
-    <div id="calc" class="sec-head" style="margin:40px 0 20px"><div class="eyebrow">Калькулятори</div></div>
-    <div class="grid-4">
-      <a class="card" href="#"><div class="num">≡</div><h3>Калькулятор штрафів</h3><p style="font-size:13px;color:var(--muted)">Онлайн · 5 параметрів</p></a>
-      <a class="card" href="#"><div class="num">≡</div><h3>Оцінка ризиків за ISO</h3><p style="font-size:13px;color:var(--muted)">XLSX · матриця 5×5</p></a>
-      <a class="card" href="#"><div class="num">≡</div><h3>Час евакуації</h3><p style="font-size:13px;color:var(--muted)">Онлайн · за ДБН</p></a>
-      <a class="card" href="#"><div class="num">≡</div><h3>Вартість аутсорсингу</h3><p style="font-size:13px;color:var(--muted)">Онлайн · 4 кроки</p></a>
-    </div>
-
-    <div id="guides" class="sec-head" style="margin:40px 0 20px"><div class="eyebrow">Гайди</div></div>
-    <div class="grid-3">
-      <a class="card" href="#"><div class="num">📖</div><h3>Як відкрити ресторан без проблем з ДСНС</h3><p style="font-size:13px;color:var(--muted)">PDF · 24 стор.</p></a>
-      <a class="card" href="#"><div class="num">📖</div><h3>Як подати декларацію відповідності</h3><p style="font-size:13px;color:var(--muted)">PDF · 18 стор.</p></a>
-      <a class="card" href="#"><div class="num">📖</div><h3>Як розслідувати нещасний випадок</h3><p style="font-size:13px;color:var(--muted)">PDF · 32 стор.</p></a>
-    </div>
-  </div>
-</section>
-
-<section class="cream">
+<!-- 5 · Як скачувати -->
+<section>
   <div class="container">
     <div class="sec-head center"><div class="eyebrow">Як це працює</div><h2>Скачування за <em>3 кроки</em></h2></div>
     <div class="process">
-      <div class="step"><div class="num">01</div><h3>Оберіть матеріал</h3><p>Натисніть «Завантажити» на картці.</p></div>
+      <div class="step"><div class="num">01</div><h3>Оберіть матеріал</h3><p>Натисніть «Завантажити» на картці потрібного файлу.</p></div>
       <div class="step"><div class="num">02</div><h3>Введіть email</h3><p>Потрібен лише email — без пароля і реєстрації.</p></div>
-      <div class="step"><div class="num">03</div><h3>Отримайте PDF</h3><p>Файл миттєво на email + бонусна стаття від редактора.</p></div>
+      <div class="step"><div class="num">03</div><h3>Отримайте файл</h3><p>Файл миттєво на email + бонусна стаття від редактора.</p></div>
       <div class="step"><div class="num">04</div><h3>Використовуйте</h3><p>Без обмежень. Можна змінювати, друкувати, передавати колегам.</p></div>
     </div>
   </div>
 </section>
 
+<!-- 6 · FAQ -->
+<section class="cream">
+  <div class="container">
+    <div class="sec-head center"><div class="eyebrow">FAQ</div><h2>Часті <em>запитання</em> про матеріали</h2></div>
+    <div class="faq">
+      <details><summary>Чи дійсно це безкоштовно?</summary><p>Так. Усі 5 розділів і 100+ матеріалів — безкоштовно. Ми ділимось матеріалами, бо віримо у культуру безпеки на українських підприємствах. Якщо знадобиться професійна адаптація під ваш бізнес — <a href="kontakty.html" style="color:var(--red);border-bottom:1px solid currentColor">звертайтесь</a>.</p></details>
+      <details><summary>Можна використовувати ці матеріали комерційно?</summary><p>Так. Шаблони документів і чек-листи можна змінювати, друкувати, передавати співробітникам. Окремих ліцензійних обмежень — немає. Просимо лише не видавати їх за свої при подальшій публікації онлайн.</p></details>
+      <details><summary>Чи актуальні матеріали для 2026 року?</summary><p>Усі шаблони, тести й покажчик НПАОП оновлені під актуальне законодавство станом на 2026 рік. Якщо в законодавстві відбудуться зміни — оновлюємо матеріали в межах місяця.</p></details>
+      <details><summary>Чим відрізняються тести в розділі від офіційного навчання НАПБ?</summary><p>Наші тести — для <b>самостійної перевірки знань</b>. Це не заміна офіційного навчання у акредитованому центрі. Якщо потрібне посвідчення в реєстрі НАПБ — див. наші <a href="treningy-z-ohorony-pratsi.html" style="color:var(--red);border-bottom:1px solid currentColor">офіційні тренінги</a>.</p></details>
+      <details><summary>Як часто оновлюється глосарій?</summary><p>Раз на квартал додаємо 5-10 нових термінів за запитами клієнтів і наших інженерів. Якщо вам потрібен термін, якого немає — напишіть, додамо протягом тижня.</p></details>
+      <details><summary>Чи є мобільна версія матеріалів?</summary><p>Усі сторінки оптимізовані під мобільні. Шаблони у DOC/XLSX — стандартні Microsoft Office формати, відкриваються на телефонах через Google Docs / OnlyOffice.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · Final CTA -->
 <section class="dark finalcta">
   <div class="container">
-    <h2 style="color:#fff">Не знайшли <em style="color:var(--beige)">потрібний шаблон</em>?</h2>
-    <p>Замовте індивідуальну розробку документа під вашу галузь і процеси.</p>
-    <div class="btns"><a href="autsorsynh.html" class="btn btn-primary">Замовити документацію →</a><a href="kontakty.html" class="btn btn-ghost">Написати</a></div>
+    <h2 style="color:#fff">Не знайшли <em style="color:var(--beige)">потрібний матеріал</em>?</h2>
+    <p>Замовте індивідуальну розробку документа під вашу галузь, специфіку процесів і корпоративні стандарти.</p>
+    <div class="btns"><a href="dokumentatsiia.html" class="btn btn-primary">Замовити документацію →</a><a href="kontakty.html" class="btn btn-ghost">Написати</a></div>
   </div>
 </section>
 
