@@ -85,43 +85,162 @@
 
 <section>
   <div class="container">
-    <div class="sec-head"><div class="eyebrow">Фільтри</div><h2>Знайти за <em>темою</em></h2></div>
-    <div class="tabs">
-      <button class="active">Всі</button>
-      <button>Охорона праці</button>
-      <button>Пожежна безпека</button>
-      <button>Ризики</button>
-      <button>Декларації ДСНС</button>
-      <button>Кейси</button>
-      <button>Законодавство</button>
+    <div class="sec-head"><div class="eyebrow">Пошук і фільтр</div><h2>Знайти за <em>ключовим словом</em> або темою</h2></div>
+
+    <!-- Search bar -->
+    <div style="max-width:600px;margin:0 auto 24px;position:relative">
+      <input type="search" id="blog-search" placeholder="Введіть ключове слово (напр. «Держпраці» або «декларація»)..." autocomplete="off"
+        style="width:100%;padding:14px 16px 14px 48px;border:1.5px solid var(--line);border-radius:8px;font:inherit;background:#fff;outline:none;transition:border-color .2s"
+        onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='var(--line)'"/>
+      <svg style="position:absolute;left:16px;top:50%;transform:translateY(-50%)" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6258" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+      </svg>
+      <button id="blog-search-clear" style="display:none;position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--muted);font-size:18px;padding:4px 8px" aria-label="Очистити пошук">×</button>
     </div>
+
+    <!-- Filter tabs -->
+    <div class="tabs" id="blog-filter">
+      <button class="active" data-tag="all">Всі</button>
+      <button data-tag="ohorona-pratsi">Охорона праці</button>
+      <button data-tag="pojejna-bezpeka">Пожежна безпека</button>
+      <button data-tag="ryzyky">Ризики</button>
+      <button data-tag="deklaratsii-dsns">Декларації ДСНС</button>
+      <button data-tag="keysy">Кейси</button>
+      <button data-tag="zakonodavstvo">Законодавство</button>
+    </div>
+
+    <!-- No results message -->
+    <p id="blog-no-results" style="display:none;text-align:center;font-size:16px;color:var(--muted);padding:40px 0;font-style:italic">Нічого не знайдено за вашим запитом. Спробуйте інше слово або скиньте фільтр.</p>
+
     <!-- Pin-стрічка (3 фіч-статті) -->
-    <div class="sec-head" style="margin:32px 0 20px"><div class="eyebrow">Редакторський вибір</div></div>
-    <div class="blog">
-      <a class="post" href="#"><div class="kind">Чек-ліст</div><h3>Як підготуватись до перевірки Держпраці — покроково</h3><p style="font-size:13px;color:var(--muted)">15 пунктів, які зупиняють 90% можливих зауважень. Завантажити PDF.</p><div class="r">5 хв · 12 квітня 2026 →</div></a>
-      <a class="post" href="#"><div class="kind">Гайд</div><h3>Декларація ДСНС для ресторану: інструкція 2026</h3><p style="font-size:13px;color:var(--muted)">Оновлена процедура, строки, вартість, типові помилки.</p><div class="r">12 хв · 8 квітня 2026 →</div></a>
-      <a class="post" href="#"><div class="kind">Аналіз</div><h3>Штатний інженер ОП чи аутсорсинг: порівняння по цифрах</h3><p style="font-size:13px;color:var(--muted)">Розбір на прикладі компанії з 50 осіб у Києві. З реальними цифрами.</p><div class="r">8 хв · 5 квітня 2026 →</div></a>
+    <div class="sec-head" id="blog-pin-head" style="margin:32px 0 20px"><div class="eyebrow">Редакторський вибір</div></div>
+    <div class="blog" id="blog-pin">
+      <a class="post" href="blog-post.html" data-tags="ohorona-pratsi,zakonodavstvo"><div class="kind">Чек-ліст</div><h3>Як підготуватись до перевірки Держпраці — покроково</h3><p style="font-size:13px;color:var(--muted)">15 пунктів, які зупиняють 90% можливих зауважень. Завантажити PDF.</p><div class="r">5 хв · 12 квітня 2026 →</div></a>
+      <a class="post" href="blog-post.html" data-tags="deklaratsii-dsns,pojejna-bezpeka"><div class="kind">Гайд</div><h3>Декларація ДСНС для ресторану: інструкція 2026</h3><p style="font-size:13px;color:var(--muted)">Оновлена процедура, строки, вартість, типові помилки.</p><div class="r">12 хв · 8 квітня 2026 →</div></a>
+      <a class="post" href="blog-post.html" data-tags="ohorona-pratsi"><div class="kind">Аналіз</div><h3>Штатний інженер ОП чи аутсорсинг: порівняння по цифрах</h3><p style="font-size:13px;color:var(--muted)">Розбір на прикладі компанії з 50 осіб у Києві. З реальними цифрами.</p><div class="r">8 хв · 5 квітня 2026 →</div></a>
     </div>
   </div>
 </section>
 
 <section class="cream">
   <div class="container">
-    <div class="sec-head"><div class="eyebrow">Свіжі статті</div><h2>Останні <em>12 статей</em></h2></div>
-    <div class="blog">
-      <a class="post" href="#"><div class="kind">Стаття</div><h3>Види інструктажів з ОП: що має знати HR</h3><div class="r">7 хв · 3 квітня →</div></a>
-      <a class="post" href="#"><div class="kind">Огляд</div><h3>Мінімальний пакет документів з ОП для SMB</h3><div class="r">6 хв · 1 квітня →</div></a>
-      <a class="post" href="#"><div class="kind">Новина</div><h3>Зміни у ЗУ «Про охорону праці» з 1 травня 2026</h3><div class="r">4 хв · 28 березня →</div></a>
-      <a class="post" href="#"><div class="kind">Чек-ліст</div><h3>Пожежна безпека офісу: 20 пунктів, які перевірять першими</h3><div class="r">5 хв · 25 березня →</div></a>
-      <a class="post" href="#"><div class="kind">Гайд</div><h3>Як розслідувати нещасний випадок — форма Н-1 крок за кроком</h3><div class="r">15 хв · 22 березня →</div></a>
-      <a class="post" href="#"><div class="kind">Кейс</div><h3>Як Socar уніфікував ОП для 24 АЗК</h3><div class="r">10 хв · 19 березня →</div></a>
-      <a class="post" href="#"><div class="kind">Стаття</div><h3>Що таке оцінка ризиків за ISO 31000</h3><div class="r">9 хв · 16 березня →</div></a>
-      <a class="post" href="#"><div class="kind">Інтерв'ю</div><h3>Інтерв'ю з головним інженером «3M Україна»</h3><div class="r">12 хв · 12 березня →</div></a>
-      <a class="post" href="#"><div class="kind">Новина</div><h3>ДСНС оновила вимоги до декларацій — що змінилося</h3><div class="r">3 хв · 10 березня →</div></a>
+    <div class="sec-head" id="blog-fresh-head"><div class="eyebrow">Свіжі статті</div><h2>Останні <em>статті</em></h2></div>
+    <div class="blog" id="blog-fresh">
+      <!-- Page 1 — 9 posts visible by default -->
+      <a class="post" href="blog-post.html" data-page="1" data-tags="ohorona-pratsi"><div class="kind">Стаття</div><h3>Види інструктажів з ОП: що має знати HR</h3><div class="r">7 хв · 3 квітня →</div></a>
+      <a class="post" href="blog-post.html" data-page="1" data-tags="ohorona-pratsi"><div class="kind">Огляд</div><h3>Мінімальний пакет документів з ОП для SMB</h3><div class="r">6 хв · 1 квітня →</div></a>
+      <a class="post" href="blog-post.html" data-page="1" data-tags="zakonodavstvo,ohorona-pratsi"><div class="kind">Новина</div><h3>Зміни у ЗУ «Про охорону праці» з 1 травня 2026</h3><div class="r">4 хв · 28 березня →</div></a>
+      <a class="post" href="blog-post.html" data-page="1" data-tags="pojejna-bezpeka"><div class="kind">Чек-ліст</div><h3>Пожежна безпека офісу: 20 пунктів, які перевірять першими</h3><div class="r">5 хв · 25 березня →</div></a>
+      <a class="post" href="blog-post.html" data-page="1" data-tags="ohorona-pratsi"><div class="kind">Гайд</div><h3>Як розслідувати нещасний випадок — форма Н-1 крок за кроком</h3><div class="r">15 хв · 22 березня →</div></a>
+      <a class="post" href="blog-post.html" data-page="1" data-tags="keysy,ohorona-pratsi"><div class="kind">Кейс</div><h3>Як Socar уніфікував ОП для 24 АЗК</h3><div class="r">10 хв · 19 березня →</div></a>
+      <a class="post" href="blog-post.html" data-page="1" data-tags="ryzyky"><div class="kind">Стаття</div><h3>Що таке оцінка ризиків за ISO 31000</h3><div class="r">9 хв · 16 березня →</div></a>
+      <a class="post" href="blog-post.html" data-page="1" data-tags="keysy"><div class="kind">Інтерв'ю</div><h3>Інтерв'ю з головним інженером «3M Україна»</h3><div class="r">12 хв · 12 березня →</div></a>
+      <a class="post" href="blog-post.html" data-page="1" data-tags="deklaratsii-dsns,zakonodavstvo"><div class="kind">Новина</div><h3>ДСНС оновила вимоги до декларацій — що змінилося</h3><div class="r">3 хв · 10 березня →</div></a>
+      <!-- Page 2 — 9 posts hidden by default (показуються при кліці «Показати ще») -->
+      <a class="post" href="blog-post.html" data-page="2" data-tags="ohorona-pratsi" style="display:none"><div class="kind">Чек-ліст</div><h3>[Заголовок статті · placeholder]</h3><div class="r">[X хв · дата →]</div></a>
+      <a class="post" href="blog-post.html" data-page="2" data-tags="pojejna-bezpeka" style="display:none"><div class="kind">Гайд</div><h3>[Заголовок статті · placeholder]</h3><div class="r">[X хв · дата →]</div></a>
+      <a class="post" href="blog-post.html" data-page="2" data-tags="ryzyky" style="display:none"><div class="kind">Стаття</div><h3>[Заголовок статті · placeholder]</h3><div class="r">[X хв · дата →]</div></a>
+      <a class="post" href="blog-post.html" data-page="2" data-tags="deklaratsii-dsns" style="display:none"><div class="kind">Гайд</div><h3>[Заголовок статті · placeholder]</h3><div class="r">[X хв · дата →]</div></a>
+      <a class="post" href="blog-post.html" data-page="2" data-tags="keysy" style="display:none"><div class="kind">Кейс</div><h3>[Заголовок кейсу · placeholder]</h3><div class="r">[X хв · дата →]</div></a>
+      <a class="post" href="blog-post.html" data-page="2" data-tags="zakonodavstvo" style="display:none"><div class="kind">Новина</div><h3>[Заголовок новини · placeholder]</h3><div class="r">[X хв · дата →]</div></a>
+      <a class="post" href="blog-post.html" data-page="2" data-tags="ohorona-pratsi" style="display:none"><div class="kind">Аналіз</div><h3>[Заголовок аналізу · placeholder]</h3><div class="r">[X хв · дата →]</div></a>
+      <a class="post" href="blog-post.html" data-page="2" data-tags="pojejna-bezpeka" style="display:none"><div class="kind">Чек-ліст</div><h3>[Заголовок чек-листа · placeholder]</h3><div class="r">[X хв · дата →]</div></a>
+      <a class="post" href="blog-post.html" data-page="2" data-tags="ryzyky" style="display:none"><div class="kind">Інтерв'ю</div><h3>[Заголовок інтерв'ю · placeholder]</h3><div class="r">[X хв · дата →]</div></a>
     </div>
-    <div style="text-align:center;margin-top:24px"><a href="#" class="btn btn-ghost">Показати ще 12 →</a></div>
+    <div style="text-align:center;margin-top:24px"><button id="blog-show-more" class="btn btn-ghost" data-current="1">Показати ще 9 →</button></div>
   </div>
 </section>
+
+<script>
+(function(){
+  const searchInput = document.getElementById('blog-search');
+  const clearBtn = document.getElementById('blog-search-clear');
+  const filterBtns = document.querySelectorAll('#blog-filter button');
+  const allPosts = document.querySelectorAll('#blog-pin .post, #blog-fresh .post');
+  const noResults = document.getElementById('blog-no-results');
+  const pinHead = document.getElementById('blog-pin-head');
+  const pinSection = document.getElementById('blog-pin');
+  const freshHead = document.getElementById('blog-fresh-head');
+  const showMoreBtn = document.getElementById('blog-show-more');
+
+  let currentFilter = 'all';
+  let currentPage = 1;
+
+  function applyFilter(){
+    const query = (searchInput.value || '').trim().toLowerCase();
+    let visibleCount = 0;
+    let visiblePinCount = 0, visibleFreshCount = 0;
+
+    allPosts.forEach(post => {
+      const tags = (post.dataset.tags || '').split(',').map(t => t.trim());
+      const title = (post.querySelector('h3')?.textContent || '').toLowerCase();
+      const desc = (post.querySelector('p')?.textContent || '').toLowerCase();
+
+      const matchesFilter = currentFilter === 'all' || tags.includes(currentFilter);
+      const matchesSearch = !query || title.includes(query) || desc.includes(query);
+      const isPin = post.parentElement.id === 'blog-pin';
+      const postPage = parseInt(post.dataset.page || '1', 10);
+      const matchesPage = isPin || postPage <= currentPage;
+
+      const isVisible = matchesFilter && matchesSearch && matchesPage;
+      post.style.display = isVisible ? '' : 'none';
+      if (isVisible) {
+        visibleCount++;
+        if (isPin) visiblePinCount++;
+        else visibleFreshCount++;
+      }
+    });
+
+    // Toggle empty-state
+    noResults.style.display = visibleCount === 0 ? '' : 'none';
+    // Hide pin section if filter/search hides all pinned posts
+    if (pinHead) pinHead.style.display = visiblePinCount === 0 ? 'none' : '';
+    if (pinSection) pinSection.style.display = visiblePinCount === 0 ? 'none' : '';
+    if (freshHead) freshHead.style.display = visibleFreshCount === 0 ? 'none' : '';
+
+    // Toggle clear button
+    clearBtn.style.display = query ? '' : 'none';
+
+    // Toggle "show more" — hide if search/filter active or already on page 2
+    const totalPagesAvailable = 2;
+    if (currentPage >= totalPagesAvailable || query || currentFilter !== 'all') {
+      showMoreBtn.style.display = 'none';
+    } else {
+      showMoreBtn.style.display = '';
+    }
+  }
+
+  // Search input
+  searchInput.addEventListener('input', applyFilter);
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    searchInput.focus();
+    applyFilter();
+  });
+
+  // Filter tabs
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentFilter = btn.dataset.tag;
+      filterBtns.forEach(b => b.classList.toggle('active', b === btn));
+      currentPage = 1;
+      showMoreBtn.dataset.current = '1';
+      showMoreBtn.textContent = 'Показати ще 9 →';
+      applyFilter();
+    });
+  });
+
+  // Show more
+  showMoreBtn.addEventListener('click', () => {
+    currentPage = currentPage === 1 ? 2 : 1;
+    showMoreBtn.dataset.current = currentPage;
+    showMoreBtn.textContent = currentPage === 2 ? '← Згорнути' : 'Показати ще 9 →';
+    applyFilter();
+  });
+
+  applyFilter();
+})();
+</script>
 
 <section>
   <div class="container">

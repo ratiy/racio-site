@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>[Заголовок статті · 60-70 символів з ключем] | RACIO</title>
+<meta name="description" content="[Опис статті · 150-160 символів з ключовими словами та call-to-action]"/>
+<!-- Open Graph для соцмереж -->
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="[Заголовок статті]"/>
+<meta property="og:description" content="[Короткий опис статті]"/>
+<meta property="og:url" content="https://racio.ua/blog-post.html"/>
+<meta property="og:image" content="https://racio.ua/og-blog.png"/>
+<meta property="og:locale" content="uk_UA"/>
+<meta property="og:site_name" content="RACIO"/>
+<meta property="article:published_time" content="2026-04-12T10:00:00+03:00"/>
+<meta property="article:author" content="[Ім'я автора]"/>
+<meta property="article:section" content="[Категорія]"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<!-- Schema.org · Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "[Заголовок статті]",
+  "description": "[Опис статті]",
+  "image": "https://racio.ua/og-blog.png",
+  "author": {"@type":"Person","name":"[Ім'я автора]","jobTitle":"[Посада]"},
+  "publisher": {"@type":"Organization","name":"RACIO","logo":{"@type":"ImageObject","url":"https://racio.ua/logo.png"}},
+  "datePublished": "2026-04-12",
+  "dateModified": "2026-04-12",
+  "mainEntityOfPage": {"@type":"WebPage","@id":"https://racio.ua/blog-post.html"}
+}
+</script>
+
+<!-- Schema.org · BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Головна","item":"https://racio.ua/"},
+    {"@type":"ListItem","position":2,"name":"Блог","item":"https://racio.ua/blog.html"},
+    {"@type":"ListItem","position":3,"name":"[Заголовок статті]","item":"https://racio.ua/blog-post.html"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="racio.css">
+<style>
+/* Article-specific layout */
+.article-hero { padding: 80px 0 60px; }
+.article-hero .container { max-width: 880px; }
+.article-meta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+.article-meta .cat { padding: 4px 12px; background: var(--red); color: var(--cream); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; border-radius: 999px; }
+.article-meta .dot { color: var(--line); }
+.article-hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.15; margin-bottom: 24px; }
+.article-hero .lead { font-size: 20px; line-height: 1.55; color: var(--muted); max-width: 760px; }
+
+.article-body { padding: 0 0 80px; }
+.article-body .container { max-width: 760px; }
+.article-body h2 { font-size: 30px; margin: 48px 0 18px; line-height: 1.25; }
+.article-body h3 { font-size: 22px; margin: 32px 0 14px; line-height: 1.3; }
+.article-body p { font-size: 17px; line-height: 1.7; margin-bottom: 18px; color: var(--ink); }
+.article-body ul, .article-body ol { margin: 0 0 24px 22px; }
+.article-body li { font-size: 17px; line-height: 1.7; margin-bottom: 8px; color: var(--ink); }
+.article-body img, .article-body .img-placeholder { width: 100%; border-radius: 12px; margin: 32px 0; }
+.article-body .img-placeholder { aspect-ratio: 16/9; background: var(--beige); display: flex; align-items: center; justify-content: center; font-style: italic; color: var(--muted); border: 1.5px dashed var(--line); }
+.article-body blockquote { border-left: 3px solid var(--red); padding: 14px 22px; margin: 32px 0; font-size: 19px; line-height: 1.55; color: var(--ink); font-family: 'Playfair Display', serif; font-style: italic; background: rgba(232,220,196,.3); border-radius: 0 12px 12px 0; }
+.article-body blockquote cite { display: block; margin-top: 10px; font-size: 13px; color: var(--muted); font-style: normal; font-family: 'Manrope', sans-serif; font-weight: 600; }
+.article-body a { color: var(--red); border-bottom: 1px solid rgba(166,55,55,.35); text-decoration: none; }
+.article-body a:hover { border-bottom-color: var(--red); }
+
+/* Lead magnet inline */
+.lead-magnet { background: linear-gradient(180deg, var(--beige) 0%, var(--cream) 100%); border-radius: 16px; padding: 32px; margin: 48px 0; text-align: center; }
+.lead-magnet h3 { font-size: 22px; margin-bottom: 8px; }
+.lead-magnet p { font-size: 15px; color: var(--muted); margin-bottom: 18px; }
+
+/* Author bio */
+.author-bio { display: flex; gap: 18px; align-items: center; padding: 28px; background: rgba(232,220,196,.25); border-radius: 16px; margin: 48px 0 0; }
+.author-bio .avatar { flex: 0 0 72px; height: 72px; border-radius: 50%; background: var(--red); color: var(--cream); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; letter-spacing: .04em; }
+.author-bio .info h4 { font-size: 17px; margin-bottom: 4px; }
+.author-bio .info p { font-size: 14px; line-height: 1.5; color: var(--muted); margin: 0; }
+
+/* Share buttons */
+.share-row { display: flex; gap: 10px; align-items: center; margin: 32px 0; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.share-row span { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+.share-row a { padding: 8px 14px; background: var(--cream); border: 1px solid var(--line); border-radius: 999px; font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; }
+.share-row a:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+
+/* Related */
+.related-posts { padding: 60px 0; }
+.related-posts .container { max-width: 1200px; }
+</style>
+</head>
+<body>
+<header class="nav" id="site-header"></header>
+<div class="container"><nav class="crumbs"><a href="index.html">Головна</a><span>›</span><a href="blog.html">Блог</a><span>›</span>[Заголовок статті]</nav></div>
+
+<!-- 1 · Hero статті -->
+<article>
+<section class="article-hero">
+  <div class="container">
+    <div class="article-meta">
+      <span class="cat">[Категорія · напр. ОХОРОНА ПРАЦІ]</span>
+      <span>[Дата · 12 квітня 2026]</span>
+      <span class="dot">·</span>
+      <span>[X хв читання]</span>
+      <span class="dot">·</span>
+      <span>[Автор · напр. Олександр Ратій]</span>
+    </div>
+    <h1>[Заголовок статті · приклад: «Як підготуватись до перевірки Держпраці — покроковий гайд»]</h1>
+    <p class="lead">[Lead-параграф · 2-3 речення. Ключова теза статті, яка ловить увагу читача й коротко пояснює про що буде матеріал. ~50-80 слів.]</p>
+  </div>
+</section>
+
+<!-- 2 · Тіло статті -->
+<section class="article-body">
+  <div class="container">
+
+    <p>[Вступний параграф · ставить контекст. Скільки коштує помилка? Що відчуває читач? Чому ця стаття йому актуальна. ~80-120 слів.]</p>
+
+    <p>[Перехідний параграф · ділимось підходом RACIO до цієї теми. Згадуємо <a href="rsstandard">Racio Safety Standard</a> або <a href="autsorsynh.html">аутсорсинг</a> якщо доречно. ~60-80 слів.]</p>
+
+    <h2>[H2 заголовок секції 1 · напр. «Що перевіряє Держпраці у 2026»]</h2>
+
+    <p>[Параграф · розкриваємо тему секції. ~100-150 слів. Можна додати конкретні числа, приклади, посилання на НПАОП.]</p>
+
+    <ul>
+      <li>[Пункт 1 · конкретна вимога або факт]</li>
+      <li>[Пункт 2 · конкретна вимога або факт]</li>
+      <li>[Пункт 3 · конкретна вимога або факт]</li>
+      <li>[Пункт 4 · конкретна вимога або факт]</li>
+      <li>[Пункт 5 · конкретна вимога або факт]</li>
+    </ul>
+
+    <p>[Заключний параграф секції 1 · підсумовує і робить перехід до наступної секції.]</p>
+
+    <div class="img-placeholder">[Зображення-ілюстрація · 16:9 · бажано схема або скриншот]</div>
+
+    <h2>[H2 заголовок секції 2 · напр. «10 типових помилок, які ловлять інспектори»]</h2>
+
+    <p>[Параграф з вступом до списку.]</p>
+
+    <ol>
+      <li><strong>[Помилка 1]</strong> — [розшифровка з прикладом]</li>
+      <li><strong>[Помилка 2]</strong> — [розшифровка з прикладом]</li>
+      <li><strong>[Помилка 3]</strong> — [розшифровка з прикладом]</li>
+    </ol>
+
+    <blockquote>
+      [Цитата з реального випадку · 1-2 речення про досвід клієнта або експертне зауваження.]
+      <cite>— [Ім'я] · [Посада в RACIO]</cite>
+    </blockquote>
+
+    <h2>[H2 заголовок секції 3 · напр. «Чек-ліст підготовки за 7 днів»]</h2>
+
+    <h3>[H3 підрозділ · день 1-2]</h3>
+    <p>[Що робити в перші 2 дні · ~80 слів.]</p>
+
+    <h3>[H3 підрозділ · день 3-5]</h3>
+    <p>[Що робити в дні 3-5 · ~80 слів.]</p>
+
+    <h3>[H3 підрозділ · день 6-7]</h3>
+    <p>[Що робити в дні 6-7 · ~80 слів.]</p>
+
+    <!-- Lead magnet inline · збір емейлів -->
+    <div class="lead-magnet">
+      <h3>📥 Завантажити PDF чек-листа</h3>
+      <p>15-сторінковий PDF зі всіма пунктами цієї статті — у форматі, готовому для друку та передачі в команду. Безкоштовно, в обмін на email.</p>
+      <form onsubmit="event.preventDefault();alert('Дякуємо! PDF надішлемо на email.')" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;max-width:480px;margin:0 auto">
+        <input type="email" placeholder="ваш@email.com" required style="flex:1;min-width:220px;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;font:inherit;background:#fff"/>
+        <button type="submit" class="btn btn-primary">Завантажити →</button>
+      </form>
+    </div>
+
+    <h2>[H2 заголовок секції 4 · напр. «Що робити, якщо штраф уже отримано»]</h2>
+
+    <p>[Параграф з порадами.]</p>
+
+    <p>[Заключний параграф з посиланням на нашу <a href="suprovid-derzhpratsi.html">послугу супроводу перевірок</a> або <a href="rozsliduvannia-nv.html">розслідування НВ</a>.]</p>
+
+    <h2>Висновок</h2>
+
+    <p>[Підсумкові 2-3 речення. Що читачу зробити СЬОГОДНІ. Прозорий call-to-action.]</p>
+
+    <!-- Share -->
+    <div class="share-row">
+      <span>Поділитись:</span>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Facebook</a>
+      <a href="#" target="_blank" rel="noopener">Telegram</a>
+      <a href="#" target="_blank" rel="noopener">Копіювати посилання</a>
+    </div>
+
+    <!-- Author bio -->
+    <div class="author-bio">
+      <div class="avatar">[ОР]</div>
+      <div class="info">
+        <h4>[Ім'я Прізвище автора]</h4>
+        <p>[Посада в RACIO · Х років у галузі · спеціалізація. Приклад: «CEO RACIO · 15+ років у охороні праці · ризик-менеджмент і культура безпеки»]</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+</article>
+
+<!-- 3 · Related posts -->
+<section class="related-posts cream">
+  <div class="container">
+    <div class="sec-head"><div class="eyebrow">Схожі матеріали</div><h2>Ще <em>статті</em> з цієї теми</h2></div>
+    <div class="blog">
+      <a class="post" href="blog-post.html"><div class="kind">[Категорія]</div><h3>[Заголовок схожої статті 1]</h3><p style="font-size:13px;color:var(--muted)">[Короткий опис]</p><div class="r">[X хв · дата →]</div></a>
+      <a class="post" href="blog-post.html"><div class="kind">[Категорія]</div><h3>[Заголовок схожої статті 2]</h3><p style="font-size:13px;color:var(--muted)">[Короткий опис]</p><div class="r">[X хв · дата →]</div></a>
+      <a class="post" href="blog-post.html"><div class="kind">[Категорія]</div><h3>[Заголовок схожої статті 3]</h3><p style="font-size:13px;color:var(--muted)">[Короткий опис]</p><div class="r">[X хв · дата →]</div></a>
+    </div>
+    <div style="text-align:center;margin-top:28px"><a href="blog.html" class="btn btn-ghost">Усі статті блогу →</a></div>
+  </div>
+</section>
+
+<!-- 4 · Subscription -->
+<section id="subscribe">
+  <div class="container">
+    <div class="sec-head center"><div class="eyebrow">Розсилка</div><h2>1 корисна стаття <em>на тиждень</em></h2></div>
+    <p style="text-align:center;max-width:540px;margin:0 auto 28px">Підписуйтесь — щотижня приходитиме свіжа стаття + бонус «Топ-5 чек-листів» у PDF при реєстрації.</p>
+    <form onsubmit="event.preventDefault();alert('Підписку оформлено!')" style="max-width:540px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap">
+      <input id="sub-email" name="email" type="email" autocomplete="email" placeholder="ваш@email.com" required style="flex:1;min-width:220px;padding:14px 16px;border:1.5px solid var(--line);border-radius:8px;font:inherit;background:#fff"/>
+      <button type="submit" class="btn btn-primary">Підписатись →</button>
+    </form>
+  </div>
+</section>
+
+<!-- 5 · Final CTA -->
+<section class="dark finalcta">
+  <div class="container">
+    <h2 style="color:#fff">Потрібна <em style="color:var(--beige)">консультація</em>?</h2>
+    <p>Безкоштовний 30-хвилинний дзвінок з профільним інженером — обговоримо вашу задачу й запропонуємо рішення.</p>
+    <div class="btns"><a href="kontakty.html" class="btn btn-primary">Записатись →</a><a href="tarify.html" class="btn btn-ghost">Тарифи</a></div>
+  </div>
+</section>
+
+<footer class="foot" id="site-footer"></footer>
+<div class="sticky-mobile" id="site-sticky"></div>
+<script src="racio.js"></script>
+</body>
+</html>
