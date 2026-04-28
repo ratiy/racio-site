@@ -3,12 +3,113 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Тарифи RACIO — прозорі ціни START / SMART / FULL для всіх послуг</title>
-<meta name="description" content="Фіксовані тарифи на аутсорсинг ОП і ПБ, документацію, аудит, декларації ДСНС, навчання, оцінку ризиків. Від 8 000 ₴/міс. Без прихованих доплат."/>
+<title>Тарифи на охорону праці й пожежну безпеку — ціни RACIO 2026 від 8 000 ₴/міс</title>
+<meta name="description" content="Прозорі ціни на аутсорсинг ОП від 8 000 ₴/міс, аудит від 9 900 ₴, документація від 15 000 ₴, декларація ДСНС від 8 900 ₴. Калькулятор, пакети START/SMART/FULL, 4 типи знижок. Без прихованих доплат."/>
+<meta name="keywords" content="ціна охорона праці, вартість аудит ОП, тарифи аутсорсинг охорони праці, скільки коштує декларація ДСНС, ціни RACIO, пакети START SMART FULL"/>
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Тарифи RACIO — ціни на охорону праці й пожежну безпеку 2026"/>
+<meta property="og:description" content="Прозорі ціни. Калькулятор. Пакети START/SMART/FULL. Від 8 000 ₴/міс. Без прихованих доплат."/>
+<meta property="og:url" content="https://racio.ua/tarify.html"/>
+<meta property="og:image" content="https://racio.ua/og-tarify.png"/>
+<meta property="og:locale" content="uk_UA"/>
+<meta property="og:site_name" content="RACIO"/>
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Тарифи RACIO — ціни на охорону праці 2026"/>
+<meta name="twitter:description" content="Прозорі ціни. Калькулятор. Від 8 000 ₴/міс."/>
+<meta name="twitter:image" content="https://racio.ua/og-tarify.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="racio.css">
-</head>
+
+<!-- Schema.org · BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Головна","item":"https://racio.ua/"},
+    {"@type":"ListItem","position":2,"name":"Тарифи","item":"https://racio.ua/tarify.html"}
+  ]
+}
+</script>
+
+<!-- Schema.org · FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Чому SMART — anchor (рекомендуємо)?","acceptedAnswer":{"@type":"Answer","text":"80% клієнтів 30-100 осіб обирають саме SMART. Це оптимальний баланс: включена пожежна безпека, виїзди інженера, квартальний аудит, компенсація штрафу до 50 тис. ₴."}},
+    {"@type":"Question","name":"Чи можна знизити або підвищити тариф під час договору?","acceptedAnswer":{"@type":"Answer","text":"Так, у будь-який момент. Зміна з наступного календарного місяця. Без штрафу за downgrade. Upgrade — ефект одразу."}},
+    {"@type":"Question","name":"Чи включено ПДВ у ціни?","acceptedAnswer":{"@type":"Answer","text":"Ціни вказані без ПДВ. Для ФОП — працюємо без ПДВ (3% єдиного податку). Для ТОВ з ПДВ — +20% до вказаних цін."}},
+    {"@type":"Question","name":"Що таке SLA і як він фіксується?","acceptedAnswer":{"@type":"Answer","text":"SLA — гарантований час відповіді та реакції. У START — 1 робочий день, SMART — 4 години, FULL — 1 година цілодобово."}},
+    {"@type":"Question","name":"Що не входить у тарифи?","acceptedAnswer":{"@type":"Answer","text":"Разове розслідування НВ (від 15 тис.), судове представництво (від 25 тис.), нічні виклики (+50%), декларація ПНО (45-150 тис.)."}},
+    {"@type":"Question","name":"Чи можна договір на 3 роки з фіксацією ціни?","acceptedAnswer":{"@type":"Answer","text":"Так, для клієнтів FULL або комплексного ENTERPRISE-пакета. Знижка 8% на другий рік, 12% на третій."}},
+    {"@type":"Question","name":"Як розраховується кількість осіб для тарифу?","acceptedAnswer":{"@type":"Answer","text":"Бере до уваги всіх працівників за трудовими договорами + цивільно-правовими договорами з регулярним виконанням робіт. ФОПи-підрядники — не рахуємо."}},
+    {"@type":"Question","name":"Як можна оплатити?","acceptedAnswer":{"@type":"Answer","text":"Стандартно — банківський переказ на рахунок ТОВ. Для міжнародних клієнтів — SWIFT/SEPA, USDT/USDC. Готівка — ні."}}
+  ]
+}
+</script>
+
+<!-- Schema.org · Product / Offer · 8 категорій × 3 рівні = 24 пакети -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#autsors-op-start","name":"Аутсорсинг охорони праці START","provider":{"@type":"Organization","name":"RACIO","url":"https://racio.ua"},"description":"Базовий пакет аутсорсингу охорони праці для бізнесу до 30 осіб","offers":{"@type":"Offer","price":"8000","priceCurrency":"UAH","priceSpecification":{"@type":"UnitPriceSpecification","price":"8000","priceCurrency":"UAH","unitText":"MONTH"},"availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#autsors-op-smart","name":"Аутсорсинг охорони праці SMART","provider":{"@type":"Organization","name":"RACIO"},"description":"Оптимальний пакет для бізнесу 30-100 осіб з пожежною безпекою включно","offers":{"@type":"Offer","price":"15000","priceCurrency":"UAH","priceSpecification":{"@type":"UnitPriceSpecification","price":"15000","priceCurrency":"UAH","unitText":"MONTH"},"availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#autsors-op-full","name":"Аутсорсинг охорони праці FULL","provider":{"@type":"Organization","name":"RACIO"},"description":"Enterprise-пакет для компаній 100+ осіб з ISO-рівнем організації","offers":{"@type":"Offer","price":"20000","priceCurrency":"UAH","priceSpecification":{"@type":"UnitPriceSpecification","price":"20000","priceCurrency":"UAH","unitText":"MONTH"},"availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#autsors-pb-start","name":"Аутсорсинг пожежної безпеки START","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"12900","priceCurrency":"UAH","priceSpecification":{"@type":"UnitPriceSpecification","price":"12900","priceCurrency":"UAH","unitText":"MONTH"},"availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#autsors-pb-smart","name":"Аутсорсинг пожежної безпеки SMART","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"19900","priceCurrency":"UAH","priceSpecification":{"@type":"UnitPriceSpecification","price":"19900","priceCurrency":"UAH","unitText":"MONTH"},"availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#autsors-pb-full","name":"Аутсорсинг пожежної безпеки FULL","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"34900","priceCurrency":"UAH","priceSpecification":{"@type":"UnitPriceSpecification","price":"34900","priceCurrency":"UAH","unitText":"MONTH"},"availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#dokumenty-start","name":"Документація з охорони праці START","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"15000","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#dokumenty-smart","name":"Документація з охорони праці SMART","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"35000","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#dokumenty-full","name":"Документація з охорони праці FULL","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"80000","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#audyt-start","name":"Аудит охорони праці START","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"9900","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#audyt-smart","name":"Аудит охорони праці SMART","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"22900","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#audyt-full","name":"Аудит охорони праці FULL","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"45000","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#deklaratsiia-start","name":"Декларація ДСНС START","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"8900","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#deklaratsiia-smart","name":"Декларація ДСНС SMART","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"14900","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#deklaratsiia-full","name":"Декларація ДСНС FULL","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"29900","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#training-online","name":"Корпоративні тренінги онлайн (LMS)","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"290","priceCurrency":"UAH","priceSpecification":{"@type":"UnitPriceSpecification","price":"290","priceCurrency":"UAH","referenceQuantity":{"@type":"QuantitativeValue","value":"1","unitText":"особа"}},"availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#training-offline","name":"Корпоративні тренінги офлайн","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"690","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#training-corporate","name":"Корпоративний тренінг + персональне посвідчення","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"1290","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#ryzyky-start","name":"Оцінка ризиків START","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"12000","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#ryzyky-smart","name":"Оцінка ризиків SMART","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"28000","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#ryzyky-full","name":"Оцінка ризиків FULL","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"65000","priceCurrency":"UAH","availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#kompleks-basic","name":"Комплексний пакет BASIC+ (ОП+ПБ)","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"22000","priceCurrency":"UAH","priceSpecification":{"@type":"UnitPriceSpecification","price":"22000","priceCurrency":"UAH","unitText":"MONTH"},"availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#kompleks-enterprise","name":"Комплексний пакет ENTERPRISE","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"42000","priceCurrency":"UAH","priceSpecification":{"@type":"UnitPriceSpecification","price":"42000","priceCurrency":"UAH","unitText":"MONTH"},"availability":"https://schema.org/InStock"}},
+    {"@type":"Service","@id":"https://racio.ua/tarify.html#kompleks-startup","name":"STARTUP-пакет (Документація + ПТМ)","provider":{"@type":"Organization","name":"RACIO"},"offers":{"@type":"Offer","price":"18000","priceCurrency":"UAH","availability":"https://schema.org/InStock"}}
+  ]
+}
+</script>
+
+<style>
+/* Mobile tab dropdown */
+.mobile-tab-select { display: none; width: 100%; padding: 14px 16px; border: 1.5px solid var(--line); border-radius: 8px; font: inherit; background: #fff; margin-bottom: 24px; cursor: pointer; }
+@media (max-width: 768px) {
+  #plans .tabs { display: none; }
+  .mobile-tab-select { display: block; }
+}
+
+/* Testimonial-quote next to anchor SMART */
+.tab-testimonial { grid-column: 1 / -1; margin-top: 16px; padding: 18px 22px; background: rgba(232,220,196,.35); border-radius: 12px; border-left: 3px solid var(--red); }
+.tab-testimonial p.quote { font-size: 14px; line-height: 1.55; margin: 0 0 6px; font-style: italic; color: var(--muted); }
+.tab-testimonial p.author { font-size: 13px; font-weight: 600; color: var(--ink); margin: 0; }
+
+/* Quiz result block */
+.quiz-result { padding: 32px; background: linear-gradient(180deg, var(--beige) 0%, var(--cream) 100%); border-radius: 16px; }
+.quiz-result h3 { font-size: 22px; margin-bottom: 18px; color: var(--ink); }
+.quiz-rec { display: inline-block; padding: 8px 14px; background: var(--red); color: var(--cream); font-weight: 700; font-size: 14px; border-radius: 999px; margin-bottom: 18px; letter-spacing: .04em; text-transform: uppercase; }
+.quiz-price-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.quiz-price-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: rgba(255,255,255,.6); border-radius: 8px; font-size: 15px; }
+.quiz-price-item.discount { background: rgba(166,55,55,.08); border-left: 3px solid var(--red); }
+.quiz-price-item b { color: var(--red); font-size: 17px; }
+.quiz-savings { padding: 14px 18px; background: rgba(166,55,55,.1); border-radius: 8px; font-size: 14px; color: var(--ink); margin-bottom: 20px; line-height: 1.5; }
+.quiz-savings b { color: var(--red); }
+</style>
 <body>
 <header class="nav" id="site-header"></header>
 <div class="container"><nav class="crumbs"><a href="index.html">Головна</a><span>›</span>Тарифи</nav></div>
@@ -75,6 +176,16 @@
 <section class="cream" id="plans">
   <div class="container">
     <div class="sec-head"><div class="eyebrow">7 категорій послуг</div><h2>Оберіть <em>послугу</em>, щоб побачити тарифи</h2></div>
+    <select class="mobile-tab-select" aria-label="Виберіть категорію послуги" onchange="document.querySelectorAll('#plans .tabs button')[this.selectedIndex].click()">
+      <option>Аутсорсинг ОП</option>
+      <option>Аутсорсинг ПБ</option>
+      <option>Документація</option>
+      <option>Аудит</option>
+      <option>Декларація ДСНС</option>
+      <option>Навчання / тренінги</option>
+      <option>Оцінка ризиків</option>
+      <option>Комплексні</option>
+    </select>
     <div class="tabs" data-targets=".tab-panel">
       <button class="active">Аутсорсинг ОП</button>
       <button>Аутсорсинг ПБ</button>
@@ -98,6 +209,10 @@
         <div class="price"><h3>FULL</h3><div class="val">20 000 <small>₴/міс</small></div><p class="for">100+ осіб · повна передача функції</p>
           <ul><li>Все з SMART</li><li>Виділений інженер</li><li>ISO-рівень організації (45001/14001)</li><li>Представництво у держорганах</li><li>Цивільний захист + оцінка ризиків</li><li>Компенсація штрафу до 200 тис. ₴</li></ul>
           <a href="autsorsynh.html" class="btn btn-ghost">Детальніше</a></div>
+        <div class="tab-testimonial">
+          <p class="quote">«[Цитата клієнта про SMART-аутсорсинг ОП · 1-2 речення з конкретною метрикою (економія / закрита перевірка / швидкий запуск)]»</p>
+          <p class="author">— [Ім'я Прізвище] · [HR-директор / CEO] · [Бренд клієнта]</p>
+        </div>
       </div>
     </div>
 
@@ -113,6 +228,10 @@
         <div class="price"><h3>FULL</h3><div class="val">34 900 <small>₴/міс</small></div><p class="for">2000+ м² або ТРЦ / виробництво з ЛЗР</p>
           <ul><li>Все з SMART</li><li>Персональний інженер ПБ на об'єкт</li><li>Розрахунок пожежного ризику</li><li>ПЛАС для ПНО (якщо застосовно)</li><li>Категорування приміщень</li><li>Тренування евакуації щоквартально</li></ul>
           <a href="autsorsynh-pojejna-bezpeka.html" class="btn btn-ghost">Детальніше</a></div>
+        <div class="tab-testimonial">
+          <p class="quote">«[Цитата клієнта про SMART-аутсорсинг ПБ · 1-2 речення з конкретикою (декларація / тренування евакуації / перевірка ДСНС)]»</p>
+          <p class="author">— [Ім'я Прізвище] · [Facility Manager / Operations] · [Бренд клієнта]</p>
+        </div>
       </div>
     </div>
 
@@ -129,6 +248,10 @@
         <div class="price"><h3>FULL</h3><div class="val">80 000 <small>₴</small></div><p class="for">200+ осіб · фарма, хімія, ISO 45001</p>
           <ul><li>Все з SMART</li><li>80-120 документів</li><li>ISO 45001-ready документація</li><li>Узгодження з EHS HQ (для корпоративних)</li><li>Тренування керівників</li><li>3 роки супроводу (не 12 міс.)</li></ul>
           <a href="dokumentatsiia.html" class="btn btn-ghost">Детальніше</a></div>
+        <div class="tab-testimonial">
+          <p class="quote">«[Цитата клієнта про SMART-документацію · 1-2 речення з конкретикою (термін / якість / закрита перевірка з 1-ї спроби)]»</p>
+          <p class="author">— [Ім'я Прізвище] · [HR / EHS-керівник] · [Бренд клієнта]</p>
+        </div>
       </div>
     </div>
 
@@ -145,6 +268,10 @@
         <div class="price"><h3>FULL</h3><div class="val">45 000 <small>₴</small></div><p class="for">200+ осіб · виробництво, ТРЦ</p>
           <ul><li>Все з SMART</li><li>Фото-звіт кожного робочого місця</li><li>Рекомендації по НПАОП</li><li>30 днів консультацій після звіту</li><li>Mock-симуляція перевірки Держпраці</li></ul>
           <a href="audit.html" class="btn btn-ghost">Детальніше</a></div>
+        <div class="tab-testimonial">
+          <p class="quote">«[Цитата клієнта про SMART-аудит · 1-2 речення з конкретикою (виявлені ризики / план дій / закрита перевірка)]»</p>
+          <p class="author">— [Ім'я Прізвище] · [Operations / EHS] · [Бренд клієнта]</p>
+        </div>
       </div>
     </div>
 
@@ -160,6 +287,10 @@
         <div class="price"><h3>FULL</h3><div class="val">29 900 <small>₴</small></div><p class="for">ТРЦ, готель 4*+, склад 2000+ м²</p>
           <ul><li>Все з SMART</li><li>Розрахунок пожежного ризику</li><li>Розрахунок часу евакуації</li><li>Повний пакет інструкцій ПБ</li><li>Супровід будь-яких запитів ДСНС</li></ul>
           <a href="deklaratsiia-dsns.html" class="btn btn-ghost">Детальніше</a></div>
+        <div class="tab-testimonial">
+          <p class="quote">«[Цитата клієнта про SMART-декларацію ДСНС · 1-2 речення (швидкий термін / прийнято з 1-ї / відкриття у графіку)]»</p>
+          <p class="author">— [Ім'я Прізвище] · [CEO / Manager] · [Бренд клієнта]</p>
+        </div>
       </div>
     </div>
 
@@ -176,6 +307,10 @@
         <div class="price"><h3>КОРПОРАТИВНИЙ</h3><div class="val">1 290 <small>₴/особа</small></div><p class="for">Персональне посвідчення відповідального</p>
           <ul><li>40 годин з іспитом</li><li>Посвідчення у реєстрі НАПБ</li><li>Валідне 3 роки</li><li>Для директорів і відповідальних</li><li>1 рік LMS-підтримки</li></ul>
           <a href="treningy-z-ohorony-pratsi.html" class="btn btn-ghost">Детальніше</a></div>
+        <div class="tab-testimonial">
+          <p class="quote">«[Цитата клієнта про офлайн-тренінг · 1-2 речення з результатом (тест 94% / зміна культури / зменшення інцидентів)]»</p>
+          <p class="author">— [Ім'я Прізвище] · [L&D / People Ops] · [Бренд клієнта]</p>
+        </div>
       </div>
     </div>
 
@@ -191,6 +326,10 @@
         <div class="price"><h3>FULL</h3><div class="val">65 000 <small>₴</small></div><p class="for">100+ місць · ISO 45001-ready</p>
           <ul><li>Все з SMART</li><li>Під ISO 45001 сертифікацію</li><li>Психосоціальні ризики (методологія 2023)</li><li>Навчання внутрішньої команди</li><li>6 міс. підтримки впровадження</li></ul>
           <a href="otsinka-ryzykiv.html" class="btn btn-ghost">Детальніше</a></div>
+        <div class="tab-testimonial">
+          <p class="quote">«[Цитата клієнта про SMART-оцінку ризиків · 1-2 речення (паспорт робочих місць / план заходів / ISO-готовність)]»</p>
+          <p class="author">— [Ім'я Прізвище] · [EHS / HR] · [Бренд клієнта]</p>
+        </div>
       </div>
     </div>
 
@@ -207,37 +346,119 @@
         <div class="price"><h3>STARTUP</h3><div class="val">18 000 <small>₴</small></div><p class="for">Документація + базове навчання (разово)</p>
           <ul><li>Для нових підприємств</li><li>Документація ОП + ПТМ 10 осіб</li><li>Замість 20-25 тис. ₴ роздільно</li><li>Запуск за 2 тижні</li></ul>
           <a href="#quiz" class="btn btn-ghost">Розрахувати</a></div>
+        <div class="tab-testimonial">
+          <p class="quote">«[Цитата клієнта про комплексний пакет ENTERPRISE/BASIC+ · 1-2 речення (економія / єдина команда / швидкість впровадження)]»</p>
+          <p class="author">— [Ім'я Прізвище] · [CEO / COO] · [Бренд клієнта]</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Full comparison matrix -->
+<!-- Full comparison matrix · динамічна для 3 ключових послуг -->
 <section>
   <div class="container">
-    <div class="sec-head"><div class="eyebrow">Порівняння</div><h2>Що <em>входить</em> у START / SMART / FULL — матриця</h2></div>
+    <div class="sec-head"><div class="eyebrow">Порівняння</div><h2>Що <em>входить</em> у START / SMART / FULL</h2></div>
+    <p class="lead" style="max-width:760px;margin-bottom:18px">Матриця показує що саме ви отримуєте у кожному з 3 пакетів — для трьох ключових послуг: <b>аутсорсингу ОП</b>, <b>документації</b> та <b>аудиту</b>. Решта послуг (ПБ, декларація ДСНС, навчання, оцінка ризиків) деталізовані всередині відповідних табів вище.</p>
+    <div class="tabs" id="matrix-tabs" style="margin-bottom:20px;display:inline-flex;flex-wrap:wrap;gap:8px">
+      <button class="active" data-matrix="autsors-op">Аутсорсинг ОП</button>
+      <button data-matrix="dokumenty">Документація</button>
+      <button data-matrix="audyt">Аудит</button>
+    </div>
+    <select class="mobile-tab-select" id="matrix-mobile-select" aria-label="Виберіть послугу для порівняння" onchange="document.querySelectorAll('#matrix-tabs button')[this.selectedIndex].click()">
+      <option>Аутсорсинг ОП</option>
+      <option>Документація</option>
+      <option>Аудит</option>
+    </select>
     <div class="cmp" style="margin-top:20px">
       <table>
         <thead><tr><th>Параметр</th><th>START</th><th>SMART</th><th class="good">FULL</th></tr></thead>
-        <tbody>
-          <tr><td><b>Пакет документів ОП</b></td><td>30 док. базових</td><td>50 док. галузевих</td><td class="ok">80+ док. ISO-рівня</td></tr>
-          <tr><td><b>Інструктажі</b></td><td>Онлайн щомісячно</td><td>+ виїзд 1 раз/міс</td><td class="ok">+ виїзд за потреби</td></tr>
-          <tr><td><b>SLA на відповідь</b></td><td>1 робочий день</td><td>4 години</td><td class="ok">1 година (24/7)</td></tr>
-          <tr><td><b>Виділений інженер</b></td><td>Черговий з команди</td><td>Закріплений</td><td class="ok">Персональний з галузевою спец.</td></tr>
-          <tr><td><b>Квартальний аудит процесів</b></td><td>—</td><td>✓</td><td class="ok">✓ щомісячно</td></tr>
-          <tr><td><b>Компенсація штрафу</b></td><td>—</td><td>До 50 000 ₴</td><td class="ok">До 200 000 ₴</td></tr>
-          <tr><td><b>Пожежна безпека</b></td><td>Окрема послуга</td><td>Включена</td><td class="ok">Включена + ПЛАС</td></tr>
-          <tr><td><b>Цивільний захист</b></td><td>—</td><td>—</td><td class="ok">Повний пакет + навчання</td></tr>
-          <tr><td><b>Оцінка ризиків</b></td><td>—</td><td>Базова</td><td class="ok">ISO 45001-ready</td></tr>
-          <tr><td><b>Розслідування НВ</b></td><td>Окрема послуга</td><td>До 2 НВ/рік</td><td class="ok">Без обмежень</td></tr>
-          <tr><td><b>Супровід перевірок</b></td><td>Планові</td><td>Планові + позапл.</td><td class="ok">+ судове представництво</td></tr>
-          <tr><td><b>LMS для співробітників</b></td><td>Базовий доступ</td><td>Брендований</td><td class="ok">Повна кастомізація</td></tr>
-          <tr><td><b>Звітність керівнику</b></td><td>Квартальна</td><td>Щомісячна</td><td class="ok">Щотижнева + дашборд</td></tr>
-        </tbody>
+        <tbody id="matrix-body"></tbody>
       </table>
     </div>
   </div>
 </section>
+<script>
+(function(){
+  const matrices = {
+    'autsors-op': {
+      pricing: ['8 000 ₴/міс', '15 000 ₴/міс', '20 000 ₴/міс'],
+      rows: [
+        ['Пакет документів ОП', '30 док. базових', '50 док. галузевих', '80+ док. ISO-рівня'],
+        ['Інструктажі', 'Онлайн щомісячно', '+ виїзд 1 раз/міс', '+ виїзд за потреби'],
+        ['SLA на відповідь', '1 робочий день', '4 години', '1 година (24/7)'],
+        ['Виділений інженер', 'Черговий з команди', 'Закріплений', 'Персональний з галузевою спец.'],
+        ['Квартальний аудит процесів', '—', '✓', '✓ щомісячно'],
+        ['Компенсація штрафу', '—', 'До 50 000 ₴', 'До 200 000 ₴'],
+        ['Пожежна безпека', 'Окрема послуга', 'Включена', 'Включена + ПЛАС'],
+        ['Цивільний захист', '—', '—', 'Повний пакет + навчання'],
+        ['Оцінка ризиків', '—', 'Базова', 'ISO 45001-ready'],
+        ['Розслідування НВ', 'Окрема послуга', 'До 2 НВ/рік', 'Без обмежень'],
+        ['Супровід перевірок', 'Планові', 'Планові + позапл.', '+ судове представництво'],
+        ['LMS для співробітників', 'Базовий доступ', 'Брендований', 'Повна кастомізація'],
+        ['Звітність керівнику', 'Квартальна', 'Щомісячна', 'Щотижнева + дашборд']
+      ]
+    },
+    'dokumenty': {
+      pricing: ['15 000 ₴ разово', '35 000 ₴ разово', '80 000 ₴ разово'],
+      rows: [
+        ['Кількість документів', '30-40 базових', '50-70 галузевих', '80-120 ISO-рівня'],
+        ['Термін підготовки', '2 тижні', '3-4 тижні', '6-8 тижнів'],
+        ['Виїзд інженера на об\'єкт', '—', '1 виїзд', '2-3 виїзди + інвентаризація'],
+        ['Галузеві інструкції', 'Базові', '+ під вашу галузь', '+ ISO 45001-ready'],
+        ['Журнали з першими записами', '✓', '✓', '✓ + кастомні форми'],
+        ['Презентація керівництву', '—', '✓ керівнику ОП', '✓ + тренування топ-менеджменту'],
+        ['Ітерацій правок без доплати', '1', '2', 'Без обмежень'],
+        ['Узгодження з EHS HQ', '—', '—', '✓ для корпоративних'],
+        ['Період подальшої актуалізації', '12 міс. у подарунок', '12 міс. + правки під зміни НПАОП', '36 міс. повного супроводу'],
+        ['Підходить для', 'Офіс до 30 осіб, типова галузь', '50-200 осіб, виробництво / склад / ритейл', '200+ осіб, фарма / хімія / ISO 45001']
+      ]
+    },
+    'audyt': {
+      pricing: ['9 900 ₴ разово', '22 900 ₴ разово', '45 000 ₴ разово'],
+      rows: [
+        ['Чек-ліст пунктів', '120+', '150+', '200+ з посиланнями на НПАОП'],
+        ['Виїзд на об\'єкт', 'Коротка перевірка (3-4 год)', '1-2 дні', 'Повний (кожне робоче місце)'],
+        ['Інтерв\'ю з персоналом', '—', 'З HR + 2-3 співробітниками', 'Усі ключові ролі + керівники'],
+        ['Звіт', '10-15 стор.', '20-25 стор. з фото', '30-50 стор. з фото-звітом по локаціях'],
+        ['Презентація керівнику', '—', '✓', '✓ + дашборд для топів'],
+        ['Mock-симуляція перевірки', '—', '—', '✓ повна симуляція Держпраці'],
+        ['Рекомендації по НПАОП', 'Загальні', 'Деталізовані', 'Юридично оформлені, готові до впровадження'],
+        ['Термін після виїзду', '5 робочих днів', '10 робочих днів', '15 робочих днів'],
+        ['Період консультацій після звіту', '—', '14 днів', '30 днів + супровід впровадження'],
+        ['Підходить для', 'Офіс до 50 осіб, документальний', '50-200 осіб, найпоширеніший вибір', '200+ осіб, виробництво, ТРЦ']
+      ]
+    }
+  };
+
+  function loadMatrix(key){
+    const m = matrices[key];
+    if (!m) return;
+    const body = document.getElementById('matrix-body');
+    let html = '<tr style="background:rgba(166,55,55,.05)"><td><b>Ціна</b></td>';
+    m.pricing.forEach((p, i) => {
+      html += `<td${i===2?' class="ok"':''}><b style="color:var(--red)">${p}</b></td>`;
+    });
+    html += '</tr>';
+    m.rows.forEach(row => {
+      html += `<tr><td><b>${row[0]}</b></td><td>${row[1]}</td><td>${row[2]}</td><td class="ok">${row[3]}</td></tr>`;
+    });
+    body.innerHTML = html;
+  }
+
+  document.querySelectorAll('#matrix-tabs button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#matrix-tabs button').forEach(b => b.classList.toggle('active', b === btn));
+      loadMatrix(btn.dataset.matrix);
+      const sel = document.getElementById('matrix-mobile-select');
+      const idx = Array.from(document.querySelectorAll('#matrix-tabs button')).indexOf(btn);
+      if (sel) sel.selectedIndex = idx;
+    });
+  });
+
+  loadMatrix('autsors-op');
+})();
+</script>
 
 <!-- Galuzevi nadbavky -->
 <section class="cream">
@@ -256,23 +477,107 @@
   </div>
 </section>
 
-<!-- Quiz -->
+<!-- Quiz · робочий калькулятор з рекомендацією -->
 <section id="quiz">
   <div class="container">
     <div class="sec-head center"><div class="eyebrow">Калькулятор</div><h2>Скільки коштує <em>для мене</em>?</h2></div>
-    <div class="quiz">
+    <div class="quiz" id="tarify-quiz">
       <div class="quiz-progress"><i></i></div>
-      <div class="quiz-step active" data-step="1"><h3>1. Галузь?</h3><div class="quiz-opts"><button class="quiz-opt">Фарма</button><button class="quiz-opt">IT</button><button class="quiz-opt">Виробництво</button><button class="quiz-opt">HoReCa</button><button class="quiz-opt">Ритейл</button><button class="quiz-opt">Логістика</button><button class="quiz-opt">Інше</button></div></div>
-      <div class="quiz-step" data-step="2"><h3>2. Розмір?</h3><div class="quiz-opts"><button class="quiz-opt">До 30</button><button class="quiz-opt">30–100</button><button class="quiz-opt">100–500</button><button class="quiz-opt">500+</button></div></div>
-      <div class="quiz-step" data-step="3"><h3>3. Що потрібно?</h3><div class="quiz-opts"><button class="quiz-opt">Аутсорсинг ОП</button><button class="quiz-opt">Аутсорсинг ПБ</button><button class="quiz-opt">Обидва</button><button class="quiz-opt">+ ризики + ЦЗ (все)</button></div></div>
-      <div class="quiz-step" data-step="4"><h3>4. Кількість локацій?</h3><div class="quiz-opts"><button class="quiz-opt">1</button><button class="quiz-opt">2-5</button><button class="quiz-opt">5-20</button><button class="quiz-opt">20+</button></div></div>
-      <div class="quiz-step" data-step="5"><h3>Куди надіслати прорахунок?</h3>
-        <div class="quiz-fields"><input name="qname" placeholder="Ім'я" autocomplete="name" required/><input name="qphone" placeholder="Телефон" autocomplete="tel" required/><input name="qemail" placeholder="Email" type="email" autocomplete="email"/><input name="qcompany" placeholder="Компанія" autocomplete="organization"/></div>
-        <div class="quiz-actions"><span class="quiz-micro">Відповідь протягом 1 робочого дня</span><button class="btn btn-primary" onclick="alert('Дякуємо!')">Надіслати →</button></div>
+      <div class="quiz-step active" data-step="1"><h3>1. Галузь?</h3><div class="quiz-opts"><button class="quiz-opt" data-q="galuz" data-val="farma">Фарма</button><button class="quiz-opt" data-q="galuz" data-val="it">IT</button><button class="quiz-opt" data-q="galuz" data-val="vyrobnytstvo">Виробництво</button><button class="quiz-opt" data-q="galuz" data-val="horeca">HoReCa</button><button class="quiz-opt" data-q="galuz" data-val="rytejl">Ритейл</button><button class="quiz-opt" data-q="galuz" data-val="lohistyka">Логістика</button><button class="quiz-opt" data-q="galuz" data-val="other">Інше</button></div></div>
+      <div class="quiz-step" data-step="2"><h3>2. Розмір команди?</h3><div class="quiz-opts"><button class="quiz-opt" data-q="size" data-val="30">До 30</button><button class="quiz-opt" data-q="size" data-val="100">30–100</button><button class="quiz-opt" data-q="size" data-val="500">100–500</button><button class="quiz-opt" data-q="size" data-val="500plus">500+</button></div></div>
+      <div class="quiz-step" data-step="3"><h3>3. Що потрібно?</h3><div class="quiz-opts"><button class="quiz-opt" data-q="need" data-val="op">Аутсорсинг ОП</button><button class="quiz-opt" data-q="need" data-val="pb">Аутсорсинг ПБ</button><button class="quiz-opt" data-q="need" data-val="both">Обидва (ОП+ПБ)</button><button class="quiz-opt" data-q="need" data-val="all">Все (+ризики+ЦЗ)</button></div></div>
+      <div class="quiz-step" data-step="4"><h3>4. Кількість локацій?</h3><div class="quiz-opts"><button class="quiz-opt" data-q="locations" data-val="1">1</button><button class="quiz-opt" data-q="locations" data-val="2-5">2-5</button><button class="quiz-opt" data-q="locations" data-val="5-20">5-20</button><button class="quiz-opt" data-q="locations" data-val="20plus">20+</button></div></div>
+      <div class="quiz-step" data-step="5">
+        <div id="quiz-result-container"></div>
       </div>
     </div>
   </div>
 </section>
+<script>
+(function(){
+  const quizState = { galuz: null, size: null, need: null, locations: null };
+
+  // Listen on quiz options to capture data-q + data-val
+  document.querySelectorAll('#tarify-quiz .quiz-opt[data-q]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      quizState[btn.dataset.q] = btn.dataset.val;
+      // If on step 4 (last selection step), render results
+      const allFilled = quizState.galuz && quizState.size && quizState.need && quizState.locations;
+      if (allFilled) {
+        // Wait until racio.js advances to step 5 (next tick)
+        setTimeout(renderResult, 100);
+      }
+    });
+  });
+
+  function calcRecommendation(s){
+    let basePrice, label, perMonth = true;
+    // Base by need
+    if (s.need === 'op') {
+      label = 'SMART · Аутсорсинг охорони праці';
+      basePrice = s.size === '500' || s.size === '500plus' ? 20000 : 15000;
+      if (s.size === '500plus') label = 'FULL · Аутсорсинг охорони праці (enterprise)';
+    } else if (s.need === 'pb') {
+      label = 'SMART · Аутсорсинг пожежної безпеки';
+      basePrice = s.size === '500plus' ? 34900 : 19900;
+      if (s.size === '500plus') label = 'FULL · Аутсорсинг пожежної безпеки';
+    } else if (s.need === 'both') {
+      label = 'BASIC+ · Комплексний (ОП + ПБ)';
+      basePrice = 22000;
+      if (s.size === '500' || s.size === '500plus') {
+        basePrice = 35000;
+        label = 'FULL комплекс (ОП + ПБ FULL)';
+      }
+    } else { // 'all'
+      label = 'ENTERPRISE · Повний комплекс (ОП + ПБ + Ризики + ЦЗ)';
+      basePrice = 42000;
+    }
+    // Локаційна знижка
+    let locDiscount = 0, locLabel = '';
+    if (s.locations === '2-5') { locDiscount = 5; locLabel = '2-5 локацій'; }
+    if (s.locations === '5-20') { locDiscount = 15; locLabel = '5-20 локацій'; }
+    if (s.locations === '20plus') { locDiscount = 20; locLabel = '20+ локацій'; }
+    const afterLocDiscount = Math.round(basePrice * (1 - locDiscount/100));
+    const annualPrepayment = Math.round(afterLocDiscount * 0.8);
+    return { label, basePrice, locDiscount, locLabel, afterLocDiscount, annualPrepayment, perMonth };
+  }
+
+  function fmt(n){ return n.toLocaleString('uk-UA').replace(/,/g, ' '); }
+
+  function renderResult(){
+    const r = calcRecommendation(quizState);
+    const galuzMap = {farma:'фарми', it:'IT-сектора', vyrobnytstvo:'виробництва', horeca:'HoReCa', rytejl:'ритейлу', lohistyka:'логістики', other:'вашої галузі'};
+    const sizeMap = {'30':'до 30 осіб', '100':'30-100 осіб', '500':'100-500 осіб', '500plus':'500+ осіб'};
+    const staffCost = 30000; // штатний інженер ОП ~30K/міс зарплата + податки
+    const savings = Math.max(0, Math.round((staffCost - r.annualPrepayment) / staffCost * 100));
+
+    const container = document.getElementById('quiz-result-container');
+    container.innerHTML = `
+      <div class="quiz-result">
+        <div class="quiz-rec">${r.label}</div>
+        <h3 style="margin-top:6px">Прорахунок для ${galuzMap[quizState.galuz]||'вашого бізнесу'} (${sizeMap[quizState.size]||''})</h3>
+        <div class="quiz-price-list">
+          <div class="quiz-price-item"><span>Базова ціна</span><b>${fmt(r.basePrice)} ₴/міс</b></div>
+          ${r.locDiscount ? `<div class="quiz-price-item discount"><span>−${r.locDiscount}% за ${r.locLabel}</span><b>${fmt(r.afterLocDiscount)} ₴/міс</b></div>` : ''}
+          <div class="quiz-price-item discount"><span>Якщо передоплата за рік (−20%)</span><b>${fmt(r.annualPrepayment)} ₴/міс</b></div>
+        </div>
+        ${quizState.need === 'op' && savings > 0 ? `<div class="quiz-savings">vs штатний інженер ОП (~${fmt(staffCost)} ₴/міс зарплата + податки + обладнання) — економія до <b>${savings}%</b> щомісяця</div>` : ''}
+        <p style="margin:0 0 14px;font-size:14px;color:var(--muted);line-height:1.55">Це попередній прорахунок на основі ваших відповідей. Точна ціна — після безкоштовного 30-хвилинного дзвінка з менеджером (з'ясуємо специфіку об'єктів і додаткові вимоги).</p>
+        <div class="quiz-fields">
+          <input name="qname" placeholder="Ім'я" autocomplete="name" required/>
+          <input name="qphone" placeholder="Телефон" autocomplete="tel" required/>
+          <input name="qemail" placeholder="Email" type="email" autocomplete="email"/>
+          <input name="qcompany" placeholder="Компанія" autocomplete="organization"/>
+        </div>
+        <div class="quiz-actions">
+          <span class="quiz-micro">Менеджер передзвонить протягом 1 робочого дня</span>
+          <button class="btn btn-primary" onclick="alert('Дякуємо! Менеджер передзвонить найближчим часом.')">Записатись на дзвінок →</button>
+        </div>
+      </div>
+    `;
+  }
+})();
+</script>
 
 <!-- Discounts -->
 <section class="cream">
